@@ -1,0 +1,82 @@
+{
+    "template": "layouts/main.twig",
+    "logo": {
+        "light": "/logo-light.svg",
+        "dark": "/logo-dark.svg"
+    },
+    "menu": {
+        "header": [
+            {
+                "label": "Home",
+                "url": "/"
+            },
+            {
+                "label": "About",
+                "url": "/about"
+            },
+            {
+                "label": "Services",
+                "url": "#services"
+            },
+            {
+                "label": "Projects",
+                "url": "#projects"
+            },
+            {
+                "label": "Contact",
+                "url": "#contact"
+            }
+        ],
+        "footer": {
+            "main": [
+                {
+                    "label": "Home",
+                    "url": "/"
+                },
+                {
+                    "label": "About",
+                    "url": "/about"
+                },
+                {
+                    "label": "Services",
+                    "url": "#services"
+                },
+                {
+                    "label": "Projects",
+                    "url": "#projects"
+                },
+                {
+                    "label": "Contact",
+                    "url": "#contact"
+                }
+            ],
+            "secondary": [
+                {
+                    "label": "Privacy Policy",
+                    "url": "#"
+                },
+                {
+                    "label": "Terms of Use",
+                    "url": "#"
+                }
+            ]
+        }
+    },
+    "socials": [
+        {
+            "label": "Facebook",
+            "url": "https://facebook.com/your-page",
+            "icon": "facebook"
+        },
+        {
+            "label": "Twitter",
+            "url": "https://twitter.com/your-handle",
+            "icon": "twitter"
+        },
+        {
+            "label": "LinkedIn",
+            "url": "https://linkedin.com/company/your-company",
+            "icon": "linkedin"
+        }
+    ]
+}

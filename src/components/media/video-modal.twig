@@ -1,0 +1,81 @@
+<div class="relative group overflow-hidden rounded-3xl cursor-pointer size-full" onclick="openVideoModal(this)" data-video-src="{{ src }}" data-video-title="{{ title }}">
+	<!-- Poster Image -->
+	<img 
+		src="{{ poster }}" 
+		alt="{{ title }}"
+		class="aspect-32/15 size-full object-cover"
+	/>
+	
+	<!-- Play Button Overlay -->
+	<div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
+		<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" class="transform group-hover:scale-110 transition-transform">
+			<g clip-path="url(#a)">
+				<path d="M32 0C14.354 0 0 14.356 0 32c0 17.645 14.354 32 32 32s32-14.355 32-32C64 14.356 49.646 0 32 0m12.721 33.121-18.666 12a1.33 1.33 0 0 1-1.36.05A1.33 1.33 0 0 1 24 44V20a1.331 1.331 0 0 1 2.055-1.121l18.666 12a1.336 1.336 0 0 1 0 2.242" fill="#fff"/>
+			</g>
+			<defs>
+				<clipPath id="a">
+					<path fill="#fff" d="M0 0h64v64H0z"/>
+				</clipPath>
+			</defs>
+		</svg>
+	</div>
+</div>
+
+<!-- Video Modal -->
+<div id="video-modal" class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center p-4" onclick="closeVideoModal(event)">
+	<div class="relative w-full max-w-6xl" onclick="event.stopPropagation()">
+		<!-- Close Button -->
+		<button 
+			class="absolute -top-12 right-0 text-white hover:text-brand transition-colors"
+			onclick="closeVideoModal()"
+			aria-label="Закрити"
+		>
+			<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M24 8L8 24M8 8L24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+			</svg>
+		</button>
+		
+		<!-- Video Container -->
+		<div class="relative group overflow-hidden rounded-3xl bg-black">
+			<video 
+				id="modal-video-player" 
+				class="w-full aspect-video object-cover cursor-pointer" 
+				loop
+				playsinline
+				onclick="togglePlayPause(this)"
+			></video>
+			
+			<!-- Play/Pause Icon -->
+			<div class="video-play-icon absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 transition-opacity duration-300">
+				<div class="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center">
+					<svg class="play-icon w-10 h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M8 5V19L19 12L8 5Z" fill="#01013F" stroke="#01013F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+					<svg class="pause-icon hidden w-10 h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M10 4H6V20H10V4Z" fill="#01013F"/>
+						<path d="M18 4H14V20H18V4Z" fill="#01013F"/>
+					</svg>
+				</div>
+			</div>
+			
+			<!-- Progress Bar -->
+			<div class="video-progress-container absolute bottom-0 left-0 right-0 h-2.5 bg-white/20 rounded-b-3xl cursor-pointer hover:h-4 transition-all z-10" onclick="seekVideo(event, this)">
+				<div class="video-progress h-full bg-brand origin-left transition-transform" style="transform: scaleX(0)"></div>
+			</div>
+			
+			<button 
+				class="absolute bottom-8 right-8 size-12 flex items-center justify-center transition-colors z-10 text-white hover:text-brand cursor-pointer"
+				onclick="event.stopPropagation(); toggleMute(this);"
+				aria-label="Увімкнути/вимкнути звук"
+			>
+				<svg class="mute-icon size-6 fill-current" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M25.1401 1.14802C25.1401 0.713809 24.8888 0.302449 24.5003 0.119623C24.0889 -0.086057 23.6318 -0.0174971 23.289 0.256743L13.165 8.32396L25.1401 20.2991V1.14802Z"/>
+					<path d="M31.6625 30.0483L1.95317 0.339015C1.50753 -0.106625 0.783083 -0.106625 0.337444 0.339015C-0.108196 0.784654 -0.108196 1.5091 0.337444 1.95474L7.5271 9.14668H6.85749C6.14904 9.14668 5.532 9.46663 5.12064 9.9694C4.77784 10.3579 4.57216 10.8835 4.57216 11.432V20.5733C4.57216 21.8303 5.60056 22.8587 6.85749 22.8587H12.1595L23.289 31.7486C23.4947 31.9086 23.7461 32 23.9975 32C24.1575 32 24.3403 31.9543 24.5003 31.8857C24.8888 31.7029 25.1401 31.2915 25.1401 30.8573V26.7597L30.0445 31.6641C30.2684 31.888 30.561 32 30.8535 32C31.146 32 31.4385 31.888 31.6625 31.6663C32.1081 31.2184 32.1081 30.4963 31.6625 30.0483Z"/>
+				</svg>
+				<svg class="unmute-icon hidden size-6 fill-current" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M24.5003 0.119623C24.8888 0.302449 25.1401 0.713809 25.1401 1.14802L25.1402 30.8573C25.1402 31.2916 24.8888 31.7029 24.5003 31.8857C24.3403 31.9543 24.1575 32 23.9975 32C23.7461 32 23.4947 31.9086 23.289 31.7486L12.1595 22.8587H6.85749C5.60056 22.8587 4.57216 21.8303 4.57216 20.5733V11.432C4.57216 10.8835 4.77784 10.3579 5.12064 9.9694C5.532 9.46663 6.14904 9.14668 6.85749 9.14668H12.1595L23.289 0.256743C23.6318 -0.0174971 24.0889 -0.086057 24.5003 0.119623Z" fill="white"/>
+				</svg>
+			</button>
+		</div>
+	</div>
+</div>

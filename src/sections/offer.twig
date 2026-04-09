@@ -1,0 +1,19 @@
+<section>
+    <div class="py-35.75 px-3 sm:px-8 lg:px-29.25 relative sm:aspect-32/15 grid">
+        <div class="max-w-176.5 w-full relative self-center">
+            {% if fields.ttl %}
+                <h1 class="offer-ttl mb-3">{{ fields.ttl|format_title }}</h1>
+            {% endif %}
+            {% if fields.text %}
+                <div class="mb-6 text-balance">{{ fields.text }}</div>
+            {% endif %}
+            {% if fields.btns|length %}
+                <div class="flex flex-wrap gap-3">
+                    {% for item in fields.btns %}
+                        {% include "../components/button.twig" with item %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>

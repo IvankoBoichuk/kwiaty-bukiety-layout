@@ -1,0 +1,84 @@
+{
+    "offer": {
+        "ttl" : "{Your} BRAND NAME",
+        "subttl": "Inspiring tagline that describes {your mission}",
+        "text": "We deliver exceptional solutions that transform businesses and create lasting value. Our expertise combines innovation, strategy, and execution to help you achieve your goals.",
+        "btns": [
+            {
+                "text": "UI-Kit",
+                "link": "/ui-kit.html",
+                "target": "_blank"
+            }
+        ],
+        "img": {
+            "src": "/placeholder.svg",
+            "alt": "Hero image showcasing our services"
+        }
+    },
+    "slider": {
+        "ttl": "Latest {News} & Updates",
+        "text": "Stay informed with our latest insights, project updates, and industry news.",
+        "items": [
+            {
+                "ttl": "Innovative Solutions for Modern Businesses",
+                "text": "Discover how our cutting-edge approach is transforming the way companies operate in the digital age.",
+                "date": "April 5, 2026",
+                "category": "Innovation",
+                "link": "/news/innovative-solutions",
+                "target": "_blank",
+                "img": {
+                    "src": "/placeholder.svg",
+                    "alt": "Innovation in business"
+                }
+            },
+            {
+                "ttl": "Success Story: Client Transformation",
+                "text": "Learn how we helped a leading organization achieve 300% growth in just 12 months.",
+                "date": "March 28, 2026",
+                "category": "Case Study",
+                "link": "/news/client-success",
+                "target": "_blank",
+                "img": {
+                    "src": "/placeholder.svg",
+                    "alt": "Client success story"
+                }
+            },
+            {
+                "ttl": "New Product Launch Announcement",
+                "text": "We're excited to introduce our latest product that will revolutionize your workflow.",
+                "date": "March 15, 2026",
+                "category": "Product",
+                "link": "/news/product-launch",
+                "target": "_blank",
+                "img": {
+                    "src": "/placeholder.svg",
+                    "alt": "New product launch"
+                }
+            },
+            {
+                "ttl": "Industry Trends Report 2026",
+                "text": "Get insights into the latest trends shaping our industry and what they mean for your business.",
+                "date": "February 20, 2026",
+                "category": "Report",
+                "link": "/news/trends-2026",
+                "target": "_blank",
+                "img": {
+                    "src": "/placeholder.svg",
+                    "alt": "Industry trends"
+                }
+            },
+            {
+                "ttl": "Team Expansion & New Hires",
+                "text": "Meet the talented professionals joining our growing team to better serve our clients.",
+                "date": "February 10, 2026",
+                "category": "Company",
+                "link": "/news/team-expansion",
+                "target": "_blank",
+                "img": {
+                    "src": "/placeholder.svg",
+                    "alt": "Team expansion"
+                }
+            }
+        ]
+    }
+}

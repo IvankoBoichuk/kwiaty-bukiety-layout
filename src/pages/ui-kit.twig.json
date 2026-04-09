@@ -1,0 +1,119 @@
+{
+  "title": "UI Kit - Template Showcase",
+  "buttonVariants": [
+    {
+      "text": "Primary",
+      "link": "#",
+      "target": "_self",
+      "variant": "primary",
+      "size": "md"
+    },
+    {
+      "text": "Secondary",
+      "link": "#",
+      "target": "_self",
+      "variant": "secondary",
+      "size": "md"
+    },
+    {
+      "text": "Outline",
+      "link": "#",
+      "target": "_self",
+      "variant": "outline",
+      "size": "md"
+    },
+    {
+      "text": "Ghost",
+      "link": "#",
+      "target": "_self",
+      "variant": "ghost",
+      "size": "md"
+    }
+  ],
+  "buttonSizes": [
+    {
+      "text": "Small Button",
+      "link": "#",
+      "target": "_self",
+      "variant": "primary",
+      "size": "sm"
+    },
+    {
+      "text": "Medium Button",
+      "link": "#",
+      "target": "_self",
+      "variant": "primary",
+      "size": "md"
+    },
+    {
+      "text": "Large Button",
+      "link": "#",
+      "target": "_self",
+      "variant": "primary",
+      "size": "lg"
+    }
+  ],
+  "buttonNoIcon": [
+    {
+      "text": "No Icon Button",
+      "link": "#",
+      "target": "_self",
+      "variant": "primary",
+      "size": "md",
+      "showIcon": false
+    },
+    {
+      "text": "Secondary No Icon",
+      "link": "#",
+      "target": "_self",
+      "variant": "secondary",
+      "size": "md",
+      "showIcon": false
+    }
+  ],
+  "quoteRight": {
+    "side": "right",
+    "text": "This is an example of a quote component with the media on the left side and text on the right. It demonstrates how testimonials or important quotes can be displayed.",
+    "author": "John Doe",
+    "position": "CEO, Example Company",
+    "media": {
+      "type": "img",
+      "img": {
+        "src": "https://placehold.co/676x427",
+        "alt": "Author portrait",
+        "width": "676",
+        "height": "427"
+      }
+    }
+  },
+  "quoteLeft": {
+    "side": "left",
+    "text": "This quote demonstrates the left-side variant, where the media appears on the right and the text content is positioned on the left side.",
+    "author": "Jane Smith",
+    "position": "Creative Director",
+    "media": {
+      "type": "img",
+      "img": {
+        "src": "https://placehold.co/676x427",
+        "alt": "Author portrait",
+        "width": "676",
+        "height": "427"
+      }
+    }
+  },
+  "sampleImage": {
+    "src": "https://placehold.co/1200x675",
+    "alt": "Sample image",
+    "width": "1200",
+    "height": "675"
+  },
+  "spacingSizes": [
+    { "label": "2 (0.5rem)", "value": "0.5rem" },
+    { "label": "3 (0.75rem)", "value": "0.75rem" },
+    { "label": "4 (1rem)", "value": "1rem" },
+    { "label": "6 (1.5rem)", "value": "1.5rem" },
+    { "label": "8 (2rem)", "value": "2rem" },
+    { "label": "12 (3rem)", "value": "3rem" },
+    { "label": "16 (4rem)", "value": "4rem" }
+  ]
+}

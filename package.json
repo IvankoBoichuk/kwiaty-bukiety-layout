@@ -1,0 +1,25 @@
+{
+  "name": "vite-twig-tailwind-boilerplate",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Modern static site boilerplate with Vite, Twig, Tailwind CSS 4, Swiper and video components",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@vituum/vite-plugin-twig": "^1.1.0",
+    "vite": "^6.0.1",
+    "vite-plugin-vercel": "^9.0.7",
+    "vite-plugin-webfont-dl": "^3.11.1",
+    "vituum": "^1.1.1"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "set-scrollbar-width": "^1.0.5",
+    "swiper": "^12.1.0",
+    "tailwindcss": "^4.1.18"
+  }
+}

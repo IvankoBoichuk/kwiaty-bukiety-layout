@@ -1,0 +1,20 @@
+{% set side = side|default('right') %}
+<div class="{{ html_classes('relative overflow-hidden rounded-t-xl lg:rounded-t-3xl', {
+    "is-right-side": side == "right",
+    "is-left-side": side == "left"
+}, container_classes) }}">
+    {% block content %}
+        {# Content #}
+    {% endblock %}
+
+    {% if caption %}
+        <div class="{{ html_classes('absolute bottom-0 z-10 bg-white', {
+            "is-right-side": side == "right",
+            "is-left-side": side == "left"
+        }) }}">
+            {% block caption %}
+                {{ caption }}
+            {% endblock %}
+        </div>
+    {% endif %}
+</div>

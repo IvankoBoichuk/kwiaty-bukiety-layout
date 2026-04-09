@@ -1,0 +1,64 @@
+<section class="relative">
+    {% if fields.ttl %}
+        <h2 class="h2 mb-6 sm:mb-8 lg:mb-12">{{ fields.ttl|format_title }}</h2>
+    {% endif %}
+
+    {% if fields.text %}
+        <p class="text-lg mb-8 max-w-3xl">{{ fields.text }}</p>
+    {% endif %}
+
+    <div class="events-swiper swiper overflow-hidden">
+        <div class="swiper-wrapper">
+            {% for item in fields.items %}
+                <div class="swiper-slide">
+                    <div class="bg-white rounded-2xl lg:rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow h-full flex flex-col">
+                        {% if item.img %}
+                            <div class="aspect-video overflow-hidden relative">
+                                <img 
+                                    src="{{ item.img.src }}" 
+                                    alt="{{ item.img.alt }}" 
+                                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                />
+                                {% if item.category %}
+                                    <span class="absolute top-4 left-4 px-3 py-1 bg-brand text-white text-sm font-medium rounded-full">
+                                        {{ item.category }}
+                                    </span>
+                                {% endif %}
+                            </div>
+                        {% endif %}
+
+                        <div class="p-4 sm:p-6 flex-1 flex flex-col">
+                            {% if item.date %}
+                                <time class="text-sm text-gray-500 mb-2">{{ item.date }}</time>
+                            {% endif %}
+
+                            {% if item.ttl %}
+                                <h3 class="text-xl sm:text-2xl font-bold mb-3 line-clamp-2">{{ item.ttl }}</h3>
+                            {% endif %}
+
+                            {% if item.text %}
+                                <p class="text-gray-600 mb-4 flex-1 line-clamp-3">{{ item.text }}</p>
+                            {% endif %}
+
+                            {% if item.link %}
+                                <a 
+                                    href="{{ item.link }}" 
+                                    target="{{ item.target | default('_self') }}"
+                                    class="inline-flex items-center gap-2 text-primary hover:text-primary-dark font-medium transition-colors mt-auto"
+                                >
+                                    <span>Learn more</span>
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination mt-8 relative!"></div>
+    </div>
+</section>

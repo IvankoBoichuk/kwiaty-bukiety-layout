@@ -1,0 +1,54 @@
+<footer class="rounded-t-3xl bg-primary text-white pt-8 pb-10 md:pt-12 md:pb-14">
+    <div class="max-w-360 w-full mx-auto px-4 md:px-8 lg:px-12">
+        <div class="flex flex-col md:flex-row pb-6 md:pb-8 border-b border-white/20 mb-6 md:mb-8 gap-6 md:gap-0">
+            {# logo #}
+            {% if logo.light %}
+                <div class="md:mr-8 xl:mr-33.25 flex-none">
+                    <img src="{{ logo.light }}" alt="Unbroken University Logo" width="94" height="46" class="w-20 h-auto md:md:w-23.5"/>
+                </div>
+            {% endif %}
+            {# socials #}
+            {% if socials %}
+                <div class="md:w-auto lg:w-51.75 md:mr-8 flex-none">
+                    <span class="block mb-3 text-sm md:text-base">Наші соціальні мережі</span>
+                    <ul class="flex flex-wrap gap-3">
+                        {% for item in socials %}
+                            <li>
+                                <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ item.icon|capitalize }}">
+                                    {{ item.icon }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+            {# menu.footer.main #}
+            {% if menu.footer.main %}
+                <nav class="flex-1">
+                    <ul class="columns-1 sm:columns-2 lg:columns-3 space-y-3 gap-x-5 md:w-auto xl:w-165.75 xl:ml-auto">
+                        {% for item in menu.footer.main %}
+                            <li><a href="{{ item.url }}" class="text-sm md:text-base">{{ item.label }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            {% endif %}
+        </div>
+        <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-6 md:gap-0">
+            <div class="order-2 md:order-1">
+                {% if menu.footer.secondary %}
+                    <ul class="flex flex-wrap gap-y-2 gap-x-4 md:gap-y-3 md:gap-x-5 mb-4 md:mb-6">
+                        {% for item in menu.footer.secondary %}
+                            <li><a href="{{ item.url }}" class="text-xs md:text-sm">{{ item.label }}</a></li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                <p class="text-[10px] md:text-[12px]">UNBROKEN UNIVERSITY 2026</p>
+            </div>
+            {% if logo.linewood %}
+                <div class="order-1 md:order-2">
+                    <img src="{{ logo.linewood }}" alt="Linewood Software Logo" width="97" height="28" class="w-20 h-auto md:w-24.25"/>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</footer>

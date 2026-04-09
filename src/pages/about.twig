@@ -1,0 +1,100 @@
+{% extends "./layouts/main.twig" %}
+
+{% block content %}
+	<div class="max-w-6xl mx-auto">
+		{# Hero Section - using data from about.twig.json #}
+		<section class="mb-12">
+			<div class="{{ html_classes(['text-center', 'py-12', hero.isActive and 'bg-blue-50', 'rounded-lg']) }}">
+				<h1 class="text-5xl font-bold mb-4 text-gray-900">{{ hero.heading }}</h1>
+				<p class="text-xl text-gray-600 max-w-2xl mx-auto">{{ hero.description }}</p>
+			</div>
+		</section>
+
+		{# Features Grid - looping through features array #}
+		<section class="mb-16">
+			<h2 class="text-3xl font-bold mb-8 text-center">Key Features</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				{% for feature in features %}
+					{% if feature.enabled %}
+						<div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+							<div class="text-4xl mb-4">{{ feature.icon }}</div>
+							<h3 class="text-xl font-semibold mb-2">{{ feature.title }}</h3>
+							<p class="text-gray-600">{{ feature.description }}</p>
+						</div>
+					{% endif %}
+				{% endfor %}
+			</div>
+		</section>
+
+		{# Statistics - using nested data #}
+		<section class="bg-linear-to-r from-blue-500 to-purple-600 text-white rounded-lg p-12 mb-16">
+			<h2 class="text-3xl font-bold mb-8 text-center">Our Achievements</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+				<div>
+					<div class="text-5xl font-bold mb-2">{{ stats.projects }}+</div>
+					<div class="text-lg opacity-90">Projects Completed</div>
+				</div>
+				<div>
+					<div class="text-5xl font-bold mb-2">{{ stats.clients }}+</div>
+					<div class="text-lg opacity-90">Happy Clients</div>
+				</div>
+				<div>
+					<div class="text-5xl font-bold mb-2">{{ stats.awards }}</div>
+					<div class="text-lg opacity-90">Awards Won</div>
+				</div>
+			</div>
+		</section>
+
+		{# Team Section - showing complex data structures #}
+		<section class="mb-16">
+			<h2 class="text-3xl font-bold mb-8 text-center">Meet Our Team</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				{% for member in team %}
+					<div class="bg-gray-50 p-6 rounded-lg">
+						<h3 class="text-2xl font-semibold mb-1">{{ member.name }}</h3>
+						<p class="text-blue-600 font-medium mb-3">{{ member.role }}</p>
+						<p class="text-gray-600">{{ member.bio }}</p>
+					</div>
+				{% endfor %}
+			</div>
+		</section>
+
+		{# Conditional rendering example #}
+		{% if contact.showContactForm %}
+			<section class="bg-blue-50 p-8 rounded-lg">
+				<h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+				<p>Contact form would go here...</p>
+			</section>
+		{% else %}
+			<section class="bg-gray-50 p-8 rounded-lg text-center">
+				<h2 class="text-2xl font-bold mb-4">Get In Touch</h2>
+				<p class="text-gray-600 mb-4">Have questions? We'd love to hear from you!</p>
+				<a href="mailto:{{ contact.email }}" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+					Email Us: {{ contact.email }}
+				</a>
+			</section>
+		{% endif %}
+
+		{# Example usage info #}
+		<section class="mt-16 border-t pt-8">
+			<div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+				<h3 class="text-lg font-semibold mb-3 text-yellow-900">💡 How This Page Works</h3>
+				<ul class="space-y-2 text-sm text-yellow-800">
+					<li>• <strong>Data:</strong> All content comes from <code class="bg-yellow-100 px-2 py-1 rounded">about.twig.json</code></li>
+					<li>• <strong>Template:</strong> Structure defined in <code class="bg-yellow-100 px-2 py-1 rounded">about.twig</code></li>
+					<li>• <strong>Layout:</strong> Extends <code class="bg-yellow-100 px-2 py-1 rounded">layouts/main.twig</code></li>
+					<li>• <strong>Custom Function:</strong> Uses <code class="bg-yellow-100 px-2 py-1 rounded">html_classes()</code> for conditional classes</li>
+					<li>• <strong>Loops:</strong> <code class="bg-yellow-100 px-2 py-1 rounded">{% raw %}{% for item in array %}{% endraw %}</code> iterates through data</li>
+					<li>• <strong>Conditionals:</strong> <code class="bg-yellow-100 px-2 py-1 rounded">{% raw %}{% if condition %}{% endraw %}</code> shows/hides content</li>
+				</ul>
+			</div>
+		</section>
+
+		{# Navigation back to home #}
+		<div class="text-center mt-12">
+			<a href="/" class="text-blue-600 hover:text-blue-800 font-medium">
+				← Back to Home
+			</a>
+		</div>
+	</div>
+{% endblock %}

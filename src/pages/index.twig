@@ -1,0 +1,6 @@
+{% extends "./layouts/main.twig" %}
+
+{% block content %}
+	{% include "sections/offer.twig" with {fields: offer} %}
+	{% include "sections/slider.twig" with {fields: slider} %}
+{% endblock %}

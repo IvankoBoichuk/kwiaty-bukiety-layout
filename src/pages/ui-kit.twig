@@ -1,0 +1,271 @@
+{% extends "./layouts/main.twig" %}
+
+{% block content %}
+	<div class="max-w-350 mx-auto">
+		<h1 class="text-[48px] font-bold mb-12 text-center">UI Kit</h1>
+		
+		{# Typography Section #}
+		<section class="mb-16">
+			<h2 class="h2 mb-8 pb-4 border-b-2 border-gray-200">Typography</h2>
+			
+			<div class="space-y-6">
+				<div>
+					<p class="text-sm text-gray-500 mb-2">Offer Title</p>
+					<h1 class="offer-ttl">Offer Title Style</h1>
+				</div>
+				
+				<div>
+					<p class="text-sm text-gray-500 mb-2">Heading 1</p>
+					<h1 class="h1">This is Heading 1</h1>
+				</div>
+				
+				<div>
+					<p class="text-sm text-gray-500 mb-2">Heading 2</p>
+					<h2 class="h2">This is Heading 2</h2>
+				</div>
+				
+				<div>
+					<p class="text-sm text-gray-500 mb-2">Heading 3</p>
+					<h3 class="h3">This is Heading 3</h3>
+				</div>
+				
+				<div>
+					<p class="text-sm text-gray-500 mb-2">Heading 4</p>
+					<h4 class="h4">This is Heading 4</h4>
+				</div>
+				
+				<div>
+					<p class="text-sm text-gray-500 mb-2">Heading 5</p>
+					<h5 class="h5">This is Heading 5</h5>
+				</div>
+				
+				<div>
+					<p class="text-sm text-gray-500 mb-2">Heading 6</p>
+					<h6 class="h6">This is Heading 6</h6>
+				</div>
+				
+				<div>
+					<p class="text-sm text-gray-500 mb-2">Body Text</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+			</div>
+		</section>
+
+		{# Buttons Section #}
+		<section class="mb-16">
+			<h2 class="h2 mb-8 pb-4 border-b-2 border-gray-200">Buttons</h2>
+			
+			<div class="space-y-8">
+				<div>
+					<p class="text-sm text-gray-500 mb-4 font-semibold">Button Variants</p>
+					<div class="flex flex-wrap gap-4">
+						{% for btn in buttonVariants %}
+							{% include "components/button.twig" with btn %}
+						{% endfor %}
+					</div>
+				</div>
+				
+				<div>
+					<p class="text-sm text-gray-500 mb-4 font-semibold">Button Sizes</p>
+					<div class="flex flex-wrap items-center gap-4">
+						{% for btn in buttonSizes %}
+							{% include "components/button.twig" with btn %}
+						{% endfor %}
+					</div>
+				</div>
+				
+				<div>
+					<p class="text-sm text-gray-500 mb-4 font-semibold">Buttons without Icon</p>
+					<div class="flex flex-wrap gap-4">
+						{% for btn in buttonNoIcon %}
+							{% include "components/button.twig" with btn %}
+						{% endfor %}
+					</div>
+				</div>
+				
+				<div>
+					<p class="text-sm text-gray-500 mb-4 font-semibold">All Combinations</p>
+					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+						{% set variants = ['primary', 'secondary', 'outline', 'ghost'] %}
+						{% set sizes = ['sm', 'md', 'lg'] %}
+						{% for variant in variants %}
+							<div>
+								<p class="text-xs font-bold mb-3 uppercase text-gray-700">{{ variant }}</p>
+								<div class="flex flex-col gap-3">
+									{% for size in sizes %}
+										{% include "components/button.twig" with {
+											text: size|upper,
+											link: "#",
+											target: "_self",
+											variant: variant,
+											size: size
+										} %}
+									{% endfor %}
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{# Quote Component #}
+		<section class="mb-16">
+			<h2 class="h2 mb-8 pb-4 border-b-2 border-gray-200">Quote Component</h2>
+			
+			<div class="space-y-12">
+				<div>
+					<p class="text-sm text-gray-500 mb-4">Quote with Image - Right Side</p>
+					{% include "components/quote.twig" with quoteRight %}
+				</div>
+				
+				<div>
+					<p class="text-sm text-gray-500 mb-4">Quote with Image - Left Side</p>
+					{% include "components/quote.twig" with quoteLeft %}
+				</div>
+			</div>
+		</section>
+
+		{# Media Components #}
+		<section class="mb-16">
+			<h2 class="h2 mb-8 pb-4 border-b-2 border-gray-200">Media Components</h2>
+			
+			<div class="space-y-12">
+				<div>
+					<p class="text-sm text-gray-500 mb-4">Image</p>
+					<div class="max-w-2xl">
+						<div class="aspect-video relative overflow-hidden rounded-xl">
+							{% include "components/media/img.twig" with sampleImage %}
+						</div>
+					</div>
+				</div>
+				
+				<div>
+					<p class="text-sm text-gray-500 mb-4">Media Caption - Right Side</p>
+					<div class="max-w-3xl">
+						{% embed "components/media-caption.twig" with {caption: "Sample Caption", side: "right"} %}
+							{% block content %}
+								<div class="aspect-video bg-gray-200 flex items-center justify-center">
+									<span class="text-gray-400">Media Content</span>
+								</div>
+							{% endblock %}
+							{% block caption %}
+								<div class="pt-2 px-3 sm:pt-3.5 sm:px-6.5">
+									<span class="font-bold text-[18px] sm:text-[24px] block">Author Name</span>
+									<span class="text-gray-600">Position Title</span>
+								</div>
+							{% endblock %}
+						{% endembed %}
+					</div>
+				</div>
+				
+				<div>
+					<p class="text-sm text-gray-500 mb-4">Media Caption - Left Side</p>
+					<div class="max-w-3xl">
+						{% embed "components/media-caption.twig" with {caption: "Sample Caption", side: "left"} %}
+							{% block content %}
+								<div class="aspect-video bg-gray-200 flex items-center justify-center">
+									<span class="text-gray-400">Media Content</span>
+								</div>
+							{% endblock %}
+							{% block caption %}
+								<div class="pt-2 px-3 sm:pt-3.5 sm:px-6.5">
+									<span class="font-bold text-[18px] sm:text-[24px] block">Author Name</span>
+									<span class="text-gray-600">Position Title</span>
+								</div>
+							{% endblock %}
+						{% endembed %}
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{# Colors Section #}
+		<section class="mb-16">
+			<h2 class="h2 mb-8 pb-4 border-b-2 border-gray-200">Colors</h2>
+			
+			<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+				<div>
+					<div class="h-24 bg-primary rounded-lg mb-2 border border-gray-200"></div>
+					<p class="text-sm font-medium">Primary</p>
+					<p class="text-xs text-gray-500">bg-primary</p>
+				</div>
+				
+				<div>
+					<div class="h-24 bg-white rounded-lg mb-2 border border-gray-200"></div>
+					<p class="text-sm font-medium">White</p>
+					<p class="text-xs text-gray-500">bg-white</p>
+				</div>
+				
+				<div>
+					<div class="h-24 bg-gray-100 rounded-lg mb-2 border border-gray-200"></div>
+					<p class="text-sm font-medium">Gray 100</p>
+					<p class="text-xs text-gray-500">bg-gray-100</p>
+				</div>
+				
+				<div>
+					<div class="h-24 bg-gray-200 rounded-lg mb-2 border border-gray-200"></div>
+					<p class="text-sm font-medium">Gray 200</p>
+					<p class="text-xs text-gray-500">bg-gray-200</p>
+				</div>
+				
+				<div>
+					<div class="h-24 bg-gray-600 rounded-lg mb-2 border border-gray-200"></div>
+					<p class="text-sm font-medium">Gray 600</p>
+					<p class="text-xs text-gray-500">bg-gray-600</p>
+				</div>
+				
+				<div>
+					<div class="h-24 bg-black rounded-lg mb-2 border border-gray-200"></div>
+					<p class="text-sm font-medium">Black</p>
+					<p class="text-xs text-gray-500">bg-black</p>
+				</div>
+			</div>
+		</section>
+
+		{# Spacing #}
+		<section class="mb-16">
+			<h2 class="h2 mb-8 pb-4 border-b-2 border-gray-200">Spacing Scale</h2>
+			
+			<div class="space-y-4">
+				{% for size in spacingSizes %}
+					<div class="flex items-center gap-4">
+						<div class="w-20 text-sm text-gray-600">{{ size.label }}</div>
+						<div class="bg-primary" style="width: {{ size.value }}; height: 20px;"></div>
+					</div>
+				{% endfor %}
+			</div>
+		</section>
+
+		{# Border Radius #}
+		<section class="mb-16">
+			<h2 class="h2 mb-8 pb-4 border-b-2 border-gray-200">Border Radius</h2>
+			
+			<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+				<div>
+					<div class="h-24 bg-gray-200 rounded mb-2"></div>
+					<p class="text-sm font-medium">Default</p>
+					<p class="text-xs text-gray-500">rounded</p>
+				</div>
+				
+				<div>
+					<div class="h-24 bg-gray-200 rounded-xl mb-2"></div>
+					<p class="text-sm font-medium">XL</p>
+					<p class="text-xs text-gray-500">rounded-xl</p>
+				</div>
+				
+				<div>
+					<div class="h-24 bg-gray-200 rounded-2xl mb-2"></div>
+					<p class="text-sm font-medium">2XL</p>
+					<p class="text-xs text-gray-500">rounded-2xl</p>
+				</div>
+				
+				<div>
+					<div class="h-24 bg-gray-200 rounded-3xl mb-2"></div>
+					<p class="text-sm font-medium">3XL</p>
+					<p class="text-xs text-gray-500">rounded-3xl</p>
+				</div>
+			</div>
+		</section>
+	</div>
+{% endblock %}

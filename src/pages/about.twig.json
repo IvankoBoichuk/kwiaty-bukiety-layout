@@ -1,0 +1,49 @@
+{
+    "title": "About Our Project",
+    "hero": {
+        "heading": "Welcome to Our Amazing Project",
+        "description": "This is an example page showing how to work with Twig templates and JSON data context",
+        "isActive": true
+    },
+    "features": [
+        {
+            "icon": "⚡",
+            "title": "Lightning Fast",
+            "description": "Built with Vite for blazing fast development experience",
+            "enabled": true
+        },
+        {
+            "icon": "🎨",
+            "title": "Beautiful Design",
+            "description": "Styled with Tailwind CSS utility classes",
+            "enabled": true
+        },
+        {
+            "icon": "📦",
+            "title": "Easy to Use",
+            "description": "Simple folder structure and intuitive workflow",
+            "enabled": true
+        }
+    ],
+    "team": [
+        {
+            "name": "John Doe",
+            "role": "Lead Developer",
+            "bio": "Passionate about creating amazing web experiences"
+        },
+        {
+            "name": "Jane Smith",
+            "role": "Designer",
+            "bio": "Crafting beautiful and functional interfaces"
+        }
+    ],
+    "stats": {
+        "projects": 150,
+        "clients": 50,
+        "awards": 12
+    },
+    "contact": {
+        "email": "hello@example.com",
+        "showContactForm": false
+    }
+}

@@ -1,0 +1,24 @@
+{% if media.type == "img" %}
+    {% include "img.twig" with {
+        src: media.img.src,
+        alt: media.img.alt,
+        width: media.img.width,
+        height: media.img.height
+    } %}
+{% elseif media.type == "video-embed" %}
+    {% include "video-embed.twig" with {
+        src: media.video.src,
+        poster: media.video.poster,
+        title: media.video.title,
+        width: media.video.width,
+        height: media.video.height
+    } %}
+{% elseif media.type == "video-modal" %}
+    {% include "video-modal.twig" with {
+        src: media.video.src,
+        poster: media.video.poster,
+        title: media.video.title,
+        width: media.video.width,
+        height: media.video.height
+    } %}
+{% endif %}

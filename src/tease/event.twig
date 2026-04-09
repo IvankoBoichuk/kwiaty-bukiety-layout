@@ -1,0 +1,38 @@
+<li class="relative text-white pt-6 pl-6 pb-7.5 pr-25">
+
+	<div class="absolute inset-0 size-full rounded-3xl rounded-br-[50px] overflow-hidden -z-10">
+		<img class="absolute inset-0 size-full object-cover" src="{{ event.img.src }}" alt="{{ event.img.alt }}" width="{{ event.img.width }}" height="{{ event.img.height }}"/>
+		<div class="absolute inset-0 size-full" style="background: linear-gradient(180deg, rgba(1, 1, 63, 0.00) 0%, #01013F 100%)"></div>
+	</div>
+
+	{% set top = [
+        event.category,
+        event.date
+    ] %}
+
+	<div class="flex gap-1.5 mb-39.5">
+		{% for info in top %}
+			<span class="py-1.5 px-5 border border-white rounded-full">{{ info }}</span>
+		{% endfor %}
+	</div>
+
+	<a href="{{ event.link }}" target="_blank" class="text-[24px] font-bold hover:underline after:content-[''] after:block after:absolute after:inset-0 after:z-10">
+		{{ event.ttl }}
+	</a>
+
+	<div class="absolute bottom-0 right-0">
+		<svg class="absolute bottom-0 right-15.25 scale-120" width="15" height="13" viewbox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M5.78418 0C8.02252 4.58066 11.0161 8.72381 14.6025 12.2695H0C5.3617 12.2692 8.45756 5.30395 6.04102 0.517578C5.95425 0.34572 5.8688 0.173113 5.78418 0Z" fill="white"/>
+		</svg>
+		<svg class="absolute bottom-15.25 right-0 scale-120" width="13" height="15" viewbox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M0 5.78418C0.173113 5.8688 0.34572 5.95425 0.517578 6.04102C5.30395 8.45756 12.2692 5.3617 12.2695 0V14.6025C8.72381 11.0161 4.58066 8.02252 0 5.78418Z" fill="white"/>
+		</svg>
+
+		<div class="border-13 border-white rounded-full bg-[#EEEEEE] translate-3.25">
+			<svg width="64" height="64" viewbox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M31.9435 18.3984H45.6013V31.9434" stroke="#01013F" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M18.3986 45.6013L45.6014 18.3984" stroke="#01013F" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+			</svg>
+		</div>
+	</div>
+</li>

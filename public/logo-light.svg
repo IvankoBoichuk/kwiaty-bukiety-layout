@@ -1,0 +1,14 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Light logo for dark backgrounds -->
+  <rect x="5" y="10" width="40" height="40" rx="8" fill="#FFFFFF"/>
+  <path d="M25 20L35 30L25 40L15 30L25 20Z" fill="#3B82F6"/>
+  
+  <text x="55" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF">
+    Your Brand
+  </text>
+  
+  <!-- Optional tagline -->
+  <text x="55" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#D1D5DB">
+    Boilerplate Template
+  </text>
+</svg>

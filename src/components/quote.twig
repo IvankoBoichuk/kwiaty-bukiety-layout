@@ -1,0 +1,29 @@
+{% set side = side|default('right') %}
+<div class="{{ html_classes('flex flex-col gap-6.5', {
+    'md:flex-row': side == 'right',
+    'md:flex-row-reverse': side == 'left'
+}) }}">
+    <div class="flex-1 ">
+        {% embed "media-caption.twig" with {caption: author} %}
+            {% block content %}
+                <div class="aspect-676/427">
+                    {% include "media/index.twig" with { media: media } %}
+                </div>
+            {% endblock %}
+            {% block caption %}
+                <div class="pt-2 px-3 sm:pt-3.5 sm:px-6.5 flex flex-col gap-3">
+                    {% if author %}
+                        <span class="font-bold text-[18px] sm:text-[24px] block">{{ author }}</span>
+                    {% endif %}
+                    {% if position %}
+                        <span>{{ position }}</span>
+                    {% endif %}
+                </div>
+            {% endblock %}
+        {% endembed %}
+    </div>
+    <div class="flex-1 md:flex flex-col justify-end gap-6 md:pb-17.5">
+        <svg class="w-5 sm:w-6 h-auto md:w-12 lg:w-15 float-left mr-2 md:float-none md:m-0" width="60" height="43" viewBox="0 0 60 43" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.2 27.651c-1.32 3.32-3.4 6.6-6.18 9.76-.88 1-1 2.44-.28 3.56.56.88 1.48 1.36 2.48 1.36.28 0 .56-.02.84-.12 5.88-1.72 19.62-7.82 20-27.38C28.2 7.291 22.68.811 15.5.071c-3.98-.4-7.94.9-10.88 3.54A14.08 14.08 0 0 0 0 14.031c0 6.6 4.68 12.38 11.2 13.62M47.42.071c-3.96-.4-7.92.9-10.86 3.54a14.08 14.08 0 0 0-4.62 10.42c0 6.6 4.68 12.38 11.2 13.62-1.32 3.32-3.4 6.6-6.18 9.76-.88 1-1 2.44-.28 3.56.56.88 1.48 1.36 2.48 1.36.28 0 .56-.02.84-.12 5.88-1.72 19.62-7.82 20-27.38v-.28C60 7.131 54.54.811 47.42.071" fill="#fcc906"/></svg>
+        <blockquote class="text-[16px] sm:text-[20px] md:text-[22px] lg:text-[24px] font-light">{{ text }}</blockquote>
+    </div>
+</div>

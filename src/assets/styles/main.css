@@ -1,0 +1,33 @@
+@import "./fonts.css";
+@import "tailwindcss";
+@import "./typography.css";
+
+@theme {
+    /* Primary brand colors - customize these for your project */
+    --color-primary: #3B82F6;
+    --color-primary-dark: #1E40AF;
+    --color-brand: #F59E0B;
+    --color-secondary: #EC4899;
+    --color-accent: #10B981;
+    
+    /* Neutral colors */
+    --color-background: #F9FAFB;
+    --color-text: #111827;
+    
+    /* Fonts - replace with your project fonts */
+    --font-main: 'Geologica', system-ui, -apple-system, sans-serif;
+}
+
+/* Base styles */
+@layer base {
+  :root {
+    /* Swiper configuration */
+    --swiper-pagination-bullet-horizontal-gap: 6px;
+    --swiper-pagination-color: var(--color-brand);
+    --swiper-pagination-bullet-size: 12px;
+  }
+
+body {
+    @apply text-[14px] sm:text-[16px] font-main;
+  }
+}
