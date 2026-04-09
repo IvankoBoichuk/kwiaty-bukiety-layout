@@ -9,6 +9,13 @@
     --color-brand: #F59E0B;
     --color-secondary: #EC4899;
     --color-accent: #10B981;
+
+    /* From Design System */
+    --color-purple-dark: #484D6F;
+    --color-green-dark: #0C3421;
+    --color-green-default: #0C4A2C;
+    --color-gray-6: #F2F2F2;
+    --color-bg: #FCF9F6;
     
     /* Neutral colors */
     --color-background: #F9FAFB;

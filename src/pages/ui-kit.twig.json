@@ -2,10 +2,10 @@
   "title": "UI Kit - Template Showcase",
   "buttonVariants": [
     {
-      "text": "Primary",
+      "text": "Purple",
       "link": "#",
       "target": "_self",
-      "variant": "primary",
+      "variant": "purple",
       "size": "md"
     },
     {
@@ -35,21 +35,28 @@
       "text": "Small Button",
       "link": "#",
       "target": "_self",
-      "variant": "primary",
+      "variant": "purple",
+      "size": "xs"
+    },
+    {
+      "text": "Small Button",
+      "link": "#",
+      "target": "_self",
+      "variant": "purple",
       "size": "sm"
     },
     {
       "text": "Medium Button",
       "link": "#",
       "target": "_self",
-      "variant": "primary",
+      "variant": "purple",
       "size": "md"
     },
     {
       "text": "Large Button",
       "link": "#",
       "target": "_self",
-      "variant": "primary",
+      "variant": "purple",
       "size": "lg"
     }
   ],
@@ -58,7 +65,7 @@
       "text": "No Icon Button",
       "link": "#",
       "target": "_self",
-      "variant": "primary",
+      "variant": "purple",
       "size": "md",
       "showIcon": false
     },
