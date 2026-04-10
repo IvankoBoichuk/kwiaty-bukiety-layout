@@ -1,7 +1,7 @@
 {
     "offer": {
         "hero": {
-            "ttl": "Kwiaty, \n które robią \n wrażenie",
+            "title": "Kwiaty, \n które robią \n wrażenie",
             "img": {
                 "src": "/images/flowers/person-cutting-up-flowers.png",
                 "alt": "Hero image showcasing our services"
@@ -14,7 +14,8 @@
                 "alt": "Hero image showcasing our services"
             },
             "name": "Niebieska róża",
-            "link": "/kategorie/roze/niebieska-roza"
+            "link": "/kategorie/roze/niebieska-roza",
+            "target": "_blank"
         },
         "categories": [
             {
@@ -23,7 +24,8 @@
                     "alt": "Róże"
                 },
                 "name": "Róże",
-                "link": "/kategorie/roze"
+                "link": "/kategorie/roze",
+                "target": "_self"
             },
             {
                 "img": {
@@ -31,7 +33,8 @@
                     "alt": "Bukiety dla niej"
                 },
                 "name": "Bukiety dla niej",
-                "link": "/kategorie/rosliny-doniczkowe"
+                "link": "/kategorie/rosliny-doniczkowe",
+                "target": "_self"
             },
             {
                 "img": {
@@ -39,7 +42,8 @@
                     "alt": "Bukiety na urodziny"
                 },
                 "name": "Bukiety na urodziny",
-                "link": "/kategorie/akcesoria"
+                "link": "/kategorie/akcesoria",
+                "target": "_self"
             },
             {
                 "img": {
@@ -47,73 +51,58 @@
                     "alt": "Kwiaty na dziś"
                 },
                 "name": "Kwiaty na dziś",
-                "link": "/kategorie/akcesoria"
+                "link": "/kategorie/akcesoria",
+                "target": "_self"
             }
         ]
     },
     "slider": {
-        "ttl": "Latest {News} & Updates",
-        "text": "Stay informed with our latest insights, project updates, and industry news.",
+        "title": "Kwiaty z dostawą na każdą okazję ",
+        "subtitle": "Najczęściej wybierany dziś",
         "items": [
             {
-                "ttl": "Innovative Solutions for Modern Businesses",
-                "text": "Discover how our cutting-edge approach is transforming the way companies operate in the digital age.",
-                "date": "April 5, 2026",
-                "category": "Innovation",
-                "link": "/news/innovative-solutions",
-                "target": "_blank",
                 "img": {
-                    "src": "/placeholder.svg",
-                    "alt": "Innovation in business"
-                }
+                    "src": "/images/flowers/malinova-pianka.png",
+                    "alt": "Bukiet Malinowa Pianka"
+                },
+                "name": "Bukiet Malinowa Pianka",
+                "link": "/kategorie/roze/malinova-pianka",
+                "target": "_blank",
+                "badges": ["Dostawa Gratis", "Bestseller"],
+                "price": "169.00 zł"
             },
             {
-                "ttl": "Success Story: Client Transformation",
-                "text": "Learn how we helped a leading organization achieve 300% growth in just 12 months.",
-                "date": "March 28, 2026",
-                "category": "Case Study",
-                "link": "/news/client-success",
-                "target": "_blank",
                 "img": {
-                    "src": "/placeholder.svg",
-                    "alt": "Client success story"
-                }
+                    "src": "/images/flowers/red-aksamit.png",
+                    "alt": "Bukiet Malinowa Pianka"
+                },
+                "name": "Bukiet Malinowa Pianka",
+                "link": "/kategorie/roze/malinova-pianka",
+                "target": "_blank",
+                "badges": ["Dostawa Gratis"],
+                "price": "169.00 zł"
             },
             {
-                "ttl": "New Product Launch Announcement",
-                "text": "We're excited to introduce our latest product that will revolutionize your workflow.",
-                "date": "March 15, 2026",
-                "category": "Product",
-                "link": "/news/product-launch",
-                "target": "_blank",
                 "img": {
-                    "src": "/placeholder.svg",
-                    "alt": "New product launch"
-                }
+                    "src": "/images/flowers/malinova-pianka.png",
+                    "alt": "Bukiet Malinowa Pianka"
+                },
+                "name": "Bukiet Malinowa Pianka",
+                "link": "/kategorie/roze/malinova-pianka",
+                "target": "_blank",
+                "badges": ["Dostawa Gratis", "Bestseller"],
+                "price": "169.00 zł"
             },
             {
-                "ttl": "Industry Trends Report 2026",
-                "text": "Get insights into the latest trends shaping our industry and what they mean for your business.",
-                "date": "February 20, 2026",
-                "category": "Report",
-                "link": "/news/trends-2026",
-                "target": "_blank",
                 "img": {
-                    "src": "/placeholder.svg",
-                    "alt": "Industry trends"
-                }
-            },
-            {
-                "ttl": "Team Expansion & New Hires",
-                "text": "Meet the talented professionals joining our growing team to better serve our clients.",
-                "date": "February 10, 2026",
-                "category": "Company",
-                "link": "/news/team-expansion",
+                    "src": "/images/flowers/malinova-pianka.png",
+                    "alt": "Bukiet Malinowa Pianka"
+                },
+                "name": "Bukiet Malinowa Pianka",
+                "link": "/kategorie/roze/malinova-pianka",
                 "target": "_blank",
-                "img": {
-                    "src": "/placeholder.svg",
-                    "alt": "Team expansion"
-                }
+                "badges": ["Dostawa Gratis", "Bestseller"],
+                "price": "169.00 zł"
             }
         ]
     }

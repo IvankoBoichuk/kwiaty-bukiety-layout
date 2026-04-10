@@ -10,11 +10,9 @@
 	--color-accent: #e8e8db;
 
 	/* From Design System */
+	--color-purple: #6c5b7b;
 	--color-purple-dark: #484d6f;
-	--color-green-dark: #0c3421;
-	--color-green-default: #0c4a2c;
-	--color-gray-6: #f2f2f2;
-	--color-bg: #fcf9f6;
+	--color-purple-light: #b19bc5;
 
 	/* Neutral colors */
 	--color-background: #fcf9f6;
@@ -30,11 +28,29 @@
 	:root {
 		/* Swiper configuration */
 		--swiper-pagination-bullet-horizontal-gap: 6px;
-		--swiper-pagination-color: var(--color-primary);
+		--swiper-pagination-color: var(--color-purple-light);
 		--swiper-pagination-bullet-size: 12px;
 	}
 
 	body {
 		@apply text-[14px] sm:text-[16px] font-main;
+	}
+
+	.swiper-pagination {
+		margin-top: 12px !important;
+	}
+
+	.swiper-pagination-bullet {
+		height: 8px !important;
+		width: 8px !important;
+		border-radius: 12px !important;
+		opacity: 1 !important;
+		background: var(--color-purple-light) !important;
+		transition: width 0.3s ease !important;
+		margin: 0 2.5px !important;
+	}
+
+	.swiper-pagination-bullet-active {
+		width: 16px !important;
 	}
 }

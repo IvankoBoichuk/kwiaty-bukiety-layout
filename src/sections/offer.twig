@@ -1,9 +1,10 @@
 <section class="mt-24">
 	{% embed "../layouts/container.twig" %}
 		{% block content %}
+
 			<div class="relative overflow-hidden w-full p-3 pb-1.5 rounded-2xl z-0">
-				{% if fields.hero.ttl %}
-					<h1 class="flex flex-col justify-center mb-3 h-25">{{ fields.hero.ttl|fancy_title }}</h1>
+				{% if fields.hero.title %}
+					<h1 class="flex flex-col justify-center mb-3 h-25">{{ fields.hero.title|fancy_title }}</h1>
 				{% endif %}
 				{% if fields.hero.advantages %}
 					<ul class="flex flex-wrap gap-1.5">
@@ -15,30 +16,39 @@
 					</ul>
 				{% endif %}
 				{% if fields.hero.img %}
-					<img src="{{ fields.hero.img.src }}" alt="{{ fields.hero.img.alt }}" class="absolute top-1/2 -translate-y-1/2 right-0 -z-20 w-[50%]"/>
+					<img src="{{ fields.hero.img.src }}" alt="{{ fields.hero.img.alt|default("Hero Image") }}" fetchpriority="high" class="absolute top-1/2 -translate-y-1/2 right-0 -z-20 w-[50%]"/>
 					<div class="absolute inset-0 -z-10 w-full bg-linear-to-r from-50% to-70% from-[#F9F3EB] to-[#f9f3eb00]"></div>
 				{% endif %}
 			</div>
+
 			<div class="grid grid-cols-2 gap-1.25 auto-rows-min mt-6">
-				<a href="{{ fields.product.link }}" class="contents">
-					<div class="relative overflow-hidden rounded-2xl row-span-2 hover:brightness-105 transition cursor-pointer">
-						<img src="{{ fields.product.img.src }}" class="absolute inset-0 w-full h-full object-cover" alt="{{ fields.product.img.alt }}">
-						<div class="flex items-center absolute bottom-1 left-1/2 -translate-x-1/2 h-6 bg-black/60 px-3 rounded-full">
-							<span class="text-background text-sm leading-tight font-medium whitespace-nowrap"/>
-						</div>
-					</div>
-				</a>
-				{% for item in fields.categories %}
-					<a href="{{ item.link }}" class="contents">
-						<div class="flex items-center bg-[#F2EDE1] rounded-2xl overflow-hidden h-12.75 hover:bg-[#F2EDE1]/80 transition-colors cursor-pointer">
-							<img src="{{ item.img.src }}" class="w-12.75 object-cover" alt="{{ item.img.alt }}">
-							<h3 class="text-green-dark text-[15px] font-normal leading-tight px-2.5">
-								{{ item.name }}
-							</h3>
+				{% if fields.product %}
+					<a href="{{ fields.product.link }}" target="{{ fields.product.target|default('_self') }}" class="contents cursor-pointer">
+						<div class="relative overflow-hidden rounded-2xl row-span-2 hover:brightness-105 transition cursor-pointer">
+							<img src="{{ fields.product.img.src }}" class="absolute inset-0 w-full h-full object-cover" alt="{{ fields.product.img.alt }}">
+							<div class="flex items-center absolute bottom-1 left-1/2 -translate-x-1/2 h-6 bg-black/60 px-3 rounded-full">
+								<span class="text-background text-sm font-medium whitespace-nowrap">
+									{{fields.product.name}}</span>
+							</div>
 						</div>
 					</a>
-				{% endfor %}
+				{% endif %}
+				{% if fields.categories|length %}
+					{% for item in fields.categories %}
+						{% if item.link %}
+							<a href="{{ item.link }}" target="{{ item.target|default('_self') }}" class="contents cursor-pointer">
+								<div class="flex items-center bg-[#F2EDE1] rounded-2xl overflow-hidden h-12.75 hover:bg-[#F2EDE1]/80 transition-colors cursor-pointer">
+									<img src="{{ item.img.src }}" class="w-12.75 object-cover" alt="{{ item.img.alt }}">
+									<h3 class="text-green-dark text-[15px] font-normal leading-tight px-2.5">
+										{{ item.name }}
+									</h3>
+								</div>
+							</a>
+						{% endif %}
+					{% endfor %}
+				{% endif %}
 			</div>
+
 		{% endblock %}
 	{% endembed %}
 </section>
