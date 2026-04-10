@@ -1,12 +1,3 @@
-/**
- * Geologica Font Family - Google Fonts
- * vite-plugin-webfont-dl automatically downloads, converts to WOFF2, and optimizes these fonts
- * 
- * Benefits:
- * - Automatic conversion to WOFF2 (smallest size)
- * - Unicode subsetting support
- * - Self-hosted (no external requests)
- * - Optimized for performance
- */
-
-@import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Galada&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap");

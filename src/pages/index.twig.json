@@ -1,19 +1,55 @@
 {
     "offer": {
-        "ttl" : "{Your} BRAND NAME",
-        "subttl": "Inspiring tagline that describes {your mission}",
-        "text": "We deliver exceptional solutions that transform businesses and create lasting value. Our expertise combines innovation, strategy, and execution to help you achieve your goals.",
-        "btns": [
+        "hero": {
+            "ttl": "Kwiaty, \n które robią \n wrażenie",
+            "img": {
+                "src": "/images/flowers/person-cutting-up-flowers.png",
+                "alt": "Hero image showcasing our services"
+            },
+            "advantages": ["Darmowa wysyłka", "Tego samego dnia", "Płatność online"]
+        },
+        "product": {
+            "img": {
+                "src": "/images/flowers/blue-rose.png",
+                "alt": "Hero image showcasing our services"
+            },
+            "name": "Niebieska róża",
+            "link": "/kategorie/roze/niebieska-roza"
+        },
+        "categories": [
             {
-                "text": "UI-Kit",
-                "link": "/ui-kit.html",
-                "target": "_blank"
+                "img": {
+                    "src": "/images/flowers/malinova-pianka.png",
+                    "alt": "Róże"
+                },
+                "name": "Róże",
+                "link": "/kategorie/roze"
+            },
+            {
+                "img": {
+                    "src": "/images/flowers/red-aksamit.png",
+                    "alt": "Bukiety dla niej"
+                },
+                "name": "Bukiety dla niej",
+                "link": "/kategorie/rosliny-doniczkowe"
+            },
+            {
+                "img": {
+                    "src": "/images/flowers/winter-roses.png",
+                    "alt": "Bukiety na urodziny"
+                },
+                "name": "Bukiety na urodziny",
+                "link": "/kategorie/akcesoria"
+            },
+            {
+                "img": {
+                    "src": "/images/flowers/white-winter-roses.png",
+                    "alt": "Kwiaty na dziś"
+                },
+                "name": "Kwiaty na dziś",
+                "link": "/kategorie/akcesoria"
             }
-        ],
-        "img": {
-            "src": "/placeholder.svg",
-            "alt": "Hero image showcasing our services"
-        }
+        ]
     },
     "slider": {
         "ttl": "Latest {News} & Updates",
