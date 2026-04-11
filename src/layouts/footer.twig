@@ -52,3 +52,73 @@
         </div>
     </div>
 </footer>
+<nav class="px-6 py-3 bg-[#072114] sticky bottom-0 inset-x-0 w-full z-50" aria-label="Bottom navigation">
+  <ul class="flex justify-between items-center">
+    {% for item in [
+        {
+            "id": "home",
+            "name": "Home",
+            "type": "link",
+            'icon': '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#F2F2F2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 22V12H15V22" stroke="#F2F2F2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>',
+            "meta": {
+                "url" : "/",
+                "target": "_self",
+            },
+        },
+        {
+            "id": "search",
+            "name": "Search",
+            "type": "button",
+            'icon': '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#F2F2F2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20.9999 20.9999L16.6499 16.6499" stroke="#F2F2F2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>',
+            "meta": {}
+        },
+        {
+            "id": "cart",
+            "name": "Cart",
+            "type": "link",
+            'icon': '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 22C8.55228 22 9 21.5523 9 21C9 20.4477 8.55228 20 8 20C7.44772 20 7 20.4477 7 21C7 21.5523 7.44772 22 8 22Z" stroke="#F2F2F2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M19 22C19.5523 22 20 21.5523 20 21C20 20.4477 19.5523 20 19 20C18.4477 20 18 20.4477 18 21C18 21.5523 18.4477 22 19 22Z" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2.0498 2.0498H4.0498L6.7098 14.4698C6.80738 14.9247 7.06048 15.3313 7.42552 15.6197C7.79056 15.908 8.24471 16.0602 8.7098 16.0498H18.4898C18.945 16.0491 19.3863 15.8931 19.7408 15.6076C20.0954 15.3222 20.3419 14.9243 20.4398 14.4798L22.0898 7.0498H5.1198" stroke="#F2F2F2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>',
+            "meta": {
+                "url" : "/cart",
+                "target": "_self",
+                "count": 3
+            }
+        },
+        {
+            "id": "menu",
+            "name": "Menu",
+            "type": "button",
+            'icon': '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 12H20" stroke="#F2F2F2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4 6H20" stroke="#F2F2F2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4 18H20" stroke="#F2F2F2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>',
+            "meta": {
+                "onClick": "toggleMenu()"
+            }
+        }
+    ] %}
+        <li>
+            {% if item.type == 'link' %}
+                <a href="{{ item.meta.url }}" target="{{ item.meta.target }}" class="text-gray-6 text-[14px] leading-4.75 relative">
+                    {{ item.icon }}
+                    <span data-count="{{ item.meta.count|default(0) }}" class="absolute before:content-[attr(data-count)] data-[count=0]:hidden bottom-2 left-2 size-5.5 bg-[#EB5757] text-background text-[13px] font-semibold leading-none rounded-full flex items-center justify-center text-center"></span>
+                </a>
+            {% elseif item.type == 'button' %}
+                <button type="button" onclick="{{ item.meta.onClick }}" class="text-gray-6 text-[14px] leading-4.75 relative">
+                    {{ item.icon }}
+                </button>
+            {% endif %}
+        </li>
+    {% endfor %}
+  </ul>
+</nav>
