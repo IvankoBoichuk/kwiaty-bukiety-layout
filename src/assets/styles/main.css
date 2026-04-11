@@ -3,38 +3,54 @@
 @import "./typography.css";
 
 @theme {
-    /* Primary brand colors - customize these for your project */
-    --color-primary: #3B82F6;
-    --color-primary-dark: #1E40AF;
-    --color-brand: #F59E0B;
-    --color-secondary: #EC4899;
-    --color-accent: #10B981;
+	/* Primary brand colors - customize these for your project */
+	--color-primary: #0c3421;
+	--color-primary-dark: #03130b;
+	--color-secondary: #e5efde;
+	--color-accent: #e8e8db;
 
-    /* From Design System */
-    --color-purple-dark: #484D6F;
-    --color-green-dark: #0C3421;
-    --color-green-default: #0C4A2C;
-    --color-gray-6: #F2F2F2;
-    --color-bg: #FCF9F6;
-    
-    /* Neutral colors */
-    --color-background: #F9FAFB;
-    --color-text: #111827;
-    
-    /* Fonts - replace with your project fonts */
-    --font-main: 'Geologica', system-ui, -apple-system, sans-serif;
+	/* From Design System */
+	--color-purple: #6c5b7b;
+	--color-purple-dark: #484d6f;
+	--color-purple-light: #b19bc5;
+
+	/* Neutral colors */
+	--color-background: #fcf9f6;
+	--color-light-text: #f2f2f2;
+	--color-dark-text: #0c4a2c;
+
+	/* Fonts - replace with your project fonts */
+	--font-main: "Raleway", system-ui, -apple-system, sans-serif;
 }
 
 /* Base styles */
 @layer base {
-  :root {
-    /* Swiper configuration */
-    --swiper-pagination-bullet-horizontal-gap: 6px;
-    --swiper-pagination-color: var(--color-brand);
-    --swiper-pagination-bullet-size: 12px;
-  }
+	:root {
+		/* Swiper configuration */
+		--swiper-pagination-bullet-horizontal-gap: 6px;
+		--swiper-pagination-color: var(--color-purple-light);
+		--swiper-pagination-bullet-size: 12px;
+	}
 
-body {
-    @apply text-[14px] sm:text-[16px] font-main;
-  }
+	body {
+		@apply text-[14px] sm:text-[16px] font-main;
+	}
+
+	.swiper-pagination {
+		margin-top: 12px !important;
+	}
+
+	.swiper-pagination-bullet {
+		height: 8px !important;
+		width: 8px !important;
+		border-radius: 12px !important;
+		opacity: 1 !important;
+		background: var(--color-purple-light) !important;
+		transition: width 0.3s ease !important;
+		margin: 0 2.5px !important;
+	}
+
+	.swiper-pagination-bullet-active {
+		width: 16px !important;
+	}
 }

@@ -1,11 +1,11 @@
 {
-  "tabWidth": 4,
-  "useTabs": false,
-  "semi": false,
-  "singleQuote": true,
-  "htmlWhitespaceSensitivity": "strict",
-  "bracketSpacing": true,
-  "bracketSameLine": true,
-  "printWidth": 100,
-  "proseWrap": "preserve"
+    "tabWidth": 4,
+    "useTabs": false,
+    "semi": false,
+    "singleQuote": true,
+    "htmlWhitespaceSensitivity": "strict",
+    "bracketSpacing": true,
+    "bracketSameLine": true,
+    "printWidth": 100,
+    "proseWrap": "preserve"
 }
