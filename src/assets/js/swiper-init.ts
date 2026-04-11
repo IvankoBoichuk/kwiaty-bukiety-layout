@@ -14,8 +14,8 @@ function initEventsSwipers(): void {
     swipers.forEach((swiperEl) => {
         new Swiper(swiperEl, {
             modules: [Pagination],
-            slidesPerView: 'auto',
             spaceBetween: 12,
+            slidesPerView: 1.3,
             slidesPerGroup: 1,
             breakpoints: {
                 640: {

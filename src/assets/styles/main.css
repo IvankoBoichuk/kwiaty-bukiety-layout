@@ -13,6 +13,7 @@
 	--color-purple: #6c5b7b;
 	--color-purple-dark: #484d6f;
 	--color-purple-light: #b19bc5;
+	--color-purple-easy: #B19BC5;
 
 	/* Neutral colors */
 	--color-background: #fcf9f6;
@@ -21,36 +22,31 @@
 
 	/* Fonts - replace with your project fonts */
 	--font-main: "Raleway", system-ui, -apple-system, sans-serif;
+	--font-heading: "Cormorant Garamond", serif;
+	
+	/* Shadows */
+	--shadow-100: 0px 1px 4px rgba(12, 12, 13, 0.05);
 }
 
 /* Base styles */
 @layer base {
 	:root {
 		/* Swiper configuration */
-		--swiper-pagination-bullet-horizontal-gap: 6px;
-		--swiper-pagination-color: var(--color-purple-light);
-		--swiper-pagination-bullet-size: 12px;
+		--swiper-pagination-color: var(--color-purple-easy);
+		--swiper-pagination-bullet-horizontal-gap: 2.5px;
+		--swiper-pagination-bullet-size: 8px;
+		--swiper-pagination-bullet-border-radius: 12px;
+		--swiper-pagination-bullet-inactive-opacity: 1;
+		--swiper-pagination-bullet-inactive-color: var(--color-purple-easy);
 	}
 
 	body {
 		@apply text-[14px] sm:text-[16px] font-main;
 	}
-
-	.swiper-pagination {
-		margin-top: 12px !important;
-	}
-
 	.swiper-pagination-bullet {
-		height: 8px !important;
-		width: 8px !important;
-		border-radius: 12px !important;
-		opacity: 1 !important;
-		background: var(--color-purple-light) !important;
-		transition: width 0.3s ease !important;
-		margin: 0 2.5px !important;
+		@apply transition-all duration-300 ease-in-out;
 	}
-
 	.swiper-pagination-bullet-active {
-		width: 16px !important;
+		--swiper-pagination-bullet-width: 16px;
 	}
 }
