@@ -61,10 +61,10 @@ export default {
                     const [p1, p2, p3] = parts
 
                     return `
-  								      <span class="font-[Cormorant_Garamond] text font-semibold text-[38px] leading-7 text-dark-text">${p1}</span>
-  								      <span class="text-base font-semibold leading-6 text-dark-text">${p2}</span>
-  								      <span class="font-[Cormorant_Garamond] font-medium italic text-[42px] leading-6 text-dark-text">${p3}</span>
-  								  `
+                            <span class="font-heading font-semibold text-[38px] leading-11.5 -mb-1.25">${p1}</span>
+                            <span class="text-h3 -mb-2.5">${p2}</span>
+                            <span class="font-heading font-medium italic text-[42px] leading-[1.2]">${p3}</span>
+                        `
                         .replace(/\s+/g, ' ')
                         .trim()
                 },
