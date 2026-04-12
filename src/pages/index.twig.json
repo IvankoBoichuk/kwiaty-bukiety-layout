@@ -203,5 +203,35 @@
             "variant": "green",
             "size": "lg"
         }
+    },
+    "guarantees": {
+        "title": "Гарантії",
+        "items": [
+            {
+                "icon": "/guarantees/flower.svg",
+                "title": "Свіжі квіти",
+                "description": "Ми використовуємо тільки свіжі композиції"
+            },
+            {
+                "icon": "/guarantees/shield.svg",
+                "title": "Безпечна оплата",
+                "description": "Ваші дані захищені"
+            },
+            {
+                "icon": "/guarantees/timer.svg",
+                "title": "Гарантія доставки",
+                "description": "Букет буде доставлено у вказаний час"
+            },
+            {
+                "icon": "/guarantees/phone.svg",
+                "title": "Якщо виникнуть проблеми",
+                "description": "Наша служба підтримки швидко допоможе у разі проблем"
+            },
+            {
+                "icon": "/guarantees/image.svg",
+                "title": "Фото перед доставкою",
+                "description": "За запитом можемо надіслати фото готового букета"
+            }
+        ]
     }
 }
