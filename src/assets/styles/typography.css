@@ -22,3 +22,6 @@
 @utility text-body-15 {
     @apply text-[15px] font-normal leading-6;
 }
+@utility text-body-13 {
+    @apply text-[13px] font-normal leading-3.75;
+}
