@@ -130,5 +130,53 @@
                 "text": "Akceptujemy różne metody płatności, w tym przelewy online, płatności kartą oraz płatność przy odbiorze. Dzięki temu proces zamówienia jest szybki, wygodny i bezpieczny."
             }
         ]
+    },
+    "cities": {
+        "title": "Міста доставки",
+        "text": "Доставляємо свіжі квіти у найбільші міста Польщі — оберіть потрібне місто",
+        "cities": [
+            {
+                "text": "Варшава",
+                "url": "/warsaw"
+            },
+            {
+                "text": "Краків",
+                "url": "/krakow"
+            },
+            {
+                "text": "Вроцлав",
+                "url": "/wroclaw"
+            },
+            {
+                "text": "Познань",
+                "url": "/poznan"
+            },
+            {
+                "text": "Перемишль",
+                "url": "/przemysl"
+            },
+            {
+                "text": "Гданськ",
+                "url": "/gdansk"
+            },
+            {
+                "text": "Лодзь",
+                "url": "/lodz"
+            },
+            {
+                "text": "Щецин",
+                "url": "/szczecin"
+            },
+            {
+                "text": "Бидгощ",
+                "url": "/bydgoszcz"
+            }
+        ],
+        "button": {
+            "text": "Всі міста",
+            "link": "/kategoria-produktu/kwiaciarnie-w-polsce/",
+            "variant": "green",
+            "size": "lg"
+        }
     }
 }
