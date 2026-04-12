@@ -68,6 +68,26 @@ export default {
                         .replace(/\s+/g, ' ')
                         .trim()
                 },
+                faq_schema: (faqList) => {
+                    if (!faqList || !Array.isArray(faqList) || faqList.length === 0) {
+                        return ''
+                    }
+
+                    const schema = {
+                        '@context': 'https://schema.org',
+                        '@type': 'FAQPage',
+                        mainEntity: faqList.map((item) => ({
+                            '@type': 'Question',
+                            name: item.title,
+                            acceptedAnswer: {
+                                '@type': 'Answer',
+                                text: item.text,
+                            },
+                        })),
+                    }
+
+                    return `<script type="application/ld+json">${JSON.stringify(schema, null, 2)}</script>`
+                },
             },
         }),
         webfontDownload(

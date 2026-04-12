@@ -105,5 +105,30 @@
                 "price": "169.00 zł"
             }
         ]
+    },
+    "faq": {
+        "title": "FAQ – Najczęściej Zadawane Pytania",
+        "list": [
+            {
+                "title": "Czy oferujecie dostawę kwiatów na terenie całej Polski?",
+                "text": "Tak, nasza poczta kwiatowa realizuje dostawę kwiatów na terenie całej Polski, a także w okolicznych miejscowościach. Dbamy o to, aby zamówienia docierały na czas i w idealnym stanie."
+            },
+            {
+                "title": "Jak zamówić kwiaty online w kwiaciarni „Kwiaty-Bukiety”?",
+                "text": "Zamówienie jest bardzo proste – wystarczy wybrać kwiatowe dekoracje online lub skontaktować się z nami telefonicznie pod numerem 797 115 220. Podaj adres dostawy oraz preferowany termin, a my zajmiemy się resztą. W wielu przypadkach możliwa jest dostawa tego samego dnia."
+            },
+            {
+                "title": "Czy mogę zamówić bukiety na specjalną okazję?",
+                "text": "Oczywiście. Oferujemy szeroki wybór kompozycji kwiatowych na różne okazje, takie jak urodziny, rocznice, Walentynki czy Dzień Matki. Istnieje również możliwość zamówienia bukietu przygotowanego indywidualnie, zgodnie z Twoimi oczekiwaniami."
+            },
+            {
+                "title": "Czy oferujecie indywidualne podejście do zamówień?",
+                "text": "Tak, każda kompozycja może zostać dopasowana do Twoich potrzeb. Nasi floryści chętnie przygotują bukiet według Twoich wskazówek – wystarczy do nas zadzwonić lub napisać."
+            },
+            {
+                "title": "Jakie metody płatności są dostępne przy zamówieniach online?",
+                "text": "Akceptujemy różne metody płatności, w tym przelewy online, płatności kartą oraz płatność przy odbiorze. Dzięki temu proces zamówienia jest szybki, wygodny i bezpieczny."
+            }
+        ]
     }
 }
