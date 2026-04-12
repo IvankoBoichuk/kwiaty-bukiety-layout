@@ -1,55 +1,92 @@
-<footer class="rounded-t-3xl bg-primary text-white pt-8 pb-10 md:pt-12 md:pb-14">
-    <div class="max-w-360 w-full mx-auto px-4 md:px-8 lg:px-12">
-        <div class="flex flex-col md:flex-row pb-6 md:pb-8 border-b border-white/20 mb-6 md:mb-8 gap-6 md:gap-0">
-            {# logo #}
-            {% if logo.light %}
-                <div class="md:mr-8 xl:mr-33.25 flex-none">
-                    <img src="{{ logo.light }}" alt="Unbroken University Logo" width="94" height="46" class="w-20 h-auto md:md:w-23.5"/>
+<footer class="bg-[#03130B] text-white p-5 pt-8 flex flex-col gap-14">
+    <div class="flex items-center gap-8.75">
+        {# logo #}
+        {% if logo.light %}
+            <img src="{{ logo.light }}" alt="Logo" width="90" height="43" class="w-22.5 h-auto"/>
+        {% endif %}
+        <p class="text-[15px] leading-4.5 text-gray-4 text-balance">Kwiaty Bukiety – dostawa na terenie całej Polski</p>
+    </div>
+
+    {# Contacts #}
+    <ul class="flex flex-col gap-5">
+        {% for item in [
+            {
+                "type": "phone",
+                "icon": "/socials/phone.svg",
+                "value": "+48 797 115 220",
+                "details": null
+            },
+            {
+                "type": "email",
+                "icon": "/socials/mail.svg",
+                "value": "kwiatybukietycompl@gmail.com",
+                "details": null
+            },
+            {
+                "type": "text",
+                "icon": "/socials/schedule.svg",
+                "value": "Godziny pracy",
+                "details": "pn–pt: 10:00–18:00<br>sob: 10:00–15:00"
+            }
+        ] %}
+            <li class="font-semibold">
+                <div class="flex items-center gap-3 text-[15px] leading-4.5 text-gray-4">
+                    {# Icon #}
+                    {% if item.icon %}
+                        <img src="{{ item.icon }}" alt="{{ item.type|capitalize }} Icon" class="inline-block"/>
+                    {% endif %}
+
+                    {# Text #}
+                    {% if item.type == 'phone' %}
+                        <a href="tel:{{ item.value }}" class="text-sm md:text-base">{{ item.value }}</a>
+                    {% elseif item.type == 'email' %}
+                        <a href="mailto:{{ item.value }}" class="text-sm md:text-base">{{ item.value }}</a>
+                    {% else %}
+                        <span class="text-sm md:text-base">{{ item.value }}</span>
+                    {% endif %}
                 </div>
-            {% endif %}
-            {# socials #}
-            {% if socials %}
-                <div class="md:w-auto lg:w-51.75 md:mr-8 flex-none">
-                    <span class="block mb-3 text-sm md:text-base">Наші соціальні мережі</span>
-                    <ul class="flex flex-wrap gap-3">
-                        {% for item in socials %}
-                            <li>
-                                <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ item.icon|capitalize }}">
-                                    {{ item.icon }}
-                                </a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            {% endif %}
-            {# menu.footer.main #}
-            {% if menu.footer.main %}
-                <nav class="flex-1">
-                    <ul class="columns-1 sm:columns-2 lg:columns-3 space-y-3 gap-x-5 md:w-auto xl:w-165.75 xl:ml-auto">
+                {% if item.details %}
+                    <p class="text-xs md:text-sm text-gray-3 mt-1.5 pl-9.25">{{ item.details|raw }}</p>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <div class="flex flex-col gap-12">
+        {# Menu #}
+        {% if menu.footer.main or menu.footer.secondary %}
+            <nav aria-label="Footer navigation" class="flex flex-col gap-14 text-[13px] font-semibold leading-3.75 uppercase">
+                {% if menu.footer.main %}
+                    <ul class="columns-1 space-y-5">
                         {% for item in menu.footer.main %}
-                            <li><a href="{{ item.url }}" class="text-sm md:text-base">{{ item.label }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </nav>
-            {% endif %}
-        </div>
-        <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-6 md:gap-0">
-            <div class="order-2 md:order-1">
-                {% if menu.footer.secondary %}
-                    <ul class="flex flex-wrap gap-y-2 gap-x-4 md:gap-y-3 md:gap-x-5 mb-4 md:mb-6">
-                        {% for item in menu.footer.secondary %}
-                            <li><a href="{{ item.url }}" class="text-xs md:text-sm">{{ item.label }}</a></li>
+                            <li><a href="{{ item.url }}">{{ item.label }}</a></li>
                         {% endfor %}
                     </ul>
                 {% endif %}
-                <p class="text-[10px] md:text-[12px]">UNBROKEN UNIVERSITY 2026</p>
-            </div>
-            {% if logo.linewood %}
-                <div class="order-1 md:order-2">
-                    <img src="{{ logo.linewood }}" alt="Linewood Software Logo" width="97" height="28" class="w-20 h-auto md:w-24.25"/>
-                </div>
-            {% endif %}
-        </div>
+                {% if menu.footer.secondary %}
+                    <ul class="columns-2 space-y-5 gap-x-6">
+                        {% for item in menu.footer.secondary %}
+                            <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </nav>
+        {% endif %}
+
+        {# Socials #}
+        {% if socials %}
+            <ul class="flex flex-wrap justify-center gap-12">
+                {% for item in socials %}
+                    <li>
+                        <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ item.label }}">
+                            <img src="{{ item.icon }}" alt="{{ item.label }} Icon" width="32" height="32" class="size-8"/>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        <div class="text-center">© {{ "now"|date("Y") }} Kwiaty Bukiety</div>
     </div>
 </footer>
 <nav class="px-6 py-3 bg-[#072114] sticky bottom-0 inset-x-0 w-full z-50" aria-label="Bottom navigation">
@@ -76,7 +113,9 @@
                 <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#F2F2F2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M20.9999 20.9999L16.6499 16.6499" stroke="#F2F2F2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>',
-            "meta": {}
+            "meta": {
+                "action": "search"
+            }
         },
         {
             "id": "cart",
@@ -103,7 +142,7 @@
                 <path d="M4 18H20" stroke="#F2F2F2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>',
             "meta": {
-                "onClick": "toggleMenu()"
+                "action": "toggleMenu"
             }
         }
     ] %}
@@ -114,7 +153,7 @@
                     <span data-count="{{ item.meta.count|default(0) }}" class="absolute before:content-[attr(data-count)] data-[count=0]:hidden bottom-2 left-2 size-5.5 bg-[#EB5757] text-background text-[13px] font-semibold leading-none rounded-full flex items-center justify-center text-center"></span>
                 </a>
             {% elseif item.type == 'button' %}
-                <button type="button" onclick="{{ item.meta.onClick }}" class="text-gray-6 text-[14px] leading-4.75 relative">
+                <button type="button" @click="{{ item.meta.action }}()" class="text-gray-6 text-[14px] leading-4.75 relative">
                     {{ item.icon }}
                 </button>
             {% endif %}

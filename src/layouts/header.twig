@@ -9,12 +9,121 @@
     </div>
     <div class="flex items-center justify-between gap-4 p-3 bg-background">
         <img src="/logo-dark.svg" alt="Logo" width="66" height="31">
-        {% include "../components/button.twig" with {
-            text: "+48 797 115 220",
-            link: "tel:+48797115220",
-            variant: "border",
-            size: "xs",
-            showIcon: false
-        } %}
+        <div class="flex items-center gap-3">
+            {% include "../components/button.twig" with {
+                text: "+48 797 115 220",
+                link: "tel:+48797115220",
+                variant: "border",
+                size: "xs",
+                showIcon: false
+            } %}
+            {# <button @click="toggleMenu()" class="flex flex-col gap-1 w-6 h-6 justify-center" aria-label="Toggle menu">
+                <span class="block h-0.5 bg-current transition-all" :class="isOpen ? 'rotate-45 translate-y-1.5' : ''"></span>
+                <span class="block h-0.5 bg-current transition-all" :class="isOpen ? 'opacity-0' : ''"></span>
+                <span class="block h-0.5 bg-current transition-all" :class="isOpen ? '-rotate-45 -translate-y-1.5' : ''"></span>
+            </button> #}
+        </div>
+    </div>
+
+    {# Mobile Menu Overlay #}
+    <div 
+        x-show="isOpen"
+        @click="closeMenu()"
+        x-transition:enter="transition-opacity ease-out duration-300"
+        x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100"
+        x-transition:leave="transition-opacity ease-in duration-200"
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0"
+        class="fixed inset-0 bg-black/50 z-40"
+        x-cloak
+    ></div>
+
+    {# Mobile Menu #}
+    <div 
+        x-show="isOpen" 
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="translate-x-full"
+        x-transition:enter-end="translate-x-0"
+        x-transition:leave="transition ease-in duration-200"
+        x-transition:leave-start="translate-x-0"
+        x-transition:leave-end="translate-x-full"
+        class="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-background border-l border-[#426E59] overflow-y-auto z-50 flex flex-col"
+        x-cloak
+    >
+        {# Menu Content #}
+        <nav class="flex-1 overflow-y-auto p-4">
+            <div x-data="accordion">
+            {% for item in menu.header %}
+                <div class="border-b border-gray-200 last:border-b-0">
+                    {% if item.children %}
+                        <button 
+                            @click="toggle('parent-{{ loop.index }}')"
+                            class="w-full flex items-center justify-between py-3 text-left font-medium"
+                        >
+                            <span>{{ item.title }}</span>
+                            <svg 
+                                class="w-5 h-5 transition-transform"
+                                :class="isActive('parent-{{ loop.index }}') ? 'rotate-180' : ''"
+                                fill="none" 
+                                stroke="currentColor" 
+                                viewBox="0 0 24 24"
+                            >
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div 
+                            x-show="isActive('parent-{{ loop.index }}')"
+                            x-collapse
+                            class="pl-4 pb-2"
+                        >
+                            <div x-data="accordion">
+                            {% for child in item.children %}
+                                {% if child.children %}
+                                    <div class="border-l-2 border-gray-300 my-2">
+                                        <button 
+                                            @click="toggle('child-{{ loop.index }}')"
+                                            class="w-full flex items-center justify-between py-2 pl-3 text-left"
+                                        >
+                                            <span class="text-sm">{{ child.title }}</span>
+                                            <svg 
+                                                class="w-4 h-4 transition-transform"
+                                                :class="isActive('child-{{ loop.index }}') ? 'rotate-180' : ''"
+                                                fill="none" 
+                                                stroke="currentColor" 
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                            </svg>
+                                        </button>
+                                        <div 
+                                            x-show="isActive('child-{{ loop.index }}')"
+                                            x-collapse
+                                            class="pl-4 pb-2"
+                                        >
+                                            {% for subchild in child.children %}
+                                                <a href="{{ subchild.url }}" class="block py-2 pl-3 text-sm text-gray-600 hover:text-primary">
+                                                    {{ subchild.title }}
+                                                </a>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                {% else %}
+                                    <a href="{{ child.url }}" class="block py-2 pl-3 text-sm text-gray-600 hover:text-primary">
+                                        {{ child.title }}
+                                    </a>
+                                {% endif %}
+                            {% endfor %}
+                            </div>
+                        </div>
+                    {% else %}
+                        <a href="{{ item.url }}" class="block py-3 font-medium">
+                            {{ item.title }}
+                        </a>
+                    {% endif %}
+                </div>
+            {% endfor %}
+            </div>
+        </nav>
     </div>
 </header>
