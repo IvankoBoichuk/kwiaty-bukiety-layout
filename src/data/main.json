@@ -7,56 +7,269 @@
     "menu": {
         "header": [
             {
-                "label": "Home",
-                "url": "/"
+                "title": "Kwiaty",
+                "url": "/kategoria-produktu/rodzaje-kwiatow/",
+                "children": [
+                    {
+                        "title": "Rodzaje kwiatów",
+                        "url": "/kategoria-produktu/rodzaje-kwiatow/"
+                    },
+                    {
+                        "title": "Róże",
+                        "url": "/kategoria-produktu/roze/"
+                    },
+                    {
+                        "title": "Goździki",
+                        "url": "/kategoria-produktu/gozdziki/"
+                    },
+                    {
+                        "title": "Gerbery",
+                        "url": "/kategoria-produktu/gerbery/"
+                    },
+                    {
+                        "title": "Chryzantemy/Margaretka",
+                        "url": "/kategoria-produktu/margaretki-i-chryzantemy/"
+                    },
+                    {
+                        "title": "Alstromeria",
+                        "url": "/kategoria-produktu/rodzaje-kwiatow/alstromeria/"
+                    },
+                    {
+                        "title": "Eustoma",
+                        "url": "/kategoria-produktu/eustomy-bukiet/"
+                    },
+                    {
+                        "title": "Tulipany",
+                        "url": "/kategoria-produktu/tulipany/"
+                    },
+                    {
+                        "title": "Kolekcja zimowa",
+                        "url": "/kategoria-produktu/bukiety-zimowe/"
+                    }
+                ]
             },
             {
-                "label": "About",
-                "url": "/about"
+                "title": "Okazje",
+                "children": [
+                    {
+                        "title": "Stałe okazje",
+                        "children": [
+                            {
+                                "title": "Urodziny",
+                                "url": "/kategoria-produktu/urodziny/"
+                            },
+                            {
+                                "title": "Imieniny",
+                                "url": "/kategoria-produktu/imieniny/"
+                            },
+                            {
+                                "title": "Miłość",
+                                "url": "/kategoria-produktu/milosc/"
+                            },
+                            {
+                                "title": "Przeprosiny",
+                                "url": "/kategoria-produktu/przeprosiny/"
+                            },
+                            {
+                                "title": "Ślub",
+                                "url": "/kategoria-produktu/kwiaty-slub-2/"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Inne",
+                        "children": [
+                            {
+                                "title": "Podziękowania",
+                                "url": "/kategoria-produktu/podziekowania/"
+                            },
+                            {
+                                "title": "Rocznica",
+                                "url": "/kategoria-produktu/rocznica/"
+                            },
+                            {
+                                "title": "Kwiaty na obronę",
+                                "url": "/kategoria-produktu/kwiaty-na-obrone/"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Okazje sezonowe",
+                        "children": [
+                            {
+                                "title": "Boże Narodzenie",
+                                "url": "/kategoria-produktu/nadchodzace/boze-narodzenie/"
+                            },
+                            {
+                                "title": "Walentynki",
+                                "url": "/kategoria-produktu/walentynki-14-02/"
+                            }
+                        ]
+                    }
+                ]
             },
             {
-                "label": "Services",
-                "url": "#services"
+                "title": "Dzień Matki",
+                "url": "/kategoria-produktu/dla-mamy/"
             },
             {
-                "label": "Projects",
-                "url": "#projects"
+                "title": "Dla kogo",
+                "children": [
+                    {
+                        "title": "Dla mamy",
+                        "url": "/kategoria-produktu/dla-mamy/"
+                    },
+                    {
+                        "title": "Dla babci",
+                        "url": "/kategoria-produktu/kazdego-dnia/dla-bliskich/dla-babci/"
+                    },
+                    {
+                        "title": "Dla mężczyzny",
+                        "url": "/kategoria-produktu/dla-mezczyzny/"
+                    },
+                    {
+                        "title": "Dla dziewczyny",
+                        "url": "/kategoria-produktu/dla-dziewczyny/"
+                    },
+                    {
+                        "title": "Dla zony",
+                        "url": "/kategoria-produktu/dla-zony/"
+                    },
+                    {
+                        "title": "Dla koleżanki",
+                        "url": "/kategoria-produktu/kwiaty-dla-kolezanki/"
+                    },
+                    {
+                        "title": "Dla firm",
+                        "url": "/kategoria-produktu/kwiaty-dla-firm/"
+                    }
+                ]
             },
             {
-                "label": "Contact",
-                "url": "#contact"
+                "title": "Róże",
+                "url": "/kategoria-produktu/roze/",
+                "children": [
+                    {
+                        "title": "Niebieski róże",
+                        "url": "/kategoria-produktu/niebieski-roze/"
+                    },
+                    {
+                        "title": "Bukiet róże",
+                        "url": "/kategoria-produktu/bukiet-roze/"
+                    },
+                    {
+                        "title": "Box z różami",
+                        "url": "/kategoria-produktu/box-z-rozami/"
+                    }
+                ]
+            },
+            {
+                "title": "Kompozycje",
+                "children": [
+                    {
+                        "title": "Flowerbox",
+                        "url": "/kategoria-produktu/flowerbox/"
+                    },
+                    {
+                        "title": "Kwiaty w koszyku",
+                        "url": "/kategoria-produktu/kwiaty-w-koszyku/"
+                    },
+                    {
+                        "title": "Bukiety Kwiatów",
+                        "url": "/kategoria-produktu/bukiet/"
+                    },
+                    {
+                        "title": "Kwiaty w wazonie",
+                        "url": "/kategoria-produktu/kwiaty-w-wazonie/"
+                    },
+                    {
+                        "title": "Wianki na drzwi",
+                        "url": "/kategoria-produktu/wianki-na-drzwi/"
+                    }
+                ]
+            },
+            {
+                "title": "Pogrzebowe",
+                "children": [
+                    {
+                        "title": "Wieniec pogrzebowy",
+                        "url": "/kategoria-produktu/wieniec-pogrzebowa/"
+                    },
+                    {
+                        "title": "Wiązanka na pogrzeb",
+                        "url": "/kategoria-produktu/wiazanka-na-pogrzeb/"
+                    },
+                    {
+                        "title": "Kwiaty na pogrzeb",
+                        "url": "/kategoria-produktu/kwiaty-na-pogrzeb/"
+                    }
+                ]
+            },
+            {
+                "title": "Miasta",
+                "url": "/kategoria-produktu/kwiaciarnie-w-polsce/",
+                "children": [
+                    {
+                        "title": "Warszawa",
+                        "url": "/kategoria-produktu/warszawa/"
+                    },
+                    {
+                        "title": "Kraków",
+                        "url": "/kategoria-produktu/krakow/"
+                    },
+                    {
+                        "title": "Wrocław",
+                        "url": "/kategoria-produktu/kwiaciarnia-wroclaw/"
+                    },
+                    {
+                        "title": "Łódź",
+                        "url": "/kategoria-produktu/lodz/"
+                    },
+                    {
+                        "title": "Poznań",
+                        "url": "/kategoria-produktu/poznan/"
+                    }
+                ]
             }
         ],
         "footer": {
             "main": [
                 {
-                    "label": "Home",
+                    "label": "O nas",
                     "url": "/"
                 },
                 {
-                    "label": "About",
-                    "url": "/about"
+                    "label": "Dostawa na terenie Polski",
+                    "url": "/"
                 },
                 {
-                    "label": "Services",
+                    "label": "Kontakt",
                     "url": "#services"
-                },
-                {
-                    "label": "Projects",
-                    "url": "#projects"
-                },
-                {
-                    "label": "Contact",
-                    "url": "#contact"
                 }
             ],
             "secondary": [
                 {
-                    "label": "Privacy Policy",
+                    "label": "Płatność i dostawa",
                     "url": "#"
                 },
                 {
-                    "label": "Terms of Use",
+                    "label": "Warunki zamówienia",
+                    "url": "#"
+                },
+                {
+                    "label": "Zwroty i reklamacje",
+                    "url": "#"
+                },
+                {
+                    "label": "Polityka prywatności",
+                    "url": "#"
+                },
+                {
+                    "label": "Regulamin",
+                    "url": "#"
+                },
+                {
+                    "label": "Polityka cookies",
                     "url": "#"
                 }
             ]
@@ -66,17 +279,17 @@
         {
             "label": "Facebook",
             "url": "https://facebook.com/your-page",
-            "icon": "facebook"
+            "icon": "/socials/facebook.svg"
         },
         {
-            "label": "Twitter",
-            "url": "https://twitter.com/your-handle",
-            "icon": "twitter"
+            "label": "WhatsApp",
+            "url": "https://wa.me/your-number",
+            "icon": "/socials/whats-app.svg"
         },
         {
-            "label": "LinkedIn",
-            "url": "https://linkedin.com/company/your-company",
-            "icon": "linkedin"
+            "label": "Instagram",
+            "url": "https://instagram.com/your-page",
+            "icon": "/socials/instagram.svg"
         }
     ]
 }

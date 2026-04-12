@@ -17,7 +17,9 @@
     "vituum": "^1.1.1"
   },
   "dependencies": {
+    "@alpinejs/collapse": "^3.15.11",
     "@tailwindcss/vite": "^4.1.18",
+    "alpinejs": "^3.15.11",
     "set-scrollbar-width": "^1.0.5",
     "swiper": "^12.1.0",
     "tailwindcss": "^4.1.18"
