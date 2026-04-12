@@ -32,7 +32,7 @@ export function initMenu() {
   }));
   
   Alpine.data('accordion', () => ({
-    activeItem: null,
+    activeItem: null as string | null,
     
     toggle(id: string) {
       this.activeItem = this.activeItem === id ? null : id;
