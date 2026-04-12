@@ -1,0 +1,61 @@
+<section class="text-dark-text">
+	{% embed "../layouts/container.twig" %}
+		{% block content %}
+			{% if fields.title %}
+				<div class="mb-6">
+					<h2 class="text-h2 mb-2">{{ fields.title }}</h2>
+					{% if fields.text %}
+						<p class="text-body-15">{{ fields.text }}</p>
+					{% endif %}
+				</div>
+			{% endif %}
+
+			{% if fields.cities %}
+				<ul class="flex flex-wrap gap-3 mb-6">
+					{% set widthPattern = [
+						'flex-[1_1_28%]',
+						'flex-[1_1_35%]',
+						'flex-[1_1_25%]',
+						'flex-[1_1_30%]',
+						'flex-[1_1_32%]',
+						'flex-[1_1_27%]',
+						'flex-[1_1_33%]',
+						'flex-[1_1_29%]',
+						'flex-[1_1_26%]'
+					] %}
+					{% for city in fields.cities %}
+						{% set widthClass = widthPattern[loop.index0 % widthPattern|length] %}
+						<li class="{{ widthClass }}">
+							{% if city.url %}
+								<a href="{{ city.url }}" class="block bg-[#E5EFDE] rounded-2xl px-4 py-4.5 text-center text-h4">
+									{{ city.text }}
+								</a>
+							{% elseif city is iterable %}
+								<div class="block bg-[#E5EFDE] rounded-2xl px-4 py-4.5 text-center text-h4">
+									{{ city.text }}
+								</div>
+							{% else %}
+								<div class="block bg-[#E5EFDE] rounded-2xl px-4 py-4.5 text-center text-h4">
+									{{ city }}
+								</div>
+							{% endif %}
+						</li>
+					{% endfor %}
+                    {% if fields.button %}
+                        <div class="flex justify-center flex-1 min-w-max">
+                            {% include '../components/button.twig' with {
+                                text: fields.button.text,
+                                link: fields.button.link,
+                                variant: fields.button.variant|default('green'),
+                                size: fields.button.size|default('lg'),
+                                target: fields.button.target|default('_self'),
+                                showIcon: fields.button.showIcon|default(false)
+                            } %}
+                        </div>
+                    {% endif %}
+				</ul>
+			{% endif %}
+
+		{% endblock %}
+	{% endembed %}
+</section>
