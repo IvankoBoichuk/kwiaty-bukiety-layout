@@ -12,11 +12,11 @@
 		{% endif %}
 	</div>
 
-	<div class="px-1 pt-2 pb-3 text-dark-text">
-		<a href="{{ item.link }}" target="{{ item.target|default('_self') }}" class="text-sm font-bold uppercase text-wrap truncate before:absolute before:inset-0">
+	<div class="pt-2 text-dark-text">
+		<a href="{{ item.link }}" target="{{ item.target|default('_self') }}" class="text-body-13 font-bold uppercase text-wrap truncate before:absolute before:inset-0">
 			{{ item.name|default('Bukiet') }}
 		</a>
-		<p class="text-[13px] font-normal">
+		<p class="text-body-15">
 			<span>od</span>
 			<span class="uppercase">{{ item.price|default('169.00 zł') }}</span>
 		</p>
