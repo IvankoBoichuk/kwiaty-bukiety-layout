@@ -1,0 +1,86 @@
+{
+    "products": {
+        "title": "Kwiaty Róże",
+        "list": [
+            {
+                "img": {
+                    "src": "/images/flowers/malinova-pianka.png",
+                    "alt": "Bukiet Malinowa Pianka"
+                },
+                "name": "Bukiet Malinowa Pianka",
+                "link": "/kategorie/roze/malinova-pianka",
+                "target": "_blank",
+                "badges": ["Dziś dostawa"],
+                "price": "169.00 zł"
+            },
+            {
+                "img": {
+                    "src": "/images/flowers/malinova-pianka.png",
+                    "alt": "Bukiet Malinowa Pianka"
+                },
+                "name": "Bukiet Malinowa Pianka",
+                "link": "/kategorie/roze/malinova-pianka",
+                "target": "_blank",
+                "badges": ["Dziś dostawa"],
+                "price": "169.00 zł"
+            },
+            {
+                "img": {
+                    "src": "/images/flowers/malinova-pianka.png",
+                    "alt": "Bukiet Malinowa Pianka"
+                },
+                "name": "Bukiet Malinowa Pianka",
+                "link": "/kategorie/roze/malinova-pianka",
+                "target": "_blank",
+                "badges": ["Dziś dostawa"],
+                "price": "169.00 zł"
+            },
+            {
+                "img": {
+                    "src": "/images/flowers/malinova-pianka.png",
+                    "alt": "Bukiet Malinowa Pianka"
+                },
+                "name": "Bukiet Malinowa Pianka",
+                "link": "/kategorie/roze/malinova-pianka",
+                "target": "_blank",
+                "badges": ["Dziś dostawa"],
+                "price": "169.00 zł"
+            },
+            {
+                "img": {
+                    "src": "/images/flowers/malinova-pianka.png",
+                    "alt": "Bukiet Malinowa Pianka"
+                },
+                "name": "Bukiet Malinowa Pianka",
+                "link": "/kategorie/roze/malinova-pianka",
+                "target": "_blank",
+                "badges": ["Dziś dostawa"],
+                "price": "169.00 zł"
+            }
+        ],
+        "button": {
+            "text": "Показати більше",
+            "link": "/catalogue/kwiaciarnie-w-polsce/",
+            "variant": "border",
+            "size": "lg"
+        }
+    },
+    "info": [
+        {
+            "title": null,
+            "text": "Róże od wieków pozostają jednymi z najbardziej rozpoznawalnych kwiatów na świecie. To kwiaty, które potrafią przekazać najszczersze uczucie, często bez potrzeby wypowiadania słów. Ich delikatność, wyjątkowy zapach i ogromna różnorodność sprawiają, że są idealnym wyborem zarówno na codzienne gesty, jak i wyjątkowe okazje. Te kwiaty przyciągają uwagę uniwersalnym pięknem oraz możliwością stworzenia eleganckich, klasycznych lub nowoczesnych kompozycji, a kwiaciarnia internetowa Kwiaty-Bukiety umożliwia ich zamówienie bez wychodzenia z domu."
+        },
+        {
+            "title": "Dlaczego róże są odpowiednie na każdą okazję?",
+            "text": "Róże mają niezwykle szerokie zastosowanie — od drobnych upominków po uroczyste bukiety. To kwiaty, które potrafią wyrazić emocje bez słów. Kompozycję z różami mogą przybierać klasyczne lub oryginalne formy, co pozwala nadać im indywidualny charakter. Piękne róże świetnie sprawdzają się jako [róże na urodziny](/link), eleganckie zestawy są chętnie wybierane jako róże na Dzień Kobiet.\n\nTe kwiaty z łatwością dopasują się do każdej okazji, a stonowane aranżacje często traktowane są jako pełne szacunku [róże na grób](/link)."
+        },
+        {
+            "title": "Wybierz rodzaj róż, który najbardziej Ci odpowiada",
+            "text": "Bogaty asortyment róż pozwala wybrać zarówno klasyczne odcienie, jak i bardziej wyszukane warianty – od delikatnych barw po intensywne, wyraziste kolory. W naszej ofercie znajdują się propozycje odpowiednie na [romantyczne okazje](/link), codzienne gesty gdy chcemy sprawić radość ukochanej osoby. Jasne i pastelowe barwy często wybierane są także na pierwszą randkę, ponieważ ich delikatność symbolizuje subtelny gest i niewinność intencji. Dzięki takiej różnorodności każdy może łatwo dopasować rodzaj róż do swoich potrzeb i stylu obdarowywania oraz podkreślić wagę wyjątkowych chwil, takich jak е ślubu, gdzie klasyka i elegancja mają szczególne znaczenie."
+        },
+        {
+            "title": "Wybierz rodzaj róż, który najbardziej Ci odpowiada",
+            "text": "Bogaty asortyment róż pozwala wybrać zarówno klasyczne odcienie, jak i bardziej wyszukane warianty – od delikatnych barw po intensywne, wyraziste kolory. W naszej ofercie znajdują się propozycje odpowiednie na romantyczne okazje, codzienne gesty gdy chcemy sprawić radość ukochanej osoby. Jasne i pastelowe barwy często wybierane są także na pierwszą randkę, ponieważ ich [delikatność symbolizuje](/link) subtelny gest i niewinność intencji. Dzięki takiej różnorodności każdy może łatwo dopasować rodzaj róż do swoich potrzeb i stylu obdarowywania oraz podkreślić wagę wyjątkowych chwil, takich jak rocznicę ślubu, gdzie klasyka i elegancja mają szczególne znaczenie."
+        }
+    ]
+}
