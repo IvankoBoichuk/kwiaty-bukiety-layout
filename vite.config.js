@@ -88,12 +88,6 @@ export default {
 
                     return `<script type="application/ld+json">${JSON.stringify(schema, null, 2)}</script>`
                 },
-                parse_markdown_links: (text) => {
-                    if (!text) return ''
-                    return text
-                        .replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a href="$2" class="link">$1</a>')
-                        .replace(/\n/g, '<br/>')
-                },
             },
         }),
         webfontDownload(
