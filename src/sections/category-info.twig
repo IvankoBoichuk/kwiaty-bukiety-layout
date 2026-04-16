@@ -1,19 +1,16 @@
 <section>
 	{% embed "../layouts/container.twig" %}
 		{% block content %}
-			<div class="grid grid-cols-1 gap-y-8 md:grid-cols-2 lg:grid-cols-4  md:gap-x-8">
-				{% for block in info %}
-					<article class="flex flex-col gap-y-5">
-						{% if block.title %}
-							<h2 class="text-h3">
-								{{ block.title }}
-							</h2>
-						{% endif %}
-						<p class="text-body-13">
-							{{ block.text | parse_markdown_links }}
-						</p>
-					</article>
-				{% endfor %}
+			<div class="max-w-none prose prose-slate lg:prose-lg">
+				{% if info.title %}
+					<h1 class="text-h1">
+						{{ info.title }}
+					</h1>
+				{% endif %}
+
+				<div class="prose-p:text-body-13 prose-h2:text-h3">
+					{{ info.text | raw }}
+				</div>
 			</div>
 		{% endblock %}
 	{% endembed %}
