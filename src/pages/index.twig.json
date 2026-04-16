@@ -233,5 +233,30 @@
                 "description": "За запитом можемо надіслати фото готового букета"
             }
         ]
+    },
+    "numbers": {
+        "title": "Kwiaty Bukiety są",
+        "list": [
+            {
+                "text": "Opinii",
+                "number": "4.8 / 5",
+                "icon": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M9.99984 1.66675L12.5748 6.88341L18.3332 7.72508L14.1665 11.7834L15.1498 17.5167L9.99984 14.8084L4.84984 17.5167L5.83317 11.7834L1.6665 7.72508L7.42484 6.88341L9.99984 1.66675Z\" stroke=\"#0C4A2C\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+            },
+            {
+                "text": "Dostaw rocznie",
+                "number": "120 000+",
+                "icon": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><g clip-path=\"url(#clip0_458_1036)\"><path d=\"M6.66683 18.3334C7.12707 18.3334 7.50016 17.9603 7.50016 17.5001C7.50016 17.0398 7.12707 16.6667 6.66683 16.6667C6.20659 16.6667 5.8335 17.0398 5.8335 17.5001C5.8335 17.9603 6.20659 18.3334 6.66683 18.3334Z\" stroke=\"#0C4A2C\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M15.8333 18.3334C16.2936 18.3334 16.6667 17.9603 16.6667 17.5001C16.6667 17.0398 16.2936 16.6667 15.8333 16.6667C15.3731 16.6667 15 17.0398 15 17.5001C15 17.9603 15.3731 18.3334 15.8333 18.3334Z\" stroke=\"#0C4A2C\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M1.7085 1.70825H3.37516L5.59183 12.0583C5.67314 12.4373 5.88405 12.7761 6.18826 13.0165C6.49246 13.2568 6.87092 13.3835 7.2585 13.3749H15.4085C15.7878 13.3743 16.1556 13.2443 16.451 13.0064C16.7465 12.7686 16.9519 12.437 17.0335 12.0666L18.4085 5.87492H4.26683\" stroke=\"#0C4A2C\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"clip0_458_1036\"><rect width=\"20\" height=\"20\" fill=\"white\"/></clipPath></defs></svg>"
+            },
+            {
+                "text": "Zadowolonych klientów",
+                "number": "50 000+",
+                "icon": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M15.8332 17.5V15.8333C15.8332 14.9493 15.482 14.1014 14.8569 13.4763C14.2317 12.8512 13.3839 12.5 12.4998 12.5H7.49984C6.61578 12.5 5.76794 12.8512 5.14281 13.4763C4.51769 14.1014 4.1665 14.9493 4.1665 15.8333V17.5\" stroke=\"#0C4A2C\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M9.99984 9.16667C11.8408 9.16667 13.3332 7.67428 13.3332 5.83333C13.3332 3.99238 11.8408 2.5 9.99984 2.5C8.15889 2.5 6.6665 3.99238 6.6665 5.83333C6.6665 7.67428 8.15889 9.16667 9.99984 9.16667Z\" stroke=\"#0C4A2C\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+            },
+            {
+                "text": "Lat na rynku",
+                "number": "10",
+                "icon": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M10.0002 18.3334C10.0002 18.3334 16.6668 15.0001 16.6668 10.0001V4.16675L10.0002 1.66675L3.3335 4.16675V10.0001C3.3335 15.0001 10.0002 18.3334 10.0002 18.3334Z\" stroke=\"#0C4A2C\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M7.5 9.99992L9.16667 11.6666L12.5 8.33325\" stroke=\"#0C4A2C\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+            }
+        ]
     }
 }

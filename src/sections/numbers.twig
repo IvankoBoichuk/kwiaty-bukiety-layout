@@ -1,0 +1,29 @@
+<section class="text-dark-text" data-counter-section>
+	{% embed "../layouts/container.twig" %}
+		{% block content %}
+			{% if fields.title %}
+				<div class="mb-8 text-center">
+					<h2 class="text-h2">{{ fields.title }}</h2>
+				</div>
+			{% endif %}
+
+			{% if fields.list %}
+				<div class="space-y-4">
+					{% for item in fields.list %}
+						<div class="flex flex-col items-center text-center gap-2 pb-4 border-b border-[#C7C7C7]">
+							<div class="text-5xl leading-14 font-medium text-green-default" data-counter="{{ item.number }}">0</div>
+							<div class="text-body-15 font-semibold text-gray-1 flex items-center justify-center gap-1">
+                                {% if item.icon %}
+                                    <div class="flex-none">
+                                        {{ item.icon|raw }}
+                                    </div>
+                                {% endif %}
+                                {{ item.text }}
+                            </div>
+						</div>
+					{% endfor %}
+				</div>
+			{% endif %}
+		{% endblock %}
+	{% endembed %}
+</section>
