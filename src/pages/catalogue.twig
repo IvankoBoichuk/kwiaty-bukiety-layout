@@ -1,0 +1,6 @@
+{% extends "./layouts/main.twig" %}
+
+{% block content %}
+	{% include "sections/products.twig" with {fields: products} %}
+	{% include "sections/category-info.twig" with {seo_content: seo_content} %}
+{% endblock %}

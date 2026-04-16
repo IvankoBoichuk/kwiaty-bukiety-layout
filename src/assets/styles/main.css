@@ -1,6 +1,7 @@
 @import "./fonts.css";
 @import "tailwindcss";
 @import "./typography.css";
+@plugin "@tailwindcss/typography";
 
 @theme {
 	/* Primary brand colors - customize these for your project */
@@ -13,14 +14,14 @@
 	--color-purple: #6c5b7b;
 	--color-purple-dark: #484d6f;
 	--color-purple-light: #b19bc5;
-	--color-purple-easy: #B19BC5;
-	--color-green-default: #0C4A2C;
-	--color-green-dark: #0C3421;
+	--color-purple-easy: #b19bc5;
+	--color-green-default: #0c4a2c;
+	--color-green-dark: #0c3421;
 
 	/* Neutral colors */
 	--color-background: #fcf9f6;
 	--color-gray-6: #f2f2f2;
-	--color-gray-4: #BDBDBD;
+	--color-gray-4: #bdbdbd;
 	--color-gray-3: #828282;
 	--color-dark-text: #0c4a2c;
 

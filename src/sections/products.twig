@@ -1,0 +1,30 @@
+<section>
+	{% embed "../layouts/container.twig" %}
+		{% block content %}
+			<div class="flex flex-col gap-y-6 pt-1.5">
+				{% if fields.title %}
+					<h2 class="text-h2 col-span-full text-green-default">{{ fields.title }}</h2>
+				{% endif %}
+				<div class="grid grid-cols-2 gap-x-2.75 gap-y-6 auto-rows-auto sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+					{% if fields.list %}
+						{% for item in fields.list %}
+							{% include "../components/product-card.twig" with { item: item } %}
+						{% endfor %}
+					{% endif %}
+				</div>
+				{% if fields.button %}
+					<div class="flex justify-center flex-1 min-w-max">
+						{% include '../components/button.twig' with {
+                                text: fields.button.text,
+                                link: fields.button.link,
+                                variant: fields.button.variant|default('green'),
+                                size: fields.button.size|default('lg'),
+                                target: fields.button.target|default('_self'),
+                                showIcon: fields.button.showIcon|default(false)
+                            } %}
+					</div>
+				{% endif %}
+			</div>
+		{% endblock %}
+	{% endembed %}
+</section>
