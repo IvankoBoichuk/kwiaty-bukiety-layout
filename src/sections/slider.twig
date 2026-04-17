@@ -1,26 +1,28 @@
 <section class="relative text-dark-text">
 	{% embed "../layouts/container.twig" %}
 		{% block content %}
-			{% if fields.title or fields.subtitle %}
-				<div class="mb-4.5">
-					{% if fields.title %}
-						<h2 class="text-h2 mb-1">{{ fields.title|format_title }}</h2>
-					{% endif %}
-					{% if fields.subtitle %}
-						<p class="text-body-15">{{ fields.subtitle }}</p>
-					{% endif %}
-				</div>
-			{% endif %}
+			<div>
+				{% if fields.title or fields.subtitle %}
+					<div class="mb-4.5">
+						{% if fields.title %}
+							<h2 class="text-h2 mb-1">{{ fields.title|format_title }}</h2>
+						{% endif %}
+						{% if fields.subtitle %}
+							<p class="text-body-15">{{ fields.subtitle }}</p>
+						{% endif %}
+					</div>
+				{% endif %}
 
-			<div class="events-swiper swiper">
-				<div class="swiper-wrapper mb-3">
-					{% for item in fields.items %}
-						{% include '../components/slider-product-card.twig' with item %}
-					{% endfor %}
-				</div>
+				<div class="events-swiper swiper">
+					<div class="swiper-wrapper mb-3">
+						{% for item in fields.items %}
+							{% include '../components/slider-product-card.twig' with item %}
+						{% endfor %}
+					</div>
 
-				<!-- Pagination -->
-				<div class="swiper-pagination relative! m-0 flex justify-center [--swiper-pagination-bottom:0]"/>
+					<!-- Pagination -->
+					<div class="swiper-pagination relative! m-0 flex justify-center [--swiper-pagination-bottom:0]"/>
+				</div>
 			</div>
 		{% endblock %}
 	{% endembed %}

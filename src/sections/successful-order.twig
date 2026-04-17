@@ -1,0 +1,36 @@
+<section class="flex flex-col grow">
+	{% embed "../layouts/container.twig" %}
+		{% block content %}
+			<div class="relative flex flex-col grow gap-8 -mt-2.5">
+				<img src="{{ success.img.src|default('/images/placeholder.jpg') }}" alt="{{ success.img.alt }}" class="w-screen h-full max-w-max self-center">
+				<div class="flex flex-col gap-4">
+					<h2 class="text-h2 text-center text-dark-text">{{success.title}}</h3>
+					<p class="font-[Rubik] text-3.5 font-normal text-center text-[#426E59]">{{success.text}}</p>
+				</div>
+				<div class="flex flex-col gap-1">
+					<div class="font-[Rubik] text-3.5 font-normal text-center text-[#6D9586]">
+						{{ success.delivery.text }}
+					</div>
+					<div class="flex gap-3 justify-center text-body-15 font-bold text-dark-text">
+						<span class="">
+							{{ success.delivery.date | date("d.m.Y") }}
+						</span>
+						<span class="time">
+							{{ success.delivery.date | date("H:t") }}
+						</span>
+					</div>
+				</div>
+				<div class="mt-auto">
+					{% include '../components/button.twig' with {
+                                text: success.button.text,
+                                link: success.button.link,
+                                variant: success.button.variant|default('green'),
+                                size: success.button.size|default('lg'),
+                                target: success.button.target|default('_self'),
+                                showIcon: success.button.showIcon|default(false)
+                            } %}
+				</div>
+			</div>
+		</div>
+	{% endblock %}
+{% endembed %}</section>

@@ -1,0 +1,20 @@
+{
+    "success": {
+        "img": {
+            "src": "/images/flowers/flowers-in-glasses.png",
+            "alt": "Flowers in glasses"
+        },
+        "title": "Order Successful!",
+        "text": "Дякуємо, що обрали нас для доставки букетів. Ваше замовлення успішно оформлено, а підтвердження надіслано на вашу електронну пошту.",
+        "delivery": {
+            "text": "Очікувана доставка:",
+            "date": "2026-04-01T14:30"
+        },
+        "button": {
+            "text": "На головну",
+            "link": "/",
+            "variant": "border",
+            "size": "lg"
+        }
+    }
+}
