@@ -1,0 +1,24 @@
+<div class="swiper-slide flex flex-col justify-center items-start bg-background border border-background">
+	<div class="relative w-full">
+		<img src="{{ item.img.src|default('/images/placeholder.jpg') }}" alt="{{ item.img.alt }}" class="size-full object-cover aspect-9/11">
+		{% if item.badges is defined %}
+			<div class="absolute top-1.25 left-1.25 flex flex-wrap gap-1.5">
+				{% for badge in item.badges %}
+					<span class="{{html_classes("flex items-center px-3 py-1 bg-purple backdrop-blur-md text-white text-[10px] uppercase rounded-full whitespace-nowrap", { "bg-purple-dark": badge == 'Dostawa Gratis'}) }}">
+						{{ badge }}
+					</span>
+				{% endfor %}
+			</div>
+		{% endif %}
+	</div>
+
+	<div class="pt-2 text-dark-text">
+		<a href="{{ item.link }}" target="{{ item.target|default('_self') }}" class="text-body-13 font-bold uppercase text-wrap truncate before:absolute before:inset-0">
+			{{ item.name|default('Bukiet') }}
+		</a>
+		<p class="text-body-15">
+			<span>od</span>
+			<span class="uppercase">{{ item.price|default('169.00 zł') }}</span>
+		</p>
+	</div>
+</div>

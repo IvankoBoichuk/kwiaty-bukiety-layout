@@ -1,6 +1,6 @@
-<div class="swiper-slide flex flex-col justify-center items-start bg-background border border-background">
+<div class="swiper-slide flex flex-col justify-center items-start">
 	<div class="relative w-full">
-		<img src="{{ item.img.src|default('/images/placeholder.jpg') }}" alt="{{ item.img.alt }}" class="w-full h-full object-cover aspect-9/11">
+		<img src="{{ item.img.src|default('/images/placeholder.jpg') }}" alt="{{ item.img.alt }}" class="size-full object-cover aspect-15/13">
 		{% if item.badges is defined %}
 			<div class="absolute top-1.25 left-1.25 flex flex-wrap gap-1.5">
 				{% for badge in item.badges %}
