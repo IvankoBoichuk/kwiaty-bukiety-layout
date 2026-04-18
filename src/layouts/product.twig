@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>{{ title | default('Vite + Twig + Tailwind Boilerplate') }}</title>
+		<link rel="stylesheet" href="/src/assets/styles/main.css">
+		<script type="module" src="/src/assets/js/app.js"></script>
+	</head>
+	<body class="min-h-screen flex flex-col" x-data="mobileMenu">
+		{% include "header.twig" %}
+		<main class="flex flex-col grow gap-12 pb-12 md:pt-4 lg:gap-25 lg:pt-8 lg:pb-25 bg-[#FCF9F6]">
+			{% block content %}
+				<div class="max-w-4xl mx-auto">
+					<h1 class="text-4xl font-bold mb-6">Welcome to Your Boilerplate</h1>
+					<p class="text-lg text-gray-600 mb-4">This is a minimal Vite + Twig + Tailwind CSS starter template.</p>
+					<p class="text-gray-600">Start building by editing the files in the
+						<code class="bg-gray-200 px-2 py-1 rounded">src/</code>
+						directory.</p>
+				</div>
+			{% endblock %}
+		</main>
+		{% if not hide_footer %}
+			{% include "footer.twig" %}
+		{% endif %}
+		{% include "mobile-navigation.twig" %}
+	</body>
+</html>

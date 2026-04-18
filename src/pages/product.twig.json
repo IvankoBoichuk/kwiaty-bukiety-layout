@@ -1,0 +1,61 @@
+{
+	"product": {
+		"title": "Bukiet Róż Premium",
+        "badges": ["Nowość", "Dostawa Gratis"],
+		"gallery": [
+			{
+				"src": "/images/flowers/blue-rose.png",
+				"alt": "Bukiet Róż Premium - widok główny"
+			},
+			{
+				"src": "/images/flowers/malinova-pianka.png",
+				"alt": "Bukiet Róż Premium - widok 2"
+			},
+			{
+				"src": "/images/flowers/person-cutting-up-flowers.png",
+				"alt": "Bukiet Róż Premium - widok 3"
+			},
+			{
+				"src": "/images/flowers/red-aksamit.png",
+				"alt": "Bukiet Róż Premium - widok 4"
+			}
+		],
+		"variations": [
+			{
+				"id": "small",
+				"name": "Mały",
+				"price": "184 zł",
+				"description": "7-9 kwiatów",
+				"active": false
+			},
+			{
+				"id": "medium",
+				"name": "Średni",
+				"price": "249 zł",
+				"description": "11-13 kwiatów",
+				"active": false
+			},
+			{
+				"id": "large",
+				"name": "Duży",
+				"price": "335 zł",
+				"description": "15-17 kwiatów",
+				"active": true
+			},
+			{
+				"id": "xl",
+				"name": "XL",
+				"price": "560 zł",
+				"description": "25-27 kwiatów",
+				"active": false
+			},
+			{
+				"id": "deluxe",
+				"name": "Deluxe",
+				"price": "890 zł",
+				"description": "47-50 kwiatów",
+				"active": false
+			}
+		]
+	}
+}
