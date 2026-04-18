@@ -1,0 +1,55 @@
+{# Review card component with floating-point star rating support #}
+<div class="p-4 bg-[#E5EFDE] flex flex-col gap-3">
+	{# Name and location #}
+	<div class="flex items-center justify-between">
+		<div class="flex gap-2 items-center text-[13px] leading-3.75 font-semibold">
+			<div class="text-green-easy uppercase">{{ name }}</div>
+			<div class="text-gray-3">{{ location }}</div>
+		</div>
+		
+		{# Star rating with floating-point support #}
+		<div class="flex items-center gap-0.5">
+			{% set fullStars = rating|round(0, 'floor')|number_format(0) %}
+			{% set decimal = rating - fullStars %}
+			{% set hasPartialStar = decimal >= 0.1 %}
+			{% set partialStarFill = (decimal * 100)|round %}
+			{% set totalEmptyStars = hasPartialStar ? (5 - fullStars - 1) : (5 - fullStars) %}
+			
+			{# Full stars #}
+			{% if fullStars > 0 %}
+				{% for i in 1..fullStars %}
+					<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M6.58333 0.75L8.38583 4.40167L12.4167 4.99083L9.5 7.83167L10.1883 11.845L6.58333 9.94917L2.97833 11.845L3.66667 7.83167L0.75 4.99083L4.78083 4.40167L6.58333 0.75Z" fill="#F2994A" stroke="#F2994A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				{% endfor %}
+			{% endif %}
+			
+			{# Partial star #}
+			{% if hasPartialStar %}
+				<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<defs>
+						<linearGradient id="star-partial-{{ name|replace({' ': '-'})|lower }}-{{ loop.parent.loop.index|default(1) }}">
+							<stop offset="{{ partialStarFill }}%" stop-color="#F2994A"/>
+							<stop offset="{{ partialStarFill }}%" stop-color="transparent"/>
+						</linearGradient>
+					</defs>
+					<path fill="url(#star-partial-{{ name|replace({' ': '-'})|lower }}-{{ loop.parent.loop.index|default(1) }})" d="M6.58333 0.75L8.38583 4.40167L12.4167 4.99083L9.5 7.83167L10.1883 11.845L6.58333 9.94917L2.97833 11.845L3.66667 7.83167L0.75 4.99083L4.78083 4.40167L6.58333 0.75Z" stroke="#F2994A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			{% endif %}
+			
+			{# Empty stars #}
+			{% if totalEmptyStars > 0 %}
+				{% for i in 1..totalEmptyStars %}
+					<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M6.58333 0.75L8.38583 4.40167L12.4167 4.99083L9.5 7.83167L10.1883 11.845L6.58333 9.94917L2.97833 11.845L3.66667 7.83167L0.75 4.99083L4.78083 4.40167L6.58333 0.75Z" stroke="#F2994A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				{% endfor %}
+			{% endif %}
+		</div>
+	</div>
+	
+	{# Review text #}
+	{% if text %}
+		<p class="font-medium text-[14px]">"{{ text }}"</p>
+	{% endif %}
+</div>

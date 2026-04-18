@@ -1,0 +1,26 @@
+<section class="text-dark-text">
+	{% embed "../layouts/container.twig" %}
+		{% block content %}
+			{% if fields.title %}
+				<div class="mb-6 relative">
+					{# Subtitle in background #}
+					{% if fields.subtitle %}
+						<div class="absolute -bottom-2 left-18 text-[37px] uppercase leading-15 font-deco text-[#E0E0D7] pointer-events-none select-none z-0">
+							{{ fields.subtitle }}
+						</div>
+					{% endif %}
+					{# Main title #}
+					<h2 class="text-h2 relative z-10">{{ fields.title }}</h2>
+				</div>
+			{% endif %}
+
+			{% if fields.reviews %}
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+					{% for review in fields.reviews %}
+						{% include '../components/review-card.twig' with review %}
+					{% endfor %}
+				</div>
+			{% endif %}
+		{% endblock %}
+	{% endembed %}
+</section>
