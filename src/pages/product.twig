@@ -18,7 +18,11 @@
             <div class="mb-8">
                 {% include "components/product-variations.twig" with {variations: product.variations} %}
             </div>
-        </div>
 
+            {# Order Options #}
+            <div class="mb-12">
+                {% include "components/product-order-options.twig" %}
+            </div>
+        </div>
 	</section>
 {% endblock %}
