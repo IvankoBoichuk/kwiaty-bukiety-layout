@@ -162,9 +162,42 @@ export function initProductOrderOptions(): void {
     })
 }
 
+function initProductAdditions(): void {
+    const additionButtons = document.querySelectorAll<HTMLButtonElement>('.addition-toggle')
+
+    additionButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const parent = btn.closest('.group') // Assuming the button is inside an element with class 'group'
+            if (!parent) return
+
+            const isSelected = btn.dataset.selected === 'true'
+            const plusIcon = btn.querySelector('.addition-icon-plus')
+            const minusIcon = btn.querySelector('.addition-icon-minus')
+
+            if (isSelected) {
+                // Deselect
+                btn.dataset.selected = 'false'
+                plusIcon?.classList.remove('hidden')
+                minusIcon?.classList.add('hidden')
+                parent.classList.remove('active')
+            } else {
+                // Select
+                btn.dataset.selected = 'true'
+                plusIcon?.classList.add('hidden')
+                minusIcon?.classList.remove('hidden')
+                parent.classList.add('active')
+            }
+        })
+    })
+}
+
 // Initialize on DOM ready
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initProductOrderOptions)
+    document.addEventListener('DOMContentLoaded', () => {
+        initProductOrderOptions()
+        initProductAdditions()
+    })
 } else {
     initProductOrderOptions()
+    initProductAdditions()
 }

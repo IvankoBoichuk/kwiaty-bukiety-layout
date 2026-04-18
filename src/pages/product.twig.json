@@ -56,6 +56,32 @@
 				"description": "47-50 kwiatów",
 				"active": false
 			}
+		],
+		"additions": [
+			{
+				"id": "raffaello",
+				"name": "Bombonierki Raffaello",
+				"price": "35 zł",
+				"image": "/images/additions/add-1.jpg"
+			},
+			{
+				"id": "merci",
+				"name": "Czekoladki Merci",
+				"price": "35 zł",
+				"image": "/images/additions/add-2.jpg"
+			},
+			{
+				"id": "vase",
+				"name": "Wazon szklany",
+				"price": "50 zł",
+				"image": "/images/additions/add-3.jpg"
+			},
+			{
+				"id": "raffaello2",
+				"name": "Bombonierki Raffaello",
+				"price": "35 zł",
+				"image": "/images/additions/add-4.jpg"
+			}
 		]
 	}
 }

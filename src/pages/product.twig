@@ -24,5 +24,10 @@
                 {% include "components/product-order-options.twig" %}
             </div>
         </div>
+
+        {# Product Additions #}
+        <div class="mb-12">
+            {% include "components/product-additions.twig" with {additions: product.additions} %}
+        </div>
 	</section>
 {% endblock %}
