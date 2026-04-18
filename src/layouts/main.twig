@@ -7,9 +7,9 @@
 		<link rel="stylesheet" href="/src/assets/styles/main.css">
 		<script type="module" src="/src/assets/js/app.js"></script>
 	</head>
-	<body class="min-h-screen" x-data="mobileMenu">
+	<body class="min-h-screen flex flex-col" x-data="mobileMenu">
 		{% include "header.twig" %}
-		<main class="flex flex-col gap-12 pb-12 pt-2.5 md:pt-4 lg:gap-25 lg:pt-8 lg:pb-25 bg-[#FCF9F6]">
+		<main class="flex flex-col grow gap-12 pb-12 pt-2.5 md:pt-4 lg:gap-25 lg:pt-8 lg:pb-25 bg-[#FCF9F6]">
 			{% block content %}
 				<div class="max-w-4xl mx-auto">
 					<h1 class="text-4xl font-bold mb-6">Welcome to Your Boilerplate</h1>
@@ -20,6 +20,9 @@
 				</div>
 			{% endblock %}
 		</main>
-		{% include "footer.twig" %}
+		{% if not hide_footer %}
+			{% include "footer.twig" %}
+		{% endif %}
+		{% include "mobile-navigation.twig" %}
 	</body>
 </html>
