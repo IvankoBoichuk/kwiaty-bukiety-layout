@@ -17,6 +17,7 @@
 	--color-purple-easy: #b19bc5;
 	--color-green-default: #0c4a2c;
 	--color-green-dark: #0c3421;
+	--color-green-easy: #6d9586;
 
 	/* Neutral colors */
 	--color-background: #fcf9f6;
@@ -28,6 +29,7 @@
 
 	/* Fonts - replace with your project fonts */
 	--font-main: "Raleway", system-ui, -apple-system, sans-serif;
+	--font-deco: "Galada", system-ui, -apple-system, sans-serif;
 	--font-heading: "Cormorant Garamond", serif;
 
 	/* Shadows */

@@ -275,6 +275,36 @@
             ]
         }
     },
+    "reviews": {
+        "title": "Mówią o nas",
+        "subtitle": "Bukiety",
+        "reviews": [
+            {
+                "name": "INNA",
+                "location": "Gdansk",
+                "rating": 5,
+                "text": "Доставили в той же день,все супер ⭐"
+            },
+            {
+                "name": "PETRO",
+                "location": "Warsaw",
+                "rating": 5,
+                "text": "Букет виглядав навіть краще, ніж на фото"
+            },
+            {
+                "name": "KARL",
+                "location": "Lodz",
+                "rating": 5,
+                "text": "Замовляю не вперше - завжди без проблем"
+            },
+            {
+                "name": "PETRO",
+                "location": "Poznan",
+                "rating": 4,
+                "text": "Букет виглядав навіть краще, ніж на фото"
+            }
+        ]
+    },
     "socials": [
         {
             "label": "Facebook",
