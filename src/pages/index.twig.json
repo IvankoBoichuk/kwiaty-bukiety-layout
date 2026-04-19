@@ -106,6 +106,66 @@
             }
         ]
     },
+    "productsPopular": {
+        "title": "Najpopularniejsze bukiety",
+        "subtitle": "Kwiaty",
+        "list": [
+            {
+                "img": {
+                    "src": "/images/flowers/malinova-pianka.png",
+                    "alt": "Bukiet Malinowa Pianka"
+                },
+                "name": "Bukiet Malinowa Pianka",
+                "link": "/kategorie/roze/malinova-pianka",
+                "target": "_blank",
+                "badges": ["Dostawa Gratis", "Bestseller"],
+                "price": "169.00 zł"
+            },
+            {
+                "img": {
+                    "src": "/images/flowers/red-aksamit.png",
+                    "alt": "Bukiet Czerwony Aksamit"
+                },
+                "name": "Bukiet Czerwony Aksamit",
+                "link": "/kategorie/roze/czerwony-aksamit",
+                "target": "_blank",
+                "badges": ["Bestseller"],
+                "price": "189.00 zł"
+            },
+            {
+                "img": {
+                    "src": "/images/flowers/winter-roses.png",
+                    "alt": "Zimowe Róże"
+                },
+                "name": "Zimowe Róże",
+                "link": "/kategorie/roze/zimowe-roze",
+                "target": "_blank",
+                "badges": ["Dostawa Gratis"],
+                "price": "159.00 zł"
+            },
+            {
+                "img": {
+                    "src": "/images/flowers/white-winter-roses.png",
+                    "alt": "Białe Zimowe Róże"
+                },
+                "name": "Białe Zimowe Róże",
+                "link": "/kategorie/roze/biale-zimowe-roze",
+                "target": "_blank",
+                "price": "149.00 zł"
+            },
+            {
+                "img": {
+                    "src": "/images/flowers/blue-rose.png",
+                    "alt": "Niebieska Róża"
+                },
+                "name": "Niebieska Róża",
+                "link": "/kategorie/roze/niebieska-roza",
+                "target": "_blank",
+                "badges": ["Dostawa Gratis", "Bestseller"],
+                "price": "199.00 zł"
+            }
+        ]
+    },
     "faq": {
         "title": "FAQ – Najczęściej Zadawane Pytania",
         "list": [
