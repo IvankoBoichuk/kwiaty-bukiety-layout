@@ -122,5 +122,65 @@
 				"text": "Швидка доставка, якісні квіти"
 			}
 		]
+	},
+	"similarProducts": {
+		"title": "Podobne produkty",
+		"subtitle": "Sprawdź także",
+		"list": [
+			{
+				"img": {
+					"src": "/images/flowers/malinova-pianka.png",
+					"alt": "Bukiet Malinowa Pianka"
+				},
+				"name": "Bukiet Malinowa Pianka",
+				"link": "/kategorie/roze/malinova-pianka",
+				"target": "_self",
+				"badges": ["Bestseller"],
+				"price": "169.00 zł"
+			},
+			{
+				"img": {
+					"src": "/images/flowers/red-aksamit.png",
+					"alt": "Bukiet Czerwony Aksamit"
+				},
+				"name": "Bukiet Czerwony Aksamit",
+				"link": "/kategorie/roze/czerwony-aksamit",
+				"target": "_self",
+				"badges": ["Dostawa Gratis"],
+				"price": "189.00 zł"
+			},
+			{
+				"img": {
+					"src": "/images/flowers/winter-roses.png",
+					"alt": "Bukiet Zimowe Róże"
+				},
+				"name": "Bukiet Zimowe Róże",
+				"link": "/kategorie/roze/zimowe-roze",
+				"target": "_self",
+				"price": "199.00 zł"
+			},
+			{
+				"img": {
+					"src": "/images/flowers/white-winter-roses.png",
+					"alt": "Bukiet Białe Róże"
+				},
+				"name": "Bukiet Białe Róże",
+				"link": "/kategorie/roze/biale-roze",
+				"target": "_self",
+				"badges": ["Nowość"],
+				"price": "179.00 zł"
+			},
+			{
+				"img": {
+					"src": "/images/flowers/blue-rose.png",
+					"alt": "Bukiet Niebieska Róża"
+				},
+				"name": "Bukiet Niebieska Róża",
+				"link": "/kategorie/roze/niebieska-roza",
+				"target": "_self",
+				"badges": ["Bestseller", "Dostawa Gratis"],
+				"price": "159.00 zł"
+			}
+		]
 	}
 }

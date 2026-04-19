@@ -41,4 +41,9 @@
         </div>
 
 	</section>
+
+    {# Similar Products #}
+    {% if similarProducts %}
+        {% include "sections/similar-products.twig" with {fields: similarProducts} %}
+    {% endif %}
 {% endblock %}
