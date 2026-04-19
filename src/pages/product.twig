@@ -23,11 +23,17 @@
             <div class="mb-12">
                 {% include "components/product-order-options.twig" %}
             </div>
+            
+            {# Product Additions #}
+            <div class="mb-12">
+                {% include "components/product-additions.twig" with {additions: product.additions} %}
+            </div>
+
+            {# Product Description #}
+            <div class="mb-12">
+                {% include "components/product-description.twig" with {description: product.description} %}
+            </div>
         </div>
 
-        {# Product Additions #}
-        <div class="mb-12">
-            {% include "components/product-additions.twig" with {additions: product.additions} %}
-        </div>
 	</section>
 {% endblock %}
