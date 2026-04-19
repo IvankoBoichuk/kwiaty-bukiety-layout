@@ -1,0 +1,22 @@
+<h2 class="text-h2 text-green-default mb-6">
+    Recenzje produktów ({{ reviews|length }})
+</h2>
+
+{% if reviews and reviews|length > 0 %}
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+        {% for review in reviews %}
+            {% include 'review-card.twig' with review %}
+        {% endfor %}
+    </div>
+
+    <div class="flex justify-center">
+        {% include 'button.twig' with {
+            text: 'Більше відгуків',
+            link: '#reviews',
+            target: '_self',
+            variant: 'border',
+            size: 'lg',
+            showIcon: false
+        } %}
+    </div>
+{% endif %}
