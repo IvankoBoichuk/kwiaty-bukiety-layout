@@ -4,9 +4,10 @@
  */
 
 import Swiper from 'swiper'
-import { Pagination } from 'swiper/modules'
+import { Pagination, Navigation } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
+import 'swiper/css/navigation'
 
 function initEventsSwipers(): void {
     const swipers = document.querySelectorAll<HTMLElement>('.events-swiper')
@@ -37,9 +38,29 @@ function initEventsSwipers(): void {
     })
 }
 
+function initProductGallery(): void {
+    const swipers = document.querySelectorAll<HTMLElement>('.product-gallery-swiper')
+
+    swipers.forEach((swiperEl) => {
+        new Swiper(swiperEl, {
+            modules: [Navigation],
+            spaceBetween: 16,
+            slidesPerView: 1,
+            navigation: {
+                nextEl: '.product-gallery-next',
+                prevEl: '.product-gallery-prev',
+            },
+        })
+    })
+}
+
 // Initialize on DOM ready
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initEventsSwipers)
+    document.addEventListener('DOMContentLoaded', () => {
+        initEventsSwipers()
+        initProductGallery()
+    })
 } else {
     initEventsSwipers()
+    initProductGallery()
 }

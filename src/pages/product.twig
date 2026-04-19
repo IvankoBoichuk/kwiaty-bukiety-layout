@@ -1,0 +1,44 @@
+{% extends "./layouts/product.twig" %}
+
+{% block content %}
+	<section class="bg-background">
+        {# Product Gallery #}
+        {% include "components/product-gallery.twig" with {
+            images: product.gallery,
+            badges: product.badges|default([])
+        } %}
+
+        <div class="px-3">
+            {# Product Title #}
+            <h1 class="text-[20px] leading-5.75 font-semibold py-1.25 mb-5 text-green-default uppercase">
+                {{ product.title }}
+            </h1>
+
+            {# Product Variations #}
+            <div class="mb-8">
+                {% include "components/product-variations.twig" with {variations: product.variations} %}
+            </div>
+
+            {# Order Options #}
+            <div class="mb-12">
+                {% include "components/product-order-options.twig" %}
+            </div>
+
+            {# Product Additions #}
+            <div class="mb-12">
+                {% include "components/product-additions.twig" with {additions: product.additions} %}
+            </div>
+
+            {# Product Description #}
+            <div class="mb-12">
+                {% include "components/product-description.twig" with {description: product.description} %}
+            </div>
+
+            {# Product Reviews #}
+            <div class="mb-12">
+                {% include "components/product-reviews.twig" with {reviews: product.reviews} %}
+            </div>
+        </div>
+
+	</section>
+{% endblock %}

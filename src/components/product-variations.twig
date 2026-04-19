@@ -1,0 +1,20 @@
+<div class="flex flex-wrap gap-2">
+	{% for variation in variations %}
+		<button 
+			class="group flex-1 text-nowrap flex flex-col gap-1 items-center justify-center px-3 py-2 bg-background border border-[#E0E0D7] rounded-xl transition-all [&.active]:border-green-easy [&.active]:bg-green-easy"
+			data-variation-id="{{ variation.id }}"
+		>
+            <div class="flex items-center gap-1.5 text-gray-2 group-[.active]:text-background">
+                <span class="text-[14px] font-medium leading-tight ">
+                    {{ variation.name }}
+                </span>
+                <span class="text-[15px] font-bold leading-tight">
+                    {{ variation.price }}
+                </span>
+            </div>
+			<span class="text-sm text-gray-3 group-[.active]:text-background">
+				{{ variation.description }}
+			</span>
+		</button>
+	{% endfor %}
+</div>

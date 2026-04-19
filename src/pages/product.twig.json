@@ -1,0 +1,126 @@
+{
+	"product": {
+		"title": "Bukiet Róż Premium",
+        "badges": ["Nowość", "Dostawa Gratis"],
+		"gallery": [
+			{
+				"src": "/images/flowers/blue-rose.png",
+				"alt": "Bukiet Róż Premium - widok główny"
+			},
+			{
+				"src": "/images/flowers/malinova-pianka.png",
+				"alt": "Bukiet Róż Premium - widok 2"
+			},
+			{
+				"src": "/images/flowers/person-cutting-up-flowers.png",
+				"alt": "Bukiet Róż Premium - widok 3"
+			},
+			{
+				"src": "/images/flowers/red-aksamit.png",
+				"alt": "Bukiet Róż Premium - widok 4"
+			}
+		],
+		"variations": [
+			{
+				"id": "small",
+				"name": "Mały",
+				"price": "184 zł",
+				"description": "7-9 kwiatów",
+				"active": false
+			},
+			{
+				"id": "medium",
+				"name": "Średni",
+				"price": "249 zł",
+				"description": "11-13 kwiatów",
+				"active": false
+			},
+			{
+				"id": "large",
+				"name": "Duży",
+				"price": "335 zł",
+				"description": "15-17 kwiatów",
+				"active": true
+			},
+			{
+				"id": "xl",
+				"name": "XL",
+				"price": "560 zł",
+				"description": "25-27 kwiatów",
+				"active": false
+			},
+			{
+				"id": "deluxe",
+				"name": "Deluxe",
+				"price": "890 zł",
+				"description": "47-50 kwiatów",
+				"active": false
+			}
+		],
+		"additions": [
+			{
+				"id": "raffaello",
+				"name": "Bombonierki Raffaello",
+				"price": "35 zł",
+				"image": "/images/additions/add-1.jpg"
+			},
+			{
+				"id": "merci",
+				"name": "Czekoladki Merci",
+				"price": "35 zł",
+				"image": "/images/additions/add-2.jpg"
+			},
+			{
+				"id": "vase",
+				"name": "Wazon szklany",
+				"price": "50 zł",
+				"image": "/images/additions/add-3.jpg"
+			},
+			{
+				"id": "raffaello2",
+				"name": "Bombonierki Raffaello",
+				"price": "35 zł",
+				"image": "/images/additions/add-4.jpg"
+			}
+		],
+		"description": "<p>Czerwone róże to prawdziwy klasyk, który zawsze pozostanie pożądany. Wyznanie miłości, rocznica ślubu, zaręczyny – żadne ważne romantyczne wydarzenie nie może obejść się bez bukietu czerwonych róż.</p><div><p class=\"font-semibold mb-2\">Skład:</p><ul><li>czerwone róże</li><li>zielone dodatki</li><li>opakowanie</li><li>wstążka</li></ul></div><p>Warto zwrócić uwagę, że kwiaty są żywe, dlatego kompozycja może nieznacznie różnić się od prezentowanego na zdjęciach przykładu pod względem odcienia, kształtu i zestawienia. Nie musisz się tym jednak martwić, ponieważ Twoja kompozycja nadal będzie niezwykle piękna!</p><div><p>Chcesz dowiedzieć się, na jaką okazję możesz wybrać ten bukiet? Sprawdź pomysły na naszym blogu:</p><ul><li><a href=\"/blog/roze-krolowa-kwiatow\">Róże – królowa kwiatów w kulturze</a></li><li><a href=\"/blog/psychologia-roz\">Psychologia róż: jak ten kwiat wpływa na nastrój i relacje</a></li><li><a href=\"/blog/wybor-wazonu\">Wybór wazonu na bukiet róż: Materiały, rozmiar, kolory i inne aspekty</a></li></ul></div>",
+		"reviews": [
+			{
+				"name": "INNA",
+				"location": "Gdansk",
+				"rating": 5,
+				"text": "Доставили в той же день,все супер ⭐"
+			},
+			{
+				"name": "PETRO",
+				"location": "Warsaw",
+				"rating": 5,
+				"text": "Букет виглядав навіть краще, ніж на фото"
+			},
+			{
+				"name": "KARL",
+				"location": "Lodz",
+				"rating": 5,
+				"text": "Замовляю не вперше - завжди без проблем"
+			},
+			{
+				"name": "PETRO",
+				"location": "Poznan",
+				"rating": 4,
+				"text": "Букет виглядав навіть краще, ніж на фото"
+			},
+			{
+				"name": "MARIA",
+				"location": "Krakow",
+				"rating": 5,
+				"text": "Дуже гарний букет, дякую!"
+			},
+			{
+				"name": "OLENA",
+				"location": "Wroclaw",
+				"rating": 4.5,
+				"text": "Швидка доставка, якісні квіти"
+			}
+		]
+	}
+}
