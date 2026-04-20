@@ -1,0 +1,46 @@
+<div class="flex gap-3 h-34 sm:h-44 md:h-48 pb-4 items-center justify-between overflow-hidden border-b border-[#E0E0D7]">
+	<img src="{{ product.img.src }}" alt="{{ product.img.alt }}" class="h-full object-cover aspect-11/12">
+	<div class="flex flex-col justify-between size-full">
+		<div class="flex flex-col ">
+			<div class="flex justify-between">
+				{% if product.title %}
+					<h2 class="text-h3 font-bold text-[#1e462f]">
+						{{ product.title }}
+					</h2>
+				{% endif %}
+				<button class="group h-5 w-5">
+					<svg class="h-5 w-5 stroke-current text-[#6D9586] group-active:text-green-dark transition-colors" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M14.125 5.87521L5.87542 14.1248" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M14.125 14.1248L5.87542 5.87521" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</button>
+			</div>
+			{% if product.description  %}
+				<p class="text-body-13 text-[#426E59]">
+					{{ product.description }}
+				</p>
+			{% endif %}
+		</div>
+		<div class="flex justify-between items-center">
+			{% if product.price  %}
+				<span class="text-h3">
+					{{ product.price }}
+				</span>
+			{% endif %}
+			<div class="flex items-center justify-between w-28.75">
+				<button class="flex h-9 w-9 items-center justify-center cursor-pointer rounded-xl border border-green-easy group active:bg-green-easy hover:bg-white transition-colors">
+					<svg class="h-5 w-5 stroke-current text-green-easy group-active:text-white transition-colors" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M15.833 10H4.16634" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</button>
+				<span class="text-h3">1</span>
+				<button class="flex h-9 w-9 items-center justify-center cursor-pointer rounded-xl border border-green-easy group active:bg-green-easy hover:bg-white transition-colors">
+					<svg class="h-5 w-5 stroke-current text-green-easy group-active:text-white transition-colors" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M10 4.16666V15.8333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M15.833 10H4.16634" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
