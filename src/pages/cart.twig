@@ -21,9 +21,13 @@
 									Total:
 									<span class="text-h3 font-extrabold">269 zł</span>
 								</div>
-								<button class="flex items-center justify-center h-11.5 w-46.25 text-body-13 bg-[#4D5174] text-white rounded-full">
-									Checkout
-								</button>
+								<div class="w-46.25">
+									{% include "components/button.twig" with { "text": "Checkout",
+            "link": "#",
+            "variant": "purple",
+            "size": "lg",
+            "showIcon": false} %}
+								</div>
 							</div>
 						</div>
 					</div>
