@@ -1,0 +1,125 @@
+{
+    "checkout": {
+        "pageTitle": "ZŁOŻENIE ZAMÓWIENIA",
+        "form": {
+            "sections": [
+                {
+                    "id": "recipient",
+                    "title": "Dane odbiorcy",
+                    "fields": [
+                        {
+                            "type": "select",
+                            "name": "delivery_place",
+                            "label": "Miejsce dostawy",
+                            "placeholder": "Adres prywatny",
+                            "required": true,
+                            "options": [
+                                {
+                                    "value": "private",
+                                    "label": "Adres prywatny"
+                                },
+                                {
+                                    "value": "company",
+                                    "label": "Firma / biuro"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "select",
+                            "name": "street",
+                            "label": "Ulica i nr",
+                            "placeholder": "Ulica i nr",
+                            "options": [
+                                {
+                                    "value": "ulica-1",
+                                    "label": "Ulica i nr"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "input",
+                            "name": "postal_code",
+                            "label": "Kod pocztowy",
+                            "placeholder": "Kod pocztowy"
+                        },
+                        {
+                            "type": "input",
+                            "name": "city",
+                            "label": "Miasto",
+                            "placeholder": "Miasto"
+                        },
+                        {
+                            "type": "input",
+                            "name": "recipient_name",
+                            "label": "Imię i nazwisko",
+                            "placeholder": "np. Jan Kowalski"
+                        },
+                        {
+                            "type": "input",
+                            "name": "recipient_phone",
+                            "label": "Numer telefonu",
+                            "placeholder": "np. 123 345 789"
+                        }
+                    ]
+                },
+                {
+                    "id": "sender",
+                    "title": "Dane nadawcy",
+                    "fields": [
+                        {
+                            "type": "input",
+                            "name": "sender_firstname",
+                            "label": "Imię",
+                            "placeholder": "np. Jan"
+                        },
+                        {
+                            "type": "input",
+                            "name": "sender_lastname",
+                            "label": "Nazwisko",
+                            "placeholder": "np. Kowalski"
+                        },
+                        {
+                            "type": "input",
+                            "name": "sender_phone",
+                            "label": "Numer telefonu",
+                            "placeholder": "np. 123 345 789"
+                        },
+                        {
+                            "type": "input",
+                            "name": "sender_email",
+                            "label": "Adres e-mail",
+                            "placeholder": "np. asd12390@gmail.com",
+                            "input_type": "email"
+                        },
+                        {
+                            "type": "input",
+                            "name": "sender_nip",
+                            "label": "NIP",
+                            "placeholder": "np. 12334567590"
+                        }
+                    ]
+                },
+                {
+                    "id": "notes",
+                    "title": "Uwagi dotyczące dostawy",
+                    "fields": [
+                        {
+                            "type": "textarea",
+                            "name": "delivery_notes",
+                            "label": "Uwagi dotyczące zamówienia",
+                            "placeholder": "Notes about your order, e.g. specials notes for delivery",
+                            "rows": 5
+                        }
+                    ]
+                }
+            ]
+        },
+        "cta": {
+            "text": "Przejdź do płatności",
+            "link": "#",
+            "variant": "purple",
+            "size": "lg",
+            "showIcon": false
+        }
+    }
+}
