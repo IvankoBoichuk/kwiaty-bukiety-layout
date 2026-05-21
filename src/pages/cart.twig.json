@@ -1,0 +1,73 @@
+{
+    "cart": {
+        "title": "Koszyk (4)",
+        "items": [
+            {
+                "id": 101,
+                "title": "Bukiet Truskawkowa Pianka",
+                "description": "Duzy, 15-17 kwiatów",
+                "price": "139 zł",
+                "img": {
+                    "src": "/images/flowers/malinova-pianka.png",
+                    "alt": "Bukiet Malinowa Pianka"
+                },
+                "quantity": 1
+            },
+            {
+                "id": 102,
+                "title": "Słoneczny Poranek",
+                "description": "Średni, 10-12 kwiatów",
+                "price": "139 zł",
+                "img": {
+                    "src": "/images/flowers/malinova-pianka.png",
+                    "alt": "Bukiet Malinowa Pianka"
+                },
+                "quantity": 1
+            },
+            {
+                "id": 102,
+                "title": "Słoneczny Poranek",
+                "description": "Średni, 10-12 kwiatów",
+                "price": "139 zł",
+                "img": {
+                    "src": "/images/flowers/malinova-pianka.png",
+                    "alt": "Bukiet Malinowa Pianka"
+                },
+                "quantity": 1
+            },
+            {
+                "id": 102,
+                "title": "Słoneczny Poranek",
+                "description": "Średni, 10-12 kwiatów",
+                "price": "139 zł",
+                "img": {
+                    "src": "/images/flowers/malinova-pianka.png",
+                    "alt": "Bukiet Malinowa Pianka"
+                },
+                "quantity": 1
+            },
+            {
+                "id": 102,
+                "title": "Słoneczny Poranek",
+                "description": "Średni, 10-12 kwiatów",
+                "price": "139 zł",
+                "img": {
+                    "src": "/images/flowers/malinova-pianka.png",
+                    "alt": "Bukiet Malinowa Pianka"
+                },
+                "quantity": 1
+            },
+            {
+                "id": 102,
+                "title": "Słoneczny Poranek",
+                "description": "Średni, 10-12 kwiatów",
+                "price": "139 zł",
+                "img": {
+                    "src": "/images/flowers/malinova-pianka.png",
+                    "alt": "Bukiet Malinowa Pianka"
+                },
+                "quantity": 1
+            }
+        ]
+    }
+}
