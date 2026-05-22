@@ -61,9 +61,9 @@ export default {
                     const [p1, p2, p3] = parts
 
                     return `
-                            <span class="font-heading font-semibold text-[38px] leading-11.5 -mb-1.25">${p1}</span>
-                            <span class="text-h3 -mb-2.5">${p2}</span>
-                            <span class="font-heading font-medium italic text-[42px] leading-[1.2]">${p3}</span>
+                            <span class="font-heading font-semibold text-[38px] leading-11.5 -mb-1.25 md:text-[56px] md:mb-3 ">${p1}</span>
+                            <span class="text-h3 -mb-2.5 md:text-[22px]">${p2}</span>
+                            <span class="font-heading font-medium italic text-[42px] leading-[1.2] md:text-[64px]">${p3}</span>
                         `
                         .replace(/\s+/g, ' ')
                         .trim()
