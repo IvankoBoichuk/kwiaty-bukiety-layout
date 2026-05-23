@@ -2,11 +2,39 @@
     "offer": {
         "hero": {
             "title": "Kwiaty, \n które robią \n wrażenie",
+            "description": "Świeże bukiety na każdą okazję. Dostarczamy szybko, pięknie i z sercem.",
             "img": {
                 "src": "/images/flowers/person-cutting-up-flowers.png",
                 "alt": "Hero image showcasing our services"
             },
-            "advantages": ["Darmowa wysyłka", "Tego samego dnia", "Płatność online"]
+            "buttons": {
+                "primary": {
+                    "name": "Zamow Online",
+                    "link": "/zamowienie"
+                },
+                "secondary": {
+                    "name": "Zadzwon teraz",
+                    "link": "tel:+48000000000",
+                    "icon": "/socials/phone.svg"
+                }
+            },
+            "advantages": [
+                {
+                    "title": "Darmowa wysyłka",
+                    "subtitle": "Na wszystkie zamówienia",
+                    "icon": "/guarantees/delivery.svg"
+                },
+                {
+                    "title": "Tego samego dnia",
+                    "subtitle": "Zamów do 12:00",
+                    "icon": "/guarantees/fast-timer.svg"
+                },
+                {
+                    "title": "Płatność online",
+                    "subtitle": "Bezpieczne i wygodne płatności",
+                    "icon": "/guarantees/card.svg"
+                }
+            ]
         },
         "product": {
             "img": {
