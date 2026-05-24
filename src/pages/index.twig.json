@@ -224,10 +224,7 @@
     },
     "howItWorks": {
         "title": "Як це працює",
-        "image": {
-            "src": "/images/flowers/pink-flowers.jpg",
-            "alt": "Букет рожевих квітів"
-        },
+        "subtitle": "Bukiety",
         "list": [
             {
                 "title": "Оберіть букет",
@@ -326,8 +323,6 @@
         ]
     },
     "reviews": {
-        "title": "Mówią o nas",
-        "subtitle": "Bukiety",
         "reviews": [
             {
                 "name": "INNA",
