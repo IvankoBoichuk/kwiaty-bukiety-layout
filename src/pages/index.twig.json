@@ -247,6 +247,10 @@
     "cities": {
         "title": "Міста доставки",
         "text": "Доставляємо свіжі квіти у найбільші міста Польщі — оберіть потрібне місто",
+				"img": {
+                    "src": "/images/additions/add-5.jpg",
+                    "alt": "Two people with flowers"
+        },
         "cities": [
             {
                 "text": "Варшава",
