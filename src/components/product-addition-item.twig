@@ -1,23 +1,23 @@
-<div class="flex flex-col rounded-xl overflow-hidden border border-[#E0E0D7] text-gray-1 group [&.active]:text-white [&.active]:bg-green-easy [&.active]:border-green-easy">
+<div class="flex flex-col rounded-xl overflow-hidden bg-white border border-[#E0E0D7] text-gray-1 group [&.active]:text-white [&.active]:bg-green-easy [&.active]:border-green-easy lg:flex-row lg:rounded-2xl lg:p-3 lg:gap-3 lg:items-start lg:overflow-visible">
 	{# Image #}
-    <img 
-        src="{{ item.image }}" 
-        alt="{{ item.name }}" 
-        class="h-38.5 w-full object-cover"
+    <img
+        src="{{ item.image }}"
+        alt="{{ item.name }}"
+        class="h-38.5 w-full object-cover lg:h-auto lg:w-20 lg:aspect-square lg:shrink-0 lg:rounded-xl"
     >
 
 	{# Content #}
-	<div class="flex flex-col justify-between gap-2 p-2 flex-1">
-		<h3 class="text-body-15 font-semibold mb-2">
+	<div class="flex flex-col justify-between p-2 flex-1 lg:p-0 lg:h-full">
+		<h3 class="text-body-15 font-semibold leading-tight mb-2 lg:mb-0">
 			{{ item.name }}
 		</h3>
 
-		<div class="flex items-center justify-between">
+		<div class="flex items-center justify-between ">
 			<span class="text-[16px] font-bold pl-1">
 				{{ item.price }}
 			</span>
 
-			<button 
+			<button
 				type="button"
 				class="addition-toggle p-2 rounded-xl border border-current text-green-default group-[.active]:text-white bg-[#A5AB5F]/25 flex items-center justify-center transition-all hover:bg-green-default hover:text-white"
 				data-addition-id="{{ item.id }}"
