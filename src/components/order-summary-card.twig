@@ -1,0 +1,38 @@
+<div class="flex flex-col gap-5 bg-white rounded-[32px] p-8 shadow-[0_4px_32px_-8px_rgba(12,12,13,0.2)]">
+	<h2 class="text-[22px] font-bold text-green-default">{{ summary.title|default('Total') }}</h2>
+
+	<div class="flex flex-col gap-3 w-full">
+		{% for item in summary.items %}
+			<div class="flex gap-3 h-21 items-start overflow-hidden">
+				<img src="{{ item.img.src }}" alt="{{ item.img.alt }}" class="h-full w-[75px] shrink-0 object-cover border border-[#F7F7F6]">
+				<div class="flex flex-1 flex-col h-full justify-between min-w-0">
+					<div class="flex flex-col">
+						<div class="flex gap-1 items-center">
+							<span class="shrink-0 text-[13px] font-semibold text-gray-4">x{{ item.quantity|default(1) }}</span>
+							<p class="text-base font-bold leading-6 text-green-default truncate">{{ item.title }}</p>
+						</div>
+						{% if item.description %}
+							<p class="text-base leading-6 text-[#426E59] truncate">{{ item.description }}</p>
+						{% endif %}
+					</div>
+					<div class="flex justify-end">
+						<span class="text-base font-bold leading-6 text-gray-1">{{ item.price }}</span>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+
+	<div class="flex flex-col gap-3 pt-5 border-t border-[#F2EDE1] text-green-default">
+		<div class="flex items-end justify-between">
+			<span class="text-base">Delivery</span>
+			<span class="text-[22px] font-bold">{{ summary.delivery }}</span>
+		</div>
+		<div class="flex items-end justify-between">
+			<span class="text-base">Calkowita cena:</span>
+			<span class="text-[22px] font-bold">{{ summary.total }}</span>
+		</div>
+	</div>
+
+	{% include "button.twig" with cta %}
+</div>

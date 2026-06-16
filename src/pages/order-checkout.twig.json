@@ -1,6 +1,43 @@
 {
     "checkout": {
-        "pageTitle": "ZŁOŻENIE ZAMÓWIENIA",
+        "pageTitle": "Złożenie zamówienia",
+        "summary": {
+            "title": "Total",
+            "delivery": "Free",
+            "total": "595 zł",
+            "items": [
+                {
+                    "title": "Bukiet Truskawkowa Pianka",
+                    "description": "Duzy, 15-17 kwiatów",
+                    "price": "139 zł",
+                    "quantity": 1,
+                    "img": {
+                        "src": "/images/flowers/malinova-pianka.png",
+                        "alt": "Bukiet Truskawkowa Pianka"
+                    }
+                },
+                {
+                    "title": "Czekoladki Merci",
+                    "description": "250 g",
+                    "price": "50 zł",
+                    "quantity": 1,
+                    "img": {
+                        "src": "/images/flowers/malinova-pianka.png",
+                        "alt": "Czekoladki Merci"
+                    }
+                },
+                {
+                    "title": "Czekoladki Merci",
+                    "description": "250 g",
+                    "price": "50 zł",
+                    "quantity": 2,
+                    "img": {
+                        "src": "/images/flowers/malinova-pianka.png",
+                        "alt": "Czekoladki Merci"
+                    }
+                }
+            ]
+        },
         "form": {
             "sections": [
                 {
