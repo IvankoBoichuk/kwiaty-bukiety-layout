@@ -2,30 +2,53 @@
 {% set hide_footer = true %}
 {% set hide_header_timer = true %}
 
+{% set rowMap = {1: 'lg:grid-rows-1', 2: 'lg:grid-rows-2', 3: 'lg:grid-rows-3', 4: 'lg:grid-rows-4'} %}
+
 {% block content %}
 	<section class="flex flex-col grow">
 		{% embed "./layouts/container.twig" %}
 			{% block content %}
-				<div class="flex flex-col gap-3">
-					<h1 class="text-h2 text-green-default uppercase">{{ checkout.pageTitle }}</h1>
+				<div class="flex flex-col gap-3 lg:gap-6">
+					<h1 class="text-h2 text-green-default lg:text-[32px] lg:font-semibold lg:leading-tight md:text-[40px] md:leading-tight">{{ checkout.pageTitle }}</h1>
 
-					<form class="flex flex-col gap-3 mb-18.5">
-						{% for section in checkout.form.sections %}
-							<div class="bg-white rounded-xl shadow-[0_2px_32px_rgba(0,0,0,.08)] px-3 py-4">
-								<h2 class="text-h3 text-green-default mb-5">{{ section.title }}</h2>
-								<div class="flex flex-col gap-3">
-									{% for field in section.fields %}
-										{% include "components/form-field.twig" with field %}
-									{% endfor %}
+					<div class="lg:grid lg:grid-cols-12 lg:gap-3 lg:items-start">
+						<form class="lg:col-span-8 flex flex-col gap-3 lg:gap-3 mb-18.5 lg:mb-0">
+							{% for section in checkout.form.sections %}
+								<div class="bg-white rounded-xl md:rounded-4xl shadow-[0_2px_32px_rgba(0,0,0,.08)] lg:shadow-[0_2px_16px_rgba(0,0,0,.08)] px-3 py-4 md:p-6 lg:p-8">
+									<h2 class="text-h3 md:text-[22px] lg:font-bold text-green-default mb-5 lg:mb-5">{{ section.title }}</h2>
+
+									{% if section.fields|length > 1 %}
+										{% set rows = (section.fields|length / 2)|round(0, 'ceil') %}
+										<div class="flex flex-col gap-3 lg:grid lg:grid-flow-col lg:grid-cols-2 lg:gap-x-8 lg:gap-y-1 {{ rowMap[rows] }}">
+											{% for field in section.fields %}
+												{% include "components/form-field.twig" with field %}
+											{% endfor %}
+										</div>
+									{% else %}
+										<div class="flex flex-col gap-3">
+											{% for field in section.fields %}
+												{% include "components/form-field.twig" with field %}
+											{% endfor %}
+										</div>
+									{% endif %}
 								</div>
-							</div>
-						{% endfor %}
-					</form>
+							{% endfor %}
+						</form>
+
+						{# Desktop order summary #}
+						<aside class="hidden lg:block lg:col-span-4 -mt-13.75">
+							{% include "components/order-summary-card.twig" with {
+								summary: checkout.summary,
+								cta: checkout.cta
+							} only %}
+						</aside>
+					</div>
 				</div>
 			{% endblock %}
 		{% endembed %}
 
-		<div class="fixed bottom-13.5 inset-x-0 p-3 sm:px-8 lg:px-29.25 bg-[#FCF9F6] border-t border-[#E0E0D7]">
+		{# Mobile / tablet sticky checkout bar #}
+		<div class="lg:hidden fixed bottom-13.5 inset-x-0 p-3 sm:px-8 bg-[#FCF9F6] border-t border-[#E0E0D7]">
 			<div class="max-w-4xl mx-auto">
 				{% include "components/button.twig" with checkout.cta %}
 			</div>

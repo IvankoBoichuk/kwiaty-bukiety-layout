@@ -3,12 +3,12 @@
 {% set required = required|default(false) %}
 {% set rows = rows|default(4) %}
 
-<label class="block pt-2.5">
+<label class="block pt-2.5 lg:pt-6.5">
 	<span class="sr-only">{{ label }}</span>
 
-	<div class="flex align-middle relative rounded-xl border border-[#C7C7C7] bg-transparent px-3 py-2 {{ class|default('') }}">
+	<div class="flex align-middle relative rounded-xl border border-[#C7C7C7] bg-transparent min-h-12 px-3 py-2 {{ class|default('') }}">
 		{% if label %}
-			<span class="absolute left-2 top-0 -translate-y-1/2 text-body-13 leading-3 text-[#969998] bg-white px-1">
+			<span class="absolute left-2 top-0 -translate-y-1/2 text-body-13 leading-3 lg:text-[15px] lg:leading-5 text-[#969998] bg-white px-1">
 				{{ label }}
 				{% if required %}
 					*
@@ -17,7 +17,7 @@
 		{% endif %}
 
 		{% if type == 'select' %}
-			<select name="{{ name }}" {% if required %} required {% endif %} class="w-full bg-transparent text-body-13 text-green-default placeholder:text-[#969998] focus:outline-none appearance-none pr-8">
+			<select name="{{ name }}" {% if required %} required {% endif %} class="w-full bg-transparent text-body-13 lg:text-base text-green-default placeholder:text-[#969998] focus:outline-none appearance-none pr-8 md:text-[16px]">
 				{% if placeholder %}
 					<option value="" selected disabled>{{ placeholder }}</option>
 				{% endif %}
@@ -32,9 +32,9 @@
 			</svg>
 
 		{% elseif type == 'textarea' %}
-			<textarea name="{{ name }}" rows="{{ rows }}" {% if required %} required {% endif %} placeholder="{{ placeholder }}" class="w-full min-h-23 mt-0.5 bg-transparent text-body-13 text-green-default placeholder:text-[#969998] focus:outline-none resize-none">{{ value|default('') }}</textarea>
+			<textarea name="{{ name }}" rows="{{ rows }}" {% if required %} required {% endif %} placeholder="{{ placeholder }}" class="w-full min-h-23 mt-0.5 bg-transparent text-body-13 lg:text-base text-green-default placeholder:text-[#969998] focus:outline-none resize-none md:text-[16px]">{{ value|default('') }}</textarea>
 		{% else %}
-			<input type="{{ input_type }}" name="{{ name }}" {% if required %} required {% endif %} placeholder="{{ placeholder }}" value="{{ value|default('') }}" class="w-full bg-transparent text-body-13 text-green-default placeholder:text-[#969998] focus:outline-none"/>
+			<input type="{{ input_type }}" name="{{ name }}" {% if required %} required {% endif %} placeholder="{{ placeholder }}" value="{{ value|default('') }}" class="w-full bg-transparent text-body-13 lg:text-base text-green-default placeholder:text-[#969998] focus:outline-none md:text-[16px]"/>
 		{% endif %}
 	</div>
 </label>
