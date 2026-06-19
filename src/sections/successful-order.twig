@@ -1,27 +1,29 @@
 <section class="flex flex-col grow">
 	{% embed "../layouts/container.twig" %}
 		{% block content %}
-			<div class="relative flex flex-col grow gap-8 -mt-2.5">
-				<img src="{{ success.img.src|default('/images/placeholder.jpg') }}" alt="{{ success.img.alt }}" class="w-screen h-full max-w-max self-center">
-				<div class="flex flex-col gap-4">
-					<h2 class="text-h2 text-center text-dark-text">{{success.title}}</h3>
-					<p class="text-3.5 font-normal text-center text-[#426E59]">{{success.text}}</p>
-				</div>
-				<div class="flex flex-col gap-1">
-					<div class="text-3.5 font-normal text-center text-[#6D9586]">
-						{{ success.delivery.text }}
+			<div class="relative flex flex-col gap-8 -mt-2.5 md:-mt-4 lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center lg:mt-8">
+				<img src="{{ success.img.src|default('/images/placeholder.jpg') }}" alt="{{ success.img.alt }}" class="w-screen h-full max-w-max self-center object-cover lg:order-last lg:w-full lg:h-auto lg:max-w-full lg:self-auto">
+
+				<div class="flex flex-col grow gap-6 md:gap-10 lg:grow-0 lg:w-full lg:max-w-[520px] lg:mx-auto">
+					<div class="flex flex-col gap-4 items-center">
+						<h2 class="text-h2 md:text-[40px] md:leading-tight text-center lg:text-left text-dark-text">{{success.title}}</h2>
+						<p class="text-3.5 md:text-base font-normal text-center text-[#426E59] md:text-[16px] md:max-w-112.5">{{success.text}}</p>
 					</div>
-					<div class="flex gap-3 justify-center text-body-15 font-bold text-dark-text">
-						<span class="">
-							{{ success.delivery.date | date("d.m.Y") }}
-						</span>
-						<span class="time">
-							{{ success.delivery.date | date("H:t") }}
-						</span>
+					<div class="flex flex-col gap-1 mb-6 md:mb-0 lg:mb-5.5">
+						<div class="text-3.5 md:text-base font-normal text-center text-[#6D9586]">
+							{{ success.delivery.text }}
+						</div>
+						<div class="flex gap-3 justify-center text-body-15 md:text-lg font-bold text-dark-text md:text-[22px]">
+							<span class="">
+								{{ success.delivery.date | date("d.m.Y") }}
+							</span>
+							<span class="time">
+								{{ success.delivery.date | date("H:i") }}
+							</span>
+						</div>
 					</div>
-				</div>
-				<div class="mt-auto">
-					{% include '../components/button.twig' with {
+					<div class="mt-auto lg:mt-0 w-full md:max-w-92 md:mx-auto">
+						{% include '../components/button.twig' with {
                                 text: success.button.text,
                                 link: success.button.link,
                                 variant: success.button.variant|default('green'),
@@ -29,8 +31,9 @@
                                 target: success.button.target|default('_self'),
                                 showIcon: success.button.showIcon|default(false)
                             } %}
+					</div>
 				</div>
 			</div>
-		</div>
-	{% endblock %}
-{% endembed %}</section>
+		{% endblock %}
+	{% endembed %}
+</section>
