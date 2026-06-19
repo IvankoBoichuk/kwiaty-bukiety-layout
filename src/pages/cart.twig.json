@@ -1,6 +1,10 @@
 {
     "cart": {
         "title": "Koszyk (4)",
+        "summary": {
+            "delivery": "Free",
+            "total": "595 zł"
+        },
         "items": [
             {
                 "id": 101,

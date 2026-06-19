@@ -1,8 +1,8 @@
-<section class="bg-[#E5EFDE] py-12">
+<section class="bg-[#E5EFDE] py-12 lg:py-25">
 	{% embed "../layouts/container.twig" %}
 		{% block content %}
-            <h2 class="text-h2 text-green-default mb-6">{{ fields.title }}</h2>
-            <div class="grid grid-cols-2 gap-x-2.75 gap-y-6 auto-rows-auto sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+            <h2 class="text-h2 text-green-default mb-6 md:text-[32px] md:font-semibold md:leading-tight">{{ fields.title }}</h2>
+            <div class="grid grid-cols-2 gap-x-2.75 gap-y-6 auto-rows-auto sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4">
                 {% if fields.list %}
                     {% for item in fields.list %}
                         {% include "../tease/product-3.twig" with { item: item } %}
