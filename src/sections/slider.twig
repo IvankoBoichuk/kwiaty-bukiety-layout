@@ -3,9 +3,9 @@
 		{% block content %}
 			<div>
 				{% if fields.title or fields.subtitle %}
-					<div class="mb-4.5">
+					<div class="mb-4.5 lg:mb-8.5">
 						{% if fields.title %}
-							<h2 class="text-h2 mb-1">{{ fields.title|format_title }}</h2>
+							<h2 class="text-h2 mb-1 md:text-[40px] md:mb-3">{{ fields.title|format_title }}</h2>
 						{% endif %}
 						{% if fields.subtitle %}
 							<p class="text-body-15">{{ fields.subtitle }}</p>
@@ -20,8 +20,19 @@
 						{% endfor %}
 					</div>
 
-					<!-- Pagination -->
-					<div class="swiper-pagination relative! m-0 flex justify-center [--swiper-pagination-bottom:0]"/>
+					<div class="flex items-center justify-center gap-4 lg:gap-5">
+						<button type="button" aria-label="Previous slide" class="events-swiper-prev hidden lg:flex items-center justify-center size-10 rounded-xl bg-background border border-gray-4 text-purple-easy transition hover:bg-secondary disabled:opacity-50 disabled:cursor-not-allowed">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12.5 15L7.5 10L12.5 5" stroke="#B19BC5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</button>
+						<div class="swiper-pagination relative! m-0 flex justify-center [--swiper-pagination-bottom:0] w-min!"></div>
+						<button type="button" aria-label="Next slide" class="events-swiper-next hidden lg:flex items-center justify-center size-10 rounded-xl bg-background border border-gray-4 text-purple-easy transition hover:bg-secondary disabled:opacity-50 disabled:cursor-not-allowed">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M7.5 15L12.5 10L7.5 5" stroke="#B19BC5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</button>
+					</div>
 				</div>
 			</div>
 		{% endblock %}

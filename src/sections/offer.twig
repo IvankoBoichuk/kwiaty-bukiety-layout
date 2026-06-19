@@ -2,15 +2,16 @@
 	{% embed "../layouts/container.twig" %}
 		{% block content %}
 
-			<div class="relative overflow-hidden w-full p-3 pb-1.5 rounded-2xl z-0">
+			<div class="relative overflow-hidden w-full p-3 pb-1.5 rounded-2xl z-0 md:px-8 md:pb-6 md:pt-9 lg:hidden">
 				{% if fields.hero.title %}
 					<h1 class="flex flex-col justify-center mb-3 text-dark-text">{{ fields.hero.title|fancy_title }}</h1>
 				{% endif %}
+
 				{% if fields.hero.advantages %}
 					<ul class="flex flex-wrap gap-1.5">
 						{% for advantage in fields.hero.advantages %}
-							<li class="flex shrink items-center gap-1 bg-accent border border-background rounded-2xl px-2">
-								<span class="text-xs text-dark-text">{{ advantage }}</span>
+							<li class="flex shrink items-center gap-1 bg-accent border border-background rounded-2xl px-2 md:h-7 md:px-3">
+								<span class="text-xs text-dark-text md:text-[15px]">{{ advantage.title }}</span>
 							</li>
 						{% endfor %}
 					</ul>
@@ -21,11 +22,71 @@
 				{% endif %}
 			</div>
 
-			<div class="grid grid-cols-2 gap-1.25 auto-rows-min mt-6">
+			<div class="relative w-full gap-14 z-0 border-b pb-8.5 border-green-easy hidden lg:flex ">
+				<div class="flex flex-col justify-center pt-6 flex-1">
+					{% if fields.hero.title %}
+						<h1 class="flex flex-col justify-center mb-3 text-dark-text">{{ fields.hero.title|fancy_title }}</h1>
+					{% endif %}
+					{% if fields.hero.description %}
+						<p class="text-dark-text text-[18px] mb-7 max-w-90">{{ fields.hero.description }}</p>
+					{% endif %}
+
+					{% if fields.hero.buttons %}
+						<div class="flex flex-wrap items-center gap-3 mb-8">
+							{% if fields.hero.buttons.primary %}
+								<a href="{{ fields.hero.buttons.primary.link }}" class="inline-flex items-center justify-center rounded-full bg-green-dark text-white border-2 border-green-dark  px-12.5 py-3 gap-2 text-base transition hover:bg-green-default">
+									<span>{{ fields.hero.buttons.primary.name }}</span>
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M7.5 15L12.5 10L7.5 5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+							{% endif %}
+							{% if fields.hero.buttons.secondary %}
+								<a href="{{ fields.hero.buttons.secondary.link }}" class="inline-flex items-center justify-center rounded-full bg-background text-green-default border-2 border-green-dark px-12.5 py-3 gap-2 text-base transition hover:bg-secondary">
+									{% if fields.hero.buttons.secondary.icon %}
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M18.3334 14.1V16.6C18.3344 16.8321 18.2868 17.0618 18.1939 17.2745C18.1009 17.4871 17.9645 17.678 17.7935 17.8349C17.6225 17.9918 17.4206 18.1112 17.2007 18.1856C16.9809 18.26 16.7479 18.2876 16.5168 18.2667C13.9525 17.988 11.4893 17.1118 9.32511 15.7083C7.31163 14.4289 5.60455 12.7218 4.32511 10.7083C2.91676 8.53435 2.04031 6.05917 1.76677 3.48334C1.74595 3.2529 1.77334 3.02064 1.84719 2.80136C1.92105 2.58208 2.03975 2.38058 2.19575 2.20969C2.35174 2.0388 2.54161 1.90227 2.75327 1.80878C2.96492 1.71529 3.19372 1.66689 3.42511 1.66668H5.92511C6.32953 1.6627 6.7216 1.80591 7.02824 2.06962C7.33488 2.33333 7.53517 2.69955 7.59177 3.10001C7.69729 3.90006 7.89298 4.68562 8.17511 5.44168C8.28723 5.73995 8.31149 6.0641 8.24503 6.37574C8.17857 6.68738 8.02416 6.97344 7.80011 7.20001L6.74177 8.25834C7.92807 10.3446 9.65549 12.072 11.7418 13.2583L12.8001 12.2C13.0267 11.976 13.3127 11.8216 13.6244 11.7551C13.936 11.6886 14.2602 11.7129 14.5584 11.825C15.3145 12.1071 16.1001 12.3028 16.9001 12.4083C17.3049 12.4655 17.6746 12.6693 17.9389 12.9813C18.2032 13.2932 18.3436 13.6913 18.3334 14.1Z" stroke="#0C4A2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									{% endif %}
+									<span>{{ fields.hero.buttons.secondary.name }}</span>
+								</a>
+							{% endif %}
+						</div>
+					{% endif %}
+
+					{% if fields.hero.advantages %}
+						<ul class="flex flex-wrap items-center gap-x-6 gap-y-4">
+							{% for advantage in fields.hero.advantages %}
+								<li class="flex items-center gap-2.5">
+									{% if advantage.icon %}
+										<span class="flex items-center justify-center size-13 rounded-full bg-secondary shrink-0">
+											<img src="{{ advantage.icon }}" alt="" class="size-7.5"/>
+										</span>
+									{% endif %}
+									<div class="flex flex-col leading-tight">
+										<span class="text-[16px] font-semibold text-dark-text">{{ advantage.title }}</span>
+										{% if advantage.subtitle %}
+											<span class="text-[16px] text-gray-3">{{ advantage.subtitle }}</span>
+										{% endif %}
+									</div>
+								</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+				</div>
+
+				{% if fields.hero.img %}
+					<div class="relative rounded-4xl overflow-hidden min-h-90 flex-1">
+						<img src="{{ fields.hero.img.src }}" alt="{{ fields.hero.img.alt|default("Hero Image") }}" fetchpriority="high" class="absolute inset-0 size-full object-cover"/>
+					</div>
+				{% endif %}
+			</div>
+
+			<div class="grid grid-cols-2 gap-1.25 auto-rows-fr mt-6 md:gap-3 lg:grid-cols-3 lg:mt-8.5">
 				{% if fields.product %}
-					<div class="relative overflow-hidden rounded-2xl row-span-2 hover:brightness-105 transition cursor-pointer">
-						<img src="{{ fields.product.img.src }}" class="absolute inset-0 size-full object-cover" alt="{{ fields.product.img.alt }}">
-						<a href="{{ fields.product.link }}" target="{{ fields.product.target|default('_self') }}" class="flex items-center absolute w-max max-w-11/12 bottom-1 left-1/2 -translate-x-1/2 bg-black/60 px-2.5 py-1 rounded-2xl text-background text-[14px] leading-4 font-semibold text-center before:absolute before:inset-0">
+					<div class="relative overflow-hidden rounded-2xl row-span-2 hover:brightness-105 transition cursor-pointer lg:rounded-4xl">
+						<img src="{{ fields.product.img.src }}" class="absolute inset-0 size-full object-cover lg:rounded-4xl" alt="{{ fields.product.img.alt }}">
+						<a href="{{ fields.product.link }}" target="{{ fields.product.target|default('_self') }}" class="flex items-center absolute w-max max-w-11/12 bottom-1 left-1/2 -translate-x-1/2 bg-black/60 px-2.5 py-1 rounded-2xl text-background text-[14px] leading-4 text-center before:absolute before:inset-0 md:text-[18px] md:px-4 md:py-2">
 							{{fields.product.name}}
 						</a>
 					</div>
@@ -33,9 +94,9 @@
 				{% if fields.categories|length %}
 					{% for item in fields.categories %}
 						{% if item.link %}
-							<div class="relative flex items-center bg-[#F2EDE1] rounded-2xl overflow-hidden hover:bg-[#F2EDE1]/80 transition-colors cursor-pointer">
-								<img src="{{ item.img.src }}" class="size-12.75 object-cover flex-none" alt="{{ item.img.alt }}">
-								<a href="{{ item.link }}" target="{{ item.target|default('_self') }}" class="text-dark-text text-body-15 px-2.5 before:absolute before:inset-0">
+							<div class="relative flex items-center bg-[#F2EDE1] rounded-2xl overflow-hidden hover:bg-[#F2EDE1]/80 transition-colors cursor-pointer lg:rounded-4xl">
+								<img src="{{ item.img.src }}" class="h-12.75 aspect-square rounded-2xl object-cover flex-none md:h-24 md:aspect-10/9 lg:h-31 lg:rounded-4xl" alt="{{ item.img.alt }}">
+								<a href="{{ item.link }}" target="{{ item.target|default('_self') }}" class="text-dark-text text-body-15 font-semibold px-2.5 before:absolute before:inset-0 md:text-[20px] md:px-4 lg:px-8">
 									{{ item.name }}
 								</a>
 							</div>
