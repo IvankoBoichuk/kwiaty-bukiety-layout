@@ -3,9 +3,9 @@
 		{% block content %}
 			<div class="flex flex-col gap-y-6 pt-1.5">
 				{% if fields.title %}
-					<h2 class="text-h2 col-span-full text-green-default">{{ fields.title }}</h2>
+					<h2 class="text-h2 col-span-full text-green-default md:text-[40px] md:leading-10">{{ fields.title }}</h2>
 				{% endif %}
-				<div class="grid grid-cols-2 gap-x-2.75 gap-y-6 auto-rows-auto sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+				<div class="grid grid-cols-2 gap-x-2.75 gap-y-6 auto-rows-auto md:grid-cols-3 lg:grid-cols-4">
 					{% if fields.list %}
 						{% for item in fields.list %}
 							{% include "../tease/product-2.twig" with { item: item } %}
@@ -13,7 +13,7 @@
 					{% endif %}
 				</div>
 				{% if fields.button %}
-					<div class="flex justify-center flex-1 min-w-max">
+					<div class="flex justify-center flex-1 min-w-max lg:w-60 lg:mx-auto">
 						{% include '../components/button.twig' with {
                                 text: fields.button.text,
                                 link: fields.button.link,
