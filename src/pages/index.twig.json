@@ -2,11 +2,39 @@
     "offer": {
         "hero": {
             "title": "Kwiaty, \n które robią \n wrażenie",
+            "description": "Świeże bukiety na każdą okazję. Dostarczamy szybko, pięknie i z sercem.",
             "img": {
                 "src": "/images/flowers/person-cutting-up-flowers.png",
                 "alt": "Hero image showcasing our services"
             },
-            "advantages": ["Darmowa wysyłka", "Tego samego dnia", "Płatność online"]
+            "buttons": {
+                "primary": {
+                    "name": "Zamow Online",
+                    "link": "/zamowienie"
+                },
+                "secondary": {
+                    "name": "Zadzwon teraz",
+                    "link": "tel:+48000000000",
+                    "icon": "/socials/phone.svg"
+                }
+            },
+            "advantages": [
+                {
+                    "title": "Darmowa wysyłka",
+                    "subtitle": "Na wszystkie zamówienia",
+                    "icon": "/guarantees/delivery.svg"
+                },
+                {
+                    "title": "Tego samego dnia",
+                    "subtitle": "Zamów do 12:00",
+                    "icon": "/guarantees/fast-timer.svg"
+                },
+                {
+                    "title": "Płatność online",
+                    "subtitle": "Bezpieczne i wygodne płatności",
+                    "icon": "/guarantees/card.svg"
+                }
+            ]
         },
         "product": {
             "img": {
@@ -164,7 +192,10 @@
                 "badges": ["Dostawa Gratis", "Bestseller"],
                 "price": "199.00 zł"
             }
-        ]
+        ],
+        "button": {
+            "text": "Wszystkie kompozycje"
+        }
     },
     "faq": {
         "title": "FAQ – Najczęściej Zadawane Pytania",
@@ -193,10 +224,7 @@
     },
     "howItWorks": {
         "title": "Як це працює",
-        "image": {
-            "src": "/images/flowers/pink-flowers.jpg",
-            "alt": "Букет рожевих квітів"
-        },
+        "subtitle": "Bukiety",
         "list": [
             {
                 "title": "Оберіть букет",
@@ -219,6 +247,10 @@
     "cities": {
         "title": "Міста доставки",
         "text": "Доставляємо свіжі квіти у найбільші міста Польщі — оберіть потрібне місто",
+				"img": {
+                    "src": "/images/additions/add-5.jpg",
+                    "alt": "Two people with flowers"
+        },
         "cities": [
             {
                 "text": "Варшава",
@@ -295,8 +327,6 @@
         ]
     },
     "reviews": {
-        "title": "Mówią o nas",
-        "subtitle": "Bukiety",
         "reviews": [
             {
                 "name": "INNA",

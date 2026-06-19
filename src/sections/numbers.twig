@@ -2,15 +2,15 @@
 	{% embed "../layouts/container.twig" %}
 		{% block content %}
 			{% if fields.title %}
-				<div class="mb-8 text-center">
-					<h2 class="text-h2">{{ fields.title }}</h2>
+				<div class="mb-8.5 text-center">
+					<h2 class="text-h2 md:text-[40px] md:leading-normal">{{ fields.title }}</h2>
 				</div>
 			{% endif %}
 
 			{% if fields.list %}
-				<div class="space-y-4">
+				<div class="space-y-4 md:grid md:grid-cols-2 md:gap-8 lg:grid-cols-4">
 					{% for item in fields.list %}
-						<div class="flex flex-col items-center text-center gap-2 pb-4 border-b border-[#C7C7C7]">
+						<div class="flex flex-col items-center text-center gap-2 pb-4 border-b h-max border-[#C7C7C7] lg:border-b-0 lg:border-l lg:last:border-r">
 							<div class="text-5xl leading-14 font-medium text-green-default" data-counter="{{ item.number }}">0</div>
 							<div class="text-body-15 font-semibold text-gray-1 flex items-center justify-center gap-1">
                                 {% if item.icon %}

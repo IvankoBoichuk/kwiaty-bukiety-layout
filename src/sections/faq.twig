@@ -1,45 +1,55 @@
-<section class="text-dark-text">
+<section class="text-dark-text md:pb-10 lg:pb-25">
 	{% embed "../layouts/container.twig" %}
 		{% block content %}
 			{% if fields.title %}
-				<div class="mb-6 md:mb-8">
-					<h2 class="{{ html_classes('text-h2', { 'md:text-[40px] md:leading-tight md:font-bold': fields.numbered }) }}">{{ fields.title }}</h2>
+				<div class="mb-6 md:mb-8 lg:mb-12">
+					<h2 class="{{ html_classes('text-h2', { 'md:text-[40px] md:leading-tight md:font-bold': fields.numbered, 'md:text-[40px] md:leading-normal': not fields.numbered }) }}">{{ fields.title }}</h2>
 				</div>
 			{% endif %}
 
 			{% if fields.list %}
-				<div x-data="accordion" class="space-y-4 divide-y divide-[#E0E0D7] lg:space-y-6">
+				<div x-data="accordion" class="divide-y divide-[#E0E0D7] lg:border-y lg:border-[#E0E0D7]">
 					{% for item in fields.list %}
-						<div class="overflow-hidden pb-4 last:pb-0 lg:pb-6">
+						<div class="{{ html_classes('overflow-hidden', { 'py-4 lg:py-6': fields.numbered, 'pb-4 last:pb-0 lg:pb-6': not fields.numbered }) }}">
 							<button
 								@click="toggle('faq-{{ loop.index }}')"
-								class="w-full flex items-center gap-4 justify-between text-left"
+								class="{{ html_classes('w-full items-center text-left', { 'grid grid-cols-12 gap-4': fields.numbered, 'flex justify-between gap-4': not fields.numbered }) }}"
 								:aria-expanded="isActive('faq-{{ loop.index }}')"
 							>
-                                {% if fields.numbered %}
-                                    <span class="hidden lg:block text-[18px] font-semibold text-green-dark w-10 shrink-0">{{ '%02d'|format(loop.index) }}</span>
-                                {% endif %}
-                                <span class="{{ html_classes('text-h3 flex-1 pr-6.5 text-green-default', { 'md:text-[22px] md:font-bold md:leading-tight lg:text-right': fields.numbered }) }}">{{ item.title }}</span>
-						<div class="relative size-6 shrink-0">
-									<!-- Horizontal line (always visible) -->
-									<span
-										class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-0.5 bg-dark-text transition-transform duration-300"
-										:class="{ 'rotate-0': !isActive('faq-{{ loop.index }}'), 'rotate-180': isActive('faq-{{ loop.index }}') }"
-									></span>
-									<!-- Vertical line (rotates to horizontal when open) -->
-									<span
-										class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-0.5 bg-dark-text transition-transform duration-300 origin-center"
-										:class="{ 'rotate-90': !isActive('faq-{{ loop.index }}'), 'rotate-0': isActive('faq-{{ loop.index }}') }"
-									></span>
+								{% if fields.numbered %}
+									<div class="hidden col-span-2 text-[16px] font-bold text-green-dark lg:col-span-6 lg:block">
+										{{ '%02d'|format(loop.index) }}
+									</div>
+								{% endif %}
+
+								<div class="{{ html_classes('flex items-center justify-between', { 'col-span-12 lg:col-span-6': fields.numbered, 'w-full': not fields.numbered }) }}">
+									<span class="{{ html_classes('text-h3 flex-1 pr-6.5 text-green-default md:text-[22px]', { 'md:font-bold md:leading-tight lg:text-right': fields.numbered }) }}">{{ item.title }}</span>
+									<div class="relative size-6 shrink-0">
+										<span
+											class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-0.5 w-4 bg-dark-text transition-transform duration-300"
+											:class="{ 'rotate-0': !isActive('faq-{{ loop.index }}'), 'rotate-180': isActive('faq-{{ loop.index }}') }"
+										></span>
+										<span
+											class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-0.5 w-4 origin-center bg-dark-text transition-transform duration-300"
+											:class="{ 'rotate-90': !isActive('faq-{{ loop.index }}'), 'rotate-0': isActive('faq-{{ loop.index }}') }"
+										></span>
+									</div>
 								</div>
 							</button>
-							<div
-								x-show="isActive('faq-{{ loop.index }}')"
-								x-collapse
-							>
-								<div class="text-body-13 text-green-dark pt-2 md:text-[16px] md:pt-4 lg:text-[18px]">
-									{{ item.text }}
-								</div>
+
+							<div x-show="isActive('faq-{{ loop.index }}')" x-collapse>
+								{% if fields.numbered %}
+									<div class="grid grid-cols-12 gap-4 pt-2 md:pt-4">
+										<div class="hidden lg:block lg:col-span-6"></div>
+										<div class="col-span-12 text-body-13 text-green-dark md:text-[16px] lg:col-span-6">
+											{{ item.text }}
+										</div>
+									</div>
+								{% else %}
+									<div class="pt-2 text-body-13 text-green-dark md:pt-4 md:text-[16px] lg:text-[18px]">
+										{{ item.text }}
+									</div>
+								{% endif %}
 							</div>
 						</div>
 					{% endfor %}

@@ -1,4 +1,4 @@
-<section class="bg-[#E5EFDE] py-12">
+<section class="bg-[#E5EFDE] py-12 lg:py-30">
 	{% embed "../layouts/container.twig" %}
 		{% block content %}
 			<div class="flex flex-col gap-y-6 pt-1.5">
@@ -6,15 +6,15 @@
 					<div class="mb-6 relative">
 						{# Subtitle in background #}
 						{% if fields.subtitle %}
-							<div class="absolute -bottom-2 left-18 text-[37px] uppercase leading-15 font-deco text-[#E0E0D7] pointer-events-none select-none z-0">
+							<div class="absolute -top-13 left-28 text-[69px] uppercase leading-15 font-deco text-[#E0E0D7] pointer-events-none select-none z-0 md:text-[144px] md:-top-4 md:left-45 lg:text-[245px] lg:-top-10 lg:left-50">
 								{{ fields.subtitle }}
 							</div>
 						{% endif %}
 						{# Main title #}
-						<h2 class="text-h2 text-green-default relative z-10">{{ fields.title }}</h2>
+						<h2 class="text-h2 text-green-default relative z-10 md:text-[40px]">{{ fields.title }}</h2>
 					</div>
 				{% endif %}
-				<div class="grid grid-cols-2 gap-x-2.75 gap-y-6 auto-rows-auto sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+				<div class="grid grid-cols-2 gap-x-2.75 gap-y-6 auto-rows-auto md:grid-cols-3 lg:grid-cols-4">
 					{% if fields.list %}
 						{% for item in fields.list %}
 							{% include "../tease/product-3.twig" with { item: item } %}
@@ -22,7 +22,7 @@
 					{% endif %}
 				</div>
 				{% if fields.button %}
-					<div class="flex justify-center flex-1 min-w-max">
+					<div class="flex justify-center flex-1 min-w-max lg:w-96 lg:mx-auto">
 						{% include '../components/button.twig' with {
                                 text: fields.button.text,
                                 link: fields.button.link,

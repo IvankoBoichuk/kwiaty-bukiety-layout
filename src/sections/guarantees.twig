@@ -7,24 +7,21 @@
 				</div>
 			{% endif %}
 
-		{% if fields.items %}
- 			<div class="grid grid-cols-1 lg:grid-cols-6 gap-3">
- 			  {% for item in fields.items %}
- 			    <div class="px-5 py-4 bg-[#F6EDDB] flex flex-col gap-2 text-green-dark rounded-sm
- 			                lg:col-span-2 
- 			                [&:nth-child(4)]:lg:col-span-3 
- 			                [&:nth-child(5)]:lg:col-span-3 lg:p-8">
- 			      <div class="flex items-center gap-2.5">
- 			        {% if item.icon %}
- 			          <img src="{{ item.icon }}" alt="{{ item.title }}" width="20" height="20" class="size-5 flex-none">
- 			        {% endif %}
- 			        <h3 class="text-h3 font-semibold">{{ item.title }}</h3>
- 			      </div>
- 			      <p class="text-body-15 text-gray-600">{{ item.description }}</p>
- 			    </div>
- 			  {% endfor %}
- 			</div>
-		{% endif %}
+			{% if fields.items %}
+				<div class="grid grid-cols-1 gap-3 lg:grid-cols-6">
+					{% for item in fields.items %}
+						<div class="flex flex-col gap-2 rounded-sm bg-[#F6EDDB] px-5 py-4 text-green-dark lg:col-span-2 lg:p-8 [&:nth-child(4)]:lg:col-span-3 [&:nth-child(5)]:lg:col-span-3">
+							<div class="flex items-center gap-2.5">
+								{% if item.icon %}
+									<img src="{{ item.icon }}" alt="{{ item.title }}" width="20" height="20" class="size-5 flex-none">
+								{% endif %}
+								<h3 class="text-h3 font-semibold">{{ item.title }}</h3>
+							</div>
+							<p class="text-body-15 text-gray-600">{{ item.description }}</p>
+						</div>
+					{% endfor %}
+				</div>
+			{% endif %}
 		{% endblock %}
 	{% endembed %}
 </section>
