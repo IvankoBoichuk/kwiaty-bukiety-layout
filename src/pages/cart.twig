@@ -5,34 +5,74 @@
 	<section class="bg-background">
 		{% embed "./layouts/container.twig" %}
 			{% block content %}
-				<div class="max-w-6xl mx-auto w-full">
-					<h1 class="text-h2 text-green-dark mb-5.25">{{cart.title}}</h1>
-					<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-						<div class="lg:col-span-8 space-y-4">
-							<div class="lg:col-span-8 space-y-4 pb-32">
+				<div class="w-full">
+					<h1 class="text-h2 text-green-dark md:text-[32px] md:font-semibold md:leading-tight md:text-green-default mb-5.25 md:mb-6">{{cart.title}}</h1>
+
+					<div class="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-start">
+						<div class="lg:col-span-8">
+							{# Desktop column headings #}
+							<div class="hidden lg:flex items-center gap-6 mb-5.5 text-base text-green-default">
+								<div class="flex flex-1 items-center justify-between pr-3">
+									<span class="w-84">Product details</span>
+									<span class="w-31 text-center">Price</span>
+									<span class="w-21 text-center">Price</span>
+									<span class="w-21 text-center">Price</span>
+									<span class="w-6"></span>
+								</div>
+							</div>
+
+							<div class="space-y-4 lg:space-y-3 pb-32 lg:pb-0">
 								{% for item in cart.items %}
 									{% include "components/cart-product-card.twig" with {
-   						  	product: item
-   							} only %}
+										product: item
+									} only %}
 								{% endfor %}
 							</div>
-							<div class="flex justify-between items-center fixed h-17.5 bottom-13 left-0 right-0 bg-[#FCF9F6] border-t border-t-[#E0E0D7] p-3">
-								<div class="flex w-46.25 justify-center gap-1.5 items-center text-body-15 text-green-dark">
-									Total:
-									<span class="text-h3 font-extrabold">269 zł</span>
+						</div>
+
+						{# Desktop order summary #}
+						<div class="lg:col-span-4">
+							<div class="hidden lg:flex flex-col gap-5 self-start bg-white rounded-[32px] p-8 shadow-[0_4px_32px_-8px_rgba(12,12,13,0.2)]">
+								<h2 class="text-[22px] font-bold text-green-default">Total</h2>
+								<div class="flex flex-col gap-3 pt-5 border-t border-[#F2EDE1] text-green-default">
+									<div class="flex items-end justify-between">
+										<span class="text-base">Delivery</span>
+										<span class="text-[22px] font-bold">{{ cart.summary.delivery }}</span>
+									</div>
+									<div class="flex items-end justify-between">
+										<span class="text-base">Calkowita cena:</span>
+										<span class="text-[22px] font-bold">{{ cart.summary.total }}</span>
+									</div>
 								</div>
-								<div class="w-46.25">
-									{% include "components/button.twig" with { "text": "Checkout",
-            "link": "#",
-            "variant": "purple",
-            "size": "lg",
-            "showIcon": false} %}
-								</div>
+								{% include "components/button.twig" with {
+									"text": "Checkout",
+									"link": "#",
+									"variant": "purple",
+									"size": "lg",
+									"showIcon": false
+								} %}
 							</div>
 						</div>
 					</div>
 				</div>
 			{% endblock %}
 		{% endembed %}
+
+		{# Mobile / tablet sticky checkout bar #}
+		<div class="lg:hidden flex justify-between items-center fixed h-17.5 bottom-13 left-0 right-0 bg-[#FCF9F6] border-t border-t-[#E0E0D7] p-3">
+			<div class="flex flex-1 justify-center gap-1.5 items-center text-body-15 text-green-dark">
+				Total:
+				<span class="text-h3 font-extrabold">{{ cart.summary.total }}</span>
+			</div>
+			<div class="flex-1">
+				{% include "components/button.twig" with {
+					"text": "Checkout",
+					"link": "#",
+					"variant": "purple",
+					"size": "lg",
+					"showIcon": false
+				} %}
+			</div>
+		</div>
 	</section>
 {% endblock %}

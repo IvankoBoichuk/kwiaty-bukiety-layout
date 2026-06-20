@@ -182,5 +182,64 @@
 				"price": "159.00 zł"
 			}
 		]
+	},
+	"faq": {
+		"title": "FAQ – Najczęściej Zadawane Pytania",
+		"list": [
+			{
+				"title": "Czy oferujecie dostawę kwiatów na terenie całej Polski?",
+				"text": "Tak, nasza poczta kwiatowa realizuje dostawę kwiatów na terenie całej Polski, a także w okolicznych miejscowościach. Dbamy o to, aby zamówienia docierały na czas i w idealnym stanie."
+			},
+			{
+				"title": "Jak zamówić kwiaty online w kwiaciarni „Kwiaty-Bukiety”?",
+				"text": "Zamówienie jest bardzo proste – wystarczy wybrać kwiatowe dekoracje online lub skontaktować się z nami telefonicznie pod numerem 797 115 220. Podaj adres dostawy oraz preferowany termin, a my zajmiemy się resztą. W wielu przypadkach możliwa jest dostawa tego samego dnia."
+			},
+			{
+				"title": "Czy mogę zamówić bukiety na specjalną okazję?",
+				"text": "Oczywiście. Oferujemy szeroki wybór kompozycji kwiatowych na różne okazje, takie jak urodziny, rocznice, Walentynki czy Dzień Matki. Istnieje również możliwość zamówienia bukietu przygotowanego indywidualnie, zgodnie z Twoimi oczekiwaniami."
+			},
+			{
+				"title": "Czy oferujecie indywidualne podejście do zamówień?",
+				"text": "Tak, każda kompozycja może zostać dopasowana do Twoich potrzeb. Nasi floryści chętnie przygotują bukiet według Twoich wskazówek – wystarczy do nas zadzwonić lub napisać."
+			},
+			{
+				"title": "Jakie metody płatności są dostępne przy zamówieniach online?",
+				"text": "Akceptujemy różne metody płatności, w tym przelewy online, płatności kartą oraz płatność przy odbiorze. Dzięki temu proces zamówienia jest szybki, wygodny i bezpieczny."
+			}
+		]
+	},
+	"guarantees": {
+		"title": "Gwarancje",
+		"items": [
+			{
+				"icon": "/guarantees/flower.svg",
+				"title": "Świeże kwiaty",
+				"description": "Tworzymy kompozycje wyłącznie ze świeżych kwiatów"
+			},
+			{
+				"icon": "/guarantees/shield.svg",
+				"title": "Bezpieczna płatność",
+				"description": "Twoje dane są chronione"
+			},
+			{
+				"icon": "/guarantees/timer.svg",
+				"title": "Gwarancja dostawy",
+				"description": "Bukiet zostanie dostarczony o wskazanej godzinie"
+			},
+			{
+				"icon": "/guarantees/phone.svg",
+				"title": "Jeśli pojawią się problemy",
+				"description": "Nasze biuro obsługi klienta szybko pomoże w razie problemów"
+			},
+			{
+				"icon": "/guarantees/image.svg",
+				"title": "Zdjęcie z dostawy",
+				"description": "Na życzenie możemy przesłać zdjęcie gotowego bukietu"
+			}
+		]
+	},
+	"info": {
+		"title": "Opis",
+		"text": "<p>Róże od wieków pozostają jednymi z najbardziej rozpoznawalnych kwiatów na świecie. To kwiaty, które potrafią przekazać najszczersze uczucie, często bez potrzeby wypowiadania słów. Ich delikatność, wyjątkowy zapach i ogromna różnorodność sprawiają, że są idealnym wyborem zarówno na codzienne gesty, jak i wyjątkowe okazje. Te kwiaty przyciągają uwagę uniwersalnym pięknem oraz możliwością stworzenia eleganckich, klasycznych lub nowoczesnych kompozycji, a kwiaciarnia internetowa Kwiaty-Bukiety umożliwia ich zamówienie bez wychodzenia z domu.</p><h2>Dlaczego róże są odpowiednie na każdą okazję?</h2><p>Róże mają niezwykle szerokie zastosowanie — od drobnych upominków po uroczyste bukiety. To kwiaty, które potrafią wyrazić emocje bez słów. Kompozycje z różami mogą przybierać klasyczne lub oryginalne formy, co pozwala nadać im indywidualny charakter. Piękne róże świetnie sprawdzają się jako <a href=\"/kategorie/roze\">róże na urodziny</a>, a eleganckie zestawy są chętnie wybierane na rocznice i inne uroczystości.</p><p>Te kwiaty z łatwością dopasują się do każdej okazji, a stonowane aranżacje często traktowane są jako pełne szacunku <a href=\"/kategorie/roze\">róże na grób</a>.</p><h2>Wybierz rodzaj róż, który najbardziej Ci odpowiada</h2><p>Bogaty asortyment róż pozwala wybrać zarówno klasyczne odcienie, jak i bardziej wyszukane warianty – od delikatnych barw po intensywne, wyraziste kolory. W naszej ofercie znajdują się propozycje odpowiednie na <a href=\"/kategorie/roze\">romantyczne okazje</a>, codzienne gesty oraz chwile, gdy chcemy sprawić radość ukochanej osobie. Jasne i pastelowe barwy często wybierane są także na pierwsze randki i ważne życiowe chwile.</p>"
 	}
 }
