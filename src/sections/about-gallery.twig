@@ -1,0 +1,29 @@
+<section class="relative text-dark-text">
+	{% embed "../layouts/container.twig" %}
+		{% block content %}
+			<div data-gallery>
+				<div data-gallery-track class="overflow-x-auto snap-x snap-mandatory scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden -mr-3 md:-mr-8 lg:-mr-30">
+					<div class="grid grid-rows-2 lg:grid-rows-1 grid-flow-col auto-cols-[44vw] sm:auto-cols-[30vw] lg:auto-cols-[22vw] gap-2 lg:gap-4 w-max md:grid-rows-1">
+						{% for item in fields.items %}
+							<img src="{{ item.img.src|default('/images/placeholder.jpg') }}" alt="{{ item.img.alt|default('Bukiet') }}" class="snap-start w-full aspect-17/19 object-cover md:aspect-3/4">
+						{% endfor %}
+					</div>
+				</div>
+
+				<div class="flex items-center justify-center gap-4 mt-5">
+					<button type="button" data-gallery-prev class="hidden lg:flex items-center justify-center size-10 rounded-xl border-2 border-[#E0E0D7] text-green-easy hover:bg-white transition-colors disabled:opacity-40 disabled:pointer-events-none" aria-label="Poprzednie">
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12.5 15L7.5 10L12.5 5" stroke="#6C5B7B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</button>
+					<div data-gallery-dots class="flex justify-center items-center gap-2"></div>
+					<button type="button" data-gallery-next class="hidden lg:flex items-center justify-center size-10 rounded-xl border-2 border-[#E0E0D7] text-green-easy hover:bg-white transition-colors disabled:opacity-40 disabled:pointer-events-none" aria-label="Następne">
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7.5 15L12.5 10L7.5 5" stroke="#6C5B7B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</button>
+				</div>
+			</div>
+		{% endblock %}
+	{% endembed %}
+</section>

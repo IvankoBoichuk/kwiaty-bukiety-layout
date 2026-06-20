@@ -17,7 +17,7 @@
 	'px-2.5 py-1 text-sm gap-1': size == 'sm',
 	'px-3 py-1.5 text-base gap-1.5': size == 'md',
 	'px-8 py-4 font-semibold text-[13px] leading-[auto] tracking-normal uppercase gap-2 w-full': size == 'lg'
-}) }}">
+}) }} {{ class|default('') }}">
 	<span>{{ text }}</span>
 	{% if showIcon %}
 		{% set iconSize = iconSizes[size] %}
