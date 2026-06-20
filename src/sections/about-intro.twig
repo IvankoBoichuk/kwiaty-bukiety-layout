@@ -1,0 +1,58 @@
+<section class="text-green-dark">
+	{% embed "../layouts/container.twig" %}
+		{% block content %}
+			<div class="flex flex-col gap-8 lg:grid lg:grid-cols-2 lg:gap-x-12 lg:items-start">
+				<div class="-mx-3 -mt-2.5 md:-mt-4 lg:mx-0 lg:mt-0 lg:col-start-2 lg:row-start-1 lg:self-start">
+					<img src="{{ hero.img.src }}" alt="{{ hero.img.alt|default('Kwiaty Bukiety') }}" fetchpriority="high" class="w-full h-72 md:h-[420px] lg:h-[345px] object-cover">
+				</div>
+
+				<div class="flex flex-col gap-20 lg:gap-12 lg:col-start-1 lg:row-start-1">
+					<div class="flex flex-col items-center text-center gap-5 lg:items-start lg:text-left">
+						<h1 class="font-heading text-green-default flex flex-col">
+							<span class="font-semibold text-[32px] leading-tight md:text-[48px] lg:text-[44px]">{{ hero.title }}</span>
+							<span class="italic font-medium text-[32px] leading-tight md:text-[48px] lg:text-[34px]">{{ hero.subtitle }}</span>
+						</h1>
+						<p class="text-[15px] md:text-[16px] text-[#426E59] max-w-md lg:max-w-lg">{{ hero.description }}</p>
+						{% include "../components/button.twig" with {
+							text: hero.button.text,
+							link: hero.button.link,
+							variant: hero.button.variant|default('border'),
+							size: hero.button.size|default('md'),
+							showIcon: false,
+							class: 'w-full max-w-92 lg:w-auto lg:px-12 lg:py-3'
+						} %}
+					</div>
+
+					<div class="flex flex-col gap-5">
+						{% if story.title %}
+							<h2 class="text-h2 md:text-[28px] lg:text-[32px] lg:leading-tight text-green-default">{{ story.title }}</h2>
+						{% endif %}
+
+						{% if story.lead %}
+							<p class="text-body-15 md:text-[16px] font-normal text-green-default lg:mb-7">{{ story.lead }}</p>
+						{% endif %}
+
+						{% if story.paragraphs %}
+							<div class="flex flex-col gap-3 text-body-13 md:text-[16px]">
+								{% for paragraph in story.paragraphs %}
+									<p>{{ paragraph }}</p>
+								{% endfor %}
+							</div>
+						{% endif %}
+
+						{% if story.stats %}
+							<div class="grid grid-cols-3 gap-2 md:gap-3 mt-1">
+								{% for stat in story.stats %}
+									<div class="flex flex-col items-center justify-center text-center gap-1 bg-[#F2EDE1] rounded-xl px-3 py-1.5 md:py-4">
+										<div class="font-main text-[16px] md:text-xl font-semibold text-green-default">{{ stat.number }}</div>
+										<div class="text-[13px] font-normal leading-tight text-gray-3 md:text-[16px]">{{ stat.label }}</div>
+									</div>
+								{% endfor %}
+							</div>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		{% endblock %}
+	{% endembed %}
+</section>

@@ -2,38 +2,36 @@
 	{% embed "../layouts/container.twig" %}
 		{% block content %}
 			{% if fields.title %}
-				<div class="mb-6 md:mb-8 lg:mb-12">
-					<h2 class="{{ html_classes('text-h2', { 'md:text-[40px] md:leading-tight md:font-bold': fields.numbered, 'md:text-[40px] md:leading-normal': not fields.numbered }) }}">{{ fields.title }}</h2>
+
+				<div class="mb-6 lg:mb-16">
+					<h2 class="text-h2 md:text-[28px] lg:text-[32px]">{{ fields.title }}</h2>
 				</div>
 			{% endif %}
 
 			{% if fields.list %}
 				<div x-data="accordion" class="divide-y divide-[#E0E0D7] lg:border-y lg:border-[#E0E0D7]">
 					{% for item in fields.list %}
-						<div class="{{ html_classes('overflow-hidden', { 'py-4 lg:py-6': fields.numbered, 'pb-4 last:pb-0 lg:pb-6': not fields.numbered }) }}">
+						<div class="overflow-hidden pb-3 last:pb-0 lg:pb-4">
 							<button
 								@click="toggle('faq-{{ loop.index }}')"
-								class="{{ html_classes('w-full items-center text-left', { 'grid grid-cols-12 gap-4': fields.numbered, 'flex justify-between gap-4': not fields.numbered }) }}"
+								class="w-full flex items-center justify-between gap-4 text-left"
 								:aria-expanded="isActive('faq-{{ loop.index }}')"
 							>
-								{% if fields.numbered %}
-									<div class="hidden col-span-2 text-[16px] font-bold text-green-dark lg:col-span-6 lg:block">
-										{{ '%02d'|format(loop.index) }}
-									</div>
-								{% endif %}
-
-								<div class="{{ html_classes('flex items-center justify-between', { 'col-span-12 lg:col-span-6': fields.numbered, 'w-full': not fields.numbered }) }}">
-									<span class="{{ html_classes('text-h3 flex-1 pr-6.5 text-green-default md:text-[22px]', { 'md:font-bold md:leading-tight lg:text-right': fields.numbered }) }}">{{ item.title }}</span>
-									<div class="relative size-6 shrink-0">
-										<span
-											class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-0.5 w-4 bg-dark-text transition-transform duration-300"
-											:class="{ 'rotate-0': !isActive('faq-{{ loop.index }}'), 'rotate-180': isActive('faq-{{ loop.index }}') }"
-										></span>
-										<span
-											class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-0.5 w-4 origin-center bg-dark-text transition-transform duration-300"
-											:class="{ 'rotate-90': !isActive('faq-{{ loop.index }}'), 'rotate-0': isActive('faq-{{ loop.index }}') }"
-										></span>
-									</div>
+                                <span class="flex items-baseline gap-3 lg:gap-12 min-w-0">
+                                    {% if fields.numbered %}
+                                        <span class="hidden lg:block shrink-0 w-8 text-[16px] text-gray-3">0{{ loop.index }}</span>
+                                    {% endif %}
+                                    <span class="text-h3 lg:text-[18px] pr-6.5 lg:pr-0 text-green-default">{{ item.title }}</span>
+                                </span>
+						<div class="relative size-6 shrink-0">
+									<span
+										class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-0.5 bg-dark-text transition-transform duration-300"
+										:class="{ 'rotate-0': !isActive('faq-{{ loop.index }}'), 'rotate-180': isActive('faq-{{ loop.index }}') }"
+									></span>
+									<span
+										class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-0.5 bg-dark-text transition-transform duration-300 origin-center"
+										:class="{ 'rotate-90': !isActive('faq-{{ loop.index }}'), 'rotate-0': isActive('faq-{{ loop.index }}') }"
+									></span>
 								</div>
 							</button>
 
@@ -56,8 +54,6 @@
 				</div>
 			{% endif %}
 
-			{# Schema.org FAQ structured data #}
-			{{ fields.list|faq_schema|raw }}
 		{% endblock %}
 	{% endembed %}
 </section>

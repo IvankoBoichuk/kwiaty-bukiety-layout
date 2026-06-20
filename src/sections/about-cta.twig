@@ -1,0 +1,32 @@
+<section class="bg-[#E8E8DB] text-green-dark -mb-12 lg:-mb-25">
+	{% embed "../layouts/container.twig" %}
+		{% block content %}
+			<div class="flex flex-col items-center text-center gap-4 pb-12 pt-8 mx-auto lg:py-16">
+				{% if fields.title %}
+					<h2 class="max-w-75 font-heading font-semibold text-[42px] md:text-[48px] leading-tight text-green-default md:max-w-none">{{ fields.title }}</h2>
+				{% endif %}
+				{% if fields.subtitle %}
+					<p class="max-w-75 text-body-13 md:text-base text-green-default md:max-w-none md:font-semibold">{{ fields.subtitle }}</p>
+				{% endif %}
+				{% if fields.paragraphs %}
+					<div class="flex flex-col gap-3 text-body-13 md:text-[16px] md:mt-8">
+						{% for paragraph in fields.paragraphs %}
+							<p class="text-left lg:text-center">{{ paragraph }}</p>
+						{% endfor %}
+					</div>
+				{% endif %}
+				{% if fields.button %}
+					<div class="w-full max-w-92 mt-2 md:max-w-none lg:max-w-115">
+						{% include "../components/button.twig" with {
+							text: fields.button.text,
+							link: fields.button.link,
+							variant: fields.button.variant|default('green'),
+							size: fields.button.size|default('lg'),
+							showIcon: false
+						} %}
+					</div>
+				{% endif %}
+			</div>
+		{% endblock %}
+	{% endembed %}
+</section>

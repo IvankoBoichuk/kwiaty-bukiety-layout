@@ -1,0 +1,25 @@
+<section>
+	{% embed "../layouts/container.twig" %}
+		{% block content %}
+			<div class="flex flex-col gap-2">
+				{% if fields.title %}
+					<h2 class="text-h2 md:text-[28px] lg:text-[32px] lg:leading-tight text-green-default">{{ fields.title }}</h2>
+				{% endif %}
+
+				{% if fields.list %}
+					<div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-12">
+						{% for item in fields.list %}
+							<div class="flex flex-col gap-2 pb-4 pt-6 border-b border-[#C7C7C7]">
+								<h3 class="flex items-baseline gap-2">
+									<span class="flex items-center justify-center size-8 text-[13px] text-green-dark bg-white rounded-full border border-[#E0E0D7] md:size-10.5 md:text-[16px]">0{{ loop.index }}</span>
+									<span class="text-h3 md:text-[22px] text-green-default">{{ item.title }}</span>
+								</h3>
+								<p class="text-body-13 md:text-[16px] text-green-dark">{{ item.text }}</p>
+							</div>
+						{% endfor %}
+					</div>
+				{% endif %}
+			</div>
+		{% endblock %}
+	{% endembed %}
+</section>
